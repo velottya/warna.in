@@ -1,6 +1,7 @@
 @extends('home.layout')
 @section('title', 'Asesmen')
 @section('content')
+
 <div class="hero-wrap js-fullheight" style="background-image: url('images/slider.jpg');">
     <div class="overlay"></div>
     <div class="container">
@@ -107,7 +108,8 @@
                     <div class="row">
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1 color-1 d-block img" style="background-image: url(images/sejarah.jpg);">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/sejarah.svg') }}" width="50" alt="Sentra Icon"></div>
+
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Sejarah</h3>
                                     <p>Sejaran rinci dari Kampung Budaya Polowijen</p>
@@ -116,7 +118,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1 color-2 d-block img" style="background-image: url(images/sentra.jpg);">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/sentra.svg') }}" width="50" alt="Sentra Icon"></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Sentra Produk</h3>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary</p>
@@ -125,7 +127,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1 color-3 d-block img" style="background-image: url(images/galeri.jpg);">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
+                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/galeri.svg') }}" width="50" alt="Sentra Icon"></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Galeri</h3>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary</p>
@@ -134,7 +136,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1 color-4 d-block img" style="background-image: url(images/blog.png);">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
+                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/blog.svg') }}" width="50" alt="Sentra Icon"></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Blog</h3>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary</p>
