@@ -1,7 +1,7 @@
 @extends('home.layout')
 @section('title', 'Asesmen')
 @section('content')
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/Batik-Ken-Dedes-1\ 1.png');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/galeri-cover.jpg');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/sinau\ tambang\ macopat\ jawa.png);">
+            <a href="#" class="img" style="background-image: url(images/tembang-mocapat.png);">
 
             </a>
             <div class="text p-4">
@@ -33,7 +33,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/budaya\ tandur.png);">
+            <a href="#" class="img" style="background-image: url(images/budaya-tandur.png);">
 
             </a>
             <div class="text p-4">
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/hari\ tari\ sedunia.png);">
+            <a href="#" class="img" style="background-image: url(images/hari-tari-sedunia.png);">
 
             </a>
             <div class="text p-4">
@@ -60,7 +60,7 @@
 
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/temu\ topeng.png);">
+            <a href="#" class="img" style="background-image: url(images/temu-topeng.png);">
 
             </a>
             <div class="text p-4">
@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/perpustakaan\ kampung\ budaya\ polowijen.png);">
+            <a href="#" class="img" style="background-image: url(images/perpustakaan.png);">
 
             </a>
             <div class="text p-4">
@@ -87,7 +87,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri\ foto\ dan\ seni.png);">
+            <a href="#" class="img" style="background-image: url(images/galeri-foto.png);">
 
             </a>
             <div class="text p-4">
@@ -101,7 +101,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/sekolah\ duta\ budaya.png);">
+            <a href="#" class="img" style="background-image: url(images/duta-budaya.png);">
 
             </a>
             <div class="text p-4">
@@ -114,7 +114,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/kriya\ topeng\ malang.png);">
+            <a href="#" class="img" style="background-image: url(images/KriyaTopengMalang.png);">
 
             </a>
             <div class="text p-4">
@@ -128,7 +128,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/gladi\ tari\ topeng\ malang.png);">
+            <a href="#" class="img" style="background-image: url(images/gladi\ tari\ topeng.png);">
 
             </a>
             <div class="text p-4">
@@ -164,7 +164,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
-          <div class="img" style="background-image: url(images/kampung-budaya-polowijen-persiapan.jpg);">
+          <div class="img" style="background-image: url(images/ask.jpg);">
             <div class="overlay"></div>
             <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
             <p>Warisi Tradisi Lestarikan Budaya</p>
