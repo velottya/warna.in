@@ -53,7 +53,7 @@
               <h3><a href="#">PERINGATAN HARI TARI SEDUNIA</a></h3>
               <p class="location">Peringatan Hari tari Sedunia di KBP selalu meriah dan disuport mahasiswa Jurusan Seni
                 Tari dan Musik UM, Sanggar
-                Tunjung Sekar, Sanggar Seni Tari Sanggar, Sumberawan Gong production...</p>
+                Tunjung Sekar, Sanggar Seni Tari Sanggar.</p>
             </div>
           </div>
         </div>
@@ -80,8 +80,8 @@
             <div class="text p-4">
 
               <h3><a href="#">PERPUSTAKAAN KAMPUNG BUDAYA POLOWIJEN</a></h3>
-              <p class="location">Perpustakaan KBP adalah perpustakaan yang di gagas dari Himpunan Mahasiswa Jurusan
-                Akuntansi Universitas Widyagama</p>
+              <p class="location">Perpustakaan KBP di gagas dari Himpunan Mahasiswa Jurusan
+                Akuntansi Universitas Widyagama.</p>
             </div>
           </div>
         </div>
@@ -92,9 +92,9 @@
             </a>
             <div class="text p-4">
 
-              <h3><a href="#">GALERI FOTO DAN SENI</a></h3>
-              <p class="location">Galery Foto dan seni yang ada di KBP merupakan salah satu hasil dokumentasi kegiatan
-                KBP yang bersifat informasi yang berkaitan dengan proses.</p>
+              <h3><a href="#">GALERI FOTO DAN SENI KBP</a></h3>
+              <p class="location">Galeri Foto dan seni yang ada di KBP merupakan hasil dokumentasi kegiatan KBP yang
+                berkaitan dengan proses kegiatan.</p>
 
             </div>
           </div>
@@ -146,11 +146,9 @@
             <ul>
               <li><a href="#">&lt;</a></li>
               <li class="active"><span>1</span></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">&gt;</a></li>
+              <li><a href="/galeri2">2</a></li>
+              <li><a href="/galeri3">3</a></li>
+              <li><a href="/galeri2">&gt;</a></li>
             </ul>
           </div>
         </div>
