@@ -7,8 +7,8 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/signin-image.jpg"></figure>
-                        <a href="#" class="signup-image-link">Create an account</a>
+                        <figure><img src="images/signin-image.png"></figure>
+                        <a href="/regist" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
