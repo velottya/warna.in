@@ -187,7 +187,11 @@ h2 {
 
 .main {
   background: #f8f8f8;
-  padding: 150px 0; }
+  padding: 90px 0; }
+
+.main2 {
+  background: #f8f8f8;
+  padding: 70px 0; }
 
 .clear {
   clear: both; }
@@ -249,8 +253,8 @@ body {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
 
-.signup {
-  margin-bottom: 150px; }
+/* .signup {
+  margin-bottom: 150px; } */
 
 .signup-content {
   padding: 75px 0; }

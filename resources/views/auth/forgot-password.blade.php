@@ -55,7 +55,7 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>Asesmen Kompetisi</h3>
+                    <h3>Kampung Budaya Polowijen</h3>
                     <p>
                         Forgot Your Password? Let's Fill the Form and Log in Again with Your New Password!
                     </p>

@@ -2,7 +2,7 @@
 @section('title', 'Register')
 @section('content')
 
-<div class="main">
+<div class="main2">
 
     <!-- Sign up form -->
     <section class="signup">
@@ -55,7 +55,7 @@
                     </form>
                 </div>
                 <div class="signup-image">
-                    <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                    <figure><img src="images/signin-image.png" alt="sing up image"></figure>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>
 
 @endsection

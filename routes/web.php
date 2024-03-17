@@ -20,6 +20,12 @@ Route::group(['prefix' => ''], function () {
     Route::get('/galeri', function () {
         return view('home.galeri');
     });
+    Route::get('/galeri2', function () {
+        return view('home.galeri2');
+    });
+    Route::get('/galeri3', function () {
+        return view('home.galeri3');
+    });
     Route::get('/blog', function () {
         return view('home.blog');
     });

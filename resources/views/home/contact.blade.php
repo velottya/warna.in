@@ -1,7 +1,7 @@
 @extends('home.layout')
 @section('title', 'Asesmen')
 @section('content')
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/Tokoh\ budaya\ polowijen.jpg');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -91,7 +91,7 @@
    <div class="container">
     <div class="row justify-content-center">
      <div class="col-md-12 text-center">
-      <div class="img"  style="background-image: url(images/bg_2.jpg);">
+      <div class="img"  style="background-image: url(images/Ask.jpg);">
        <div class="overlay"></div>
        <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
        <p>Warisi Tradisi Lestarikan Budaya</p>

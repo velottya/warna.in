@@ -4,7 +4,7 @@
 <body>
 
     <section class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url('images/IMG-20180912-WA0089_1\ 1.png');">
+      style="background-image: url('images/galeri3-6.png');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
