@@ -23,6 +23,9 @@ Route::group(['prefix' => ''], function () {
     Route::get('/blog', function () {
         return view('home.blog');
     });
+    Route::get('/chart', function () {
+        return view('home.addchart');
+    });
     Route::get('/sentra', fn () => view('home.sentra'));
     Route::get('/contact', function () {
         return view('home.contact');
