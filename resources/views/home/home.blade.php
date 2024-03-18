@@ -77,7 +77,7 @@
                                             <div class="col-md d-flex">
                                                 <div class="form-group d-flex w-100 border-0">
                                                     <div class="form-field w-100 align-items-center d-flex">
-                                                        <input type="submit" value="FEEDBACK" s="align-self-stretch form-control btn btn-primary">
+                                                        <input type="submit" value="FEEDBACK" class="align-self-stretch form-control btn btn-primary">
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,7 +121,7 @@
                             <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/sentra.svg') }}" width="50" alt="Sentra Icon"></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Sentra Produk</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                    <p>Pasar Budaya, Mejual segala kriya tangan warga lokal</p>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
                             <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/galeri.svg') }}" width="50" alt="Sentra Icon"></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Galeri</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                    <p>Galeri Kegiatan di Kampung Budaya Polowijen</p>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                             <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/blog.svg') }}" width="50" alt="Sentra Icon"></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Blog</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                                    <p>Artikel Terkait Kampung Budaya Polowijen</p>
                                 </div>
                             </div>
                         </div>

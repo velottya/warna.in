@@ -1,7 +1,7 @@
 @extends('home.layout')
 @section('title', 'Asesmen')
 @section('content')
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/Tokoh\ budaya\ polowijen.jpg');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -40,7 +40,7 @@
        <span class="fa fa-paper-plane"></span>
      </div>
      <h3 class="mb-2">Alamat Email</h3>
-     <p><a href="mailto:info@yoursite.com">kampungbudayapolowijen@gmail.com</a></p>
+     <p><a href="mailto:info@yoursite.com">kampungbudayapolowijen <br> @gmail.com</a></p>
    </div>
   </div>
   <div class="col-md-3 d-flex">
@@ -49,7 +49,7 @@
      <span class="fa fa-globe"></span>
    </div>
    <h3 class="mb-2">Website</h3>
-   <p><a href="#">yoursite.com</a></p>
+   <p><a href="#">authenticpolowijen.com</a></p>
   </div>
   </div>
   </div>
@@ -91,7 +91,7 @@
    <div class="container">
     <div class="row justify-content-center">
      <div class="col-md-12 text-center">
-      <div class="img"  style="background-image: url(images/bg_2.jpg);">
+      <div class="img"  style="background-image: url(images/Ask.jpg);">
        <div class="overlay"></div>
        <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
        <p>Warisi Tradisi Lestarikan Budaya</p>
