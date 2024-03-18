@@ -22,7 +22,7 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-6 col-md-6 col-lg-7">
                                                         <div class="d-flex">
-                                                            <img src="images/KriyaBatik.png" alt="Ecommerce" style="height: 70px; padding-right: 50px;">
+                                                          <img src="images/KriyaBatik.png" alt="Ecommerce" style="height: 70px; width: 130px; padding-right: 50px; object-fit: cover;">
                                                             <div class="ms-3">
                                                                 <a href="product_link">
                                                                     <h6 class="mb-1">Batik Tulis</h6>
@@ -54,10 +54,10 @@
                                                 <div class="row align-items-center">
                                                     <div class="col-6 col-md-6 col-lg-7">
                                                         <div class="d-flex">
-                                                            <img src="images/KriyaBatik.png" alt="Ecommerce" style="height: 70px; padding-right: 50px;">
+                                                        <img src="images/Screenshot 2024-02-28 090458.png" alt="Ecommerce" style="height: 70px; width: 130px; padding-right: 50px; object-fit: cover;">
                                                             <div class="ms-3">
                                                                 <a href="product_link">
-                                                                    <h6 class="mb-1">Batik  </h6>
+                                                                    <h6 class="mb-1">Topeng Polos  </h6>
                                                                 </a>
                                                                 <span>
                                                                     <small>IDR 120.000</small>
@@ -136,7 +136,7 @@
                                                 </div>
                                                 <div class="d-grid mb-1 mt-4">
                                                     <!-- btn -->
-                                                    <button class="btn d-flex justify-content-between align-items-center" type="submit" 
+                                                    <!-- <button class="btn d-flex justify-content-between align-items-center" type="submit" 
                                                     style="background-color: #F15D30; 
                                                     color: white; 
                                                     font-size: 16px; 
@@ -144,7 +144,18 @@
                                                     border-radius: 5px;">
                                                         Go to Checkout
                                                         <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
-                                                    </button>
+                                                    </button> -->
+                                                    <a href="{{ route('form')}}" class="btn d-flex justify-content-between align-items-center" 
+                                                        style="background-color: #F15D30; 
+                                                        color: white; 
+                                                        font-size: 16px; 
+                                                        padding: 10px 20px; 
+                                                        border-radius: 5px;
+                                                        text-decoration: none;">
+                                                        Go to Checkout
+                                                        <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
+                                                    </a>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -157,12 +168,10 @@
             </div>
         </div>
     </section>
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg'); position: relative; z-index: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{ asset('images/sentra.jpg') }}'); position: relative; z-index: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
         <div class="overlay"></div>
         <div class="container"></div>
     </section>
 </div>
-
-
 
 @endsection
