@@ -1,6 +1,7 @@
 @extends('home.layout')
-@section('title', 'Checkout Form')
+@section('title', 'Checkout')
 @section('content')
+
 <section class="main-content" style="padding-top: 120px; padding-bottom: 120px;">
     <div class="container">
         <div class="row">

@@ -145,7 +145,7 @@
                                                         Go to Checkout
                                                         <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
                                                     </button> -->
-                                                    <a href="{{ route('form')}}" class="btn d-flex justify-content-between align-items-center" 
+                                                    <a href="{{ route('cekout')}}" class="btn d-flex justify-content-between align-items-center" 
                                                         style="background-color: #F15D30; 
                                                         color: white; 
                                                         font-size: 16px; 

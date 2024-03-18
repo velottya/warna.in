@@ -32,7 +32,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/chart', function () {
         return view('home.addchart');
     });
-    Route::get('/form', fn() => view('home.form-order'))->name('form');
+    Route::get('/cekout', fn() => view('home.cekout'))->name('cekout');
     Route::get('/sentra', fn () => view('home.sentra'));
     Route::get('/contact', function () {
         return view('home.contact');
