@@ -33,12 +33,12 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item scrollto @if (Request::is('/')) active @endif"><a href="/" class="nav-link">Home</a></li>
-					<li class="nav-item scrollto @if (Request::is('/about')) active @endif"><a href="/about" class="nav-link">About</a></li>
-					<li class="nav-item scrollto @if (Request::is('/sentra')) active @endif"><a href="/sentra" class="nav-link">Sentra</a></li>
-					<li class="nav-item scrollto @if (Request::is('/galeri')) active @endif"><a href="/galeri" class="nav-link">Galeri</a></li>
-					<li class="nav-item scrollto @if (Request::is('/blog')) active @endif"><a href="/blog" class="nav-link">Blog</a></li>
-					<li class="nav-item scrollto @if (Request::is('/contact')) active @endif"><a href="/contact" class="nav-link">Contact</a></li>
+					<li class="nav-item scrollto {{ Request()->is('/') ? 'active' : '' }}"> <a href="{{ url('') }}" class="nav-link">Home</a></li>
+					<li class="nav-item scrollto {{ Request()->is('about') ? 'active' : '' }}"> <a href="{{ url('about') }}" class="nav-link">About</a></li>
+					<li class="nav-item scrollto {{ Request()->is('sentra') ? 'active' : '' }}"> <a href="{{ url('sentra') }}" class="nav-link">Sentra</a></li>
+					<li class="nav-item scrollto {{ Request()->is('galeri') ? 'active' : '' }}"><a href="{{ url('galeri') }}" class="nav-link">Galeri</a></li>
+					<li class="nav-item scrollto {{ Request()->is('blog') ? 'active' : '' }}"><a href="{{ url('blog') }}" class="nav-link">Blog</a></li>
+					<li class="nav-item scrollto {{ Request()->is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}" class="nav-link">Contact</a></li>
                     @if (Auth::check() && Auth::user()->role == 'admin')
                     <li class="nav-item scrollto"><a href="{{ route('admin') }}" class="nav-link">Admin</a></li>
                     @endif
