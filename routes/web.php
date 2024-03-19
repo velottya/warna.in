@@ -14,10 +14,10 @@ Route::group(['prefix' => ''], function () {
     Route::get('/', fn () => view('home.home'));
     Route::get('/about', fn () => view('home.about'));
 
-    Route::get('/galeri', fn () => view('home.galeri'));
-    Route::get('/galeri1', fn () => view('home.galeri1'));
-    Route::get('/galeri2', fn () => view('home.galeri2'));
-    Route::get('/galeri3', fn () => view('home.galeri3'));
+    Route::get('/galeri', fn () => view('home.galeri.galeri'));
+    Route::get('/galeri1', fn () => view('home.galeri.galeri1'));
+    Route::get('/galeri2', fn () => view('home.galeri.galeri2'));
+    Route::get('/galeri3', fn () => view('home.galeri.galeri3'));
 
     Route::get('/blog', fn () => view('home.blog.blog'))->name('blog');
     Route::get('/blog1', fn () => view('home.blog.blog1'))->name('blog1');

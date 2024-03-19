@@ -3,8 +3,7 @@
 @section('content')
 <body>
 
-    <section class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url('images/headerr.jpg');">
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{ asset('images/headerr.jpg') }}');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -24,7 +23,7 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_1.jpeg');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_1.jpeg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
@@ -35,7 +34,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_2.jpeg');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_2.jpeg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
@@ -46,7 +45,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_3.jpg');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_3.jpg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
@@ -65,7 +64,7 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/bm.jpg);">
+              <a href="#" class="img" style="background-image: url('{{ asset('images/bm.jpg') }}');">
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
@@ -80,7 +79,7 @@
 
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/tm.jpeg);">
+              <a href="#" class="img" style="background-image: url('{{ asset('images/tm.jpeg') }}');">
                 <span class="price">Rp 75.000</span>
               </a>
               <div class="text p-4">
@@ -94,7 +93,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/pab.png);">
+              <a href="#" class="img" style="background-image: url('{{ asset('images/pab.png') }}');">
                 <span class="price">Rp 145.000</span>
               </a>
               <div class="text p-4">
@@ -115,7 +114,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
-            <div class="img" style="background-image: url(images/kampung-budaya-polowijen-persiapan.jpg);">
+            <div class="img" style="background-image: url('{{ asset('images/kampung-budaya-polowijen-persiapan.jpg') }}');">
               <div class="overlay"></div>
               <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
               <p>Warisi Tradisi Lestarikan Budaya</p>

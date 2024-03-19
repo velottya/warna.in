@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_1.jpeg');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_1.jpeg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
