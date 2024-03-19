@@ -49,11 +49,10 @@
                     @if (Auth::check() && Auth::user()->role == 'user')
                     {{-- <li class="nav-item scrollto"><a href="{{ route('profile.show') }}" class="nav-link">Account</a> --}}
                         <li class="nav-item scrollto @if (Request::is('profiluser')) active @endif"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
-                        <!-- <li class="nav-item scrollto">
+                        <li class="nav-item scrollto">
                             <a href="#" class="nav link">
-                            <img src="" alt="">    
-                            Keranjang</a>
-                        </li> -->
+                            <img src="{{ asset('images/icon/cart.svg') }}" alt="" style="height: 30px; margin-right: 30px;" class="mt-4"></a>
+                        </li>
                         <li class="nav-item scrollto"><a href="/logout" class="nav-link">Logout</a></li>
                     @endif
 				</ul>

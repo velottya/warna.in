@@ -129,8 +129,7 @@
                       <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#previewGaleri"
                         ><i class="bx bx-edit-alt me-1"></i> More Preview</a>
                       <a class="dropdown-item" href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#editGaleri"
-                        ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                      >
+                        ><i class="bx bx-edit-alt me-1"></i> Edit</a>
                       <a class="dropdown-item" href="javascript:void(0);"
                         ><i class="bx bx-trash me-1"></i> Delete</a
                       >

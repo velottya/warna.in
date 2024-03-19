@@ -11,9 +11,6 @@
     <div class="container-xxl flex-grow-1 container-p-y">
       <h4 class="fw-bold py-3 mb-4">Transaksi Sentra</h4>
       <div class="card">
-    
-        
-        
         <!-- Modal -->
         <div class="modal fade" id="tambahGaleri" tabindex="-1" aria-hidden="true">
           <div class="modal-dialog" role="document">

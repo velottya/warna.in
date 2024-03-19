@@ -8,6 +8,6 @@ class PembelianController extends Controller
 {
     public function sentra()
     {
-        return view('home.sentra');
+        return view('home.sentra.sentra');
     }
 }
