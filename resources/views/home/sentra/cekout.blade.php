@@ -29,10 +29,8 @@
                                         <address>
                                             <strong>Silvana Ovarista</strong>
                                             <br>
-
                                             Jl. Terusan Ambarawan no. 137 Malang
                                             <br>
-
                                             <abbr title="Phone">0864-7389-****</abbr>
                                         </address>
                                         <span class="text-danger">Default address</span>
@@ -52,21 +50,10 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-between mt-4 mb-5">
-                            <a href="products_index_link" class="btn btn-first" 
-                                style="background-color: #F15D30; 
-                                color: white; 
-                                padding: 10px 20px; 
-                                border-radius: 5px; 
-                                text-decoration: none;">
+                            <a href="products_index_link" class="btn btn-first" style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
                                 Back to Shopping Cart</a>
-                                <a href="#" type="submit" class="btn btn-second" 
-                                style="background-color: transparent; 
-                                color: #F15D30; 
-                                border: 2px solid #F15D30; 
-                                padding: 10px 20px; 
-                                border-radius: 5px;">
+                            <a href="#" type="submit" class="btn btn-second" style="background-color: transparent; color: #F15D30; border: 2px solid #F15D30; padding: 10px 20px; border-radius: 5px;">
                                 Place Order</a>
-
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 col-md-6">

@@ -66,11 +66,11 @@
             <li class="menu-item">
               <a href="verifikasi_pembayaran.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Support">verifikasi pembayaran</div>
+                <div data-i18n="Support">Verifikasi pembayaran</div>
               </a>
             </li>
             <!-- Website Information -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Website Information</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Website Informasi</span></li>
             <li class="menu-item">
               <a href="galeri.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-support"></i>
@@ -95,9 +95,8 @@
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="booking_desa.html" class="menu-link">
-
                     <div data-i18n="Account">Booking Desa</div>
-                </a>
+                  </a>
                 </li>
                 <li class="menu-item">
                   <a href="sentra.html" class="menu-link">
@@ -124,9 +123,7 @@
                 </li>
               </ul>
             </li>
-
-
-
+            
             <!-- Pages -->
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>

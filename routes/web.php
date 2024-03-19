@@ -11,37 +11,30 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\PembelianController;
 
 Route::group(['prefix' => ''], function () {
-    Route::get('/', function () {
-        return view('home.home');
-    })->name('home');
-    Route::get('/about', function () {
-        return view('home.about');
+    Route::get('/', fn () => view('home.home'));
+    Route::get('/about', fn () => view('home.about'));
+
+    Route::get('/galeri', fn () => view('home.galeri'));
+    Route::get('/galeri1', fn () => view('home.galeri1'));
+    Route::get('/galeri2', fn () => view('home.galeri2'));
+    Route::get('/galeri3', fn () => view('home.galeri3'));
+
+    Route::get('/blog', fn () => view('home.blog'));
+
+    Route::get('/contact', fn () => view('home.contact'));
+    
+    Route::get('/chart', fn() => view('home.sentra.addchart'));
+    Route::get('/cekout', fn() => view('home.sentra.cekout'));
+    Route::get('/sentra', fn () => view('home.sentra.sentra'));
+    Route::get('/sentra1', fn () => view('home.sentra.sentra1'));
+    Route::get('/sentra2', fn () => view('home.sentra.sentra2'));
+
+
+    Route::get('/admin1', function () {
+        return view('admin.index');
     });
-    Route::get('/galeri', function () {
-        return view('home.galeri.galeri');
-    });
-    Route::get('/galeri2', function () {
-        return view('home.galeri.galeri2');
-    });
-    Route::get('/galeri3', function () {
-        return view('home.galeri.galeri3');
-    });
-    Route::get('/blog', function () {
-        return view('home.blog');
-    });
-    Route::get('/chart', function () {
-        return view('home.addchart');
-    });
-    Route::get('/cekout', fn() => view('home.cekout'))->name('cekout');
-    Route::get('/sentra', fn () => view('home.sentra'));
-    Route::get('/contact', function () {
-        return view('home.contact');
-    });
-    Route::get('/sentra1', function () {
-        return view('home.sentra1');
-    });
-    Route::get('/sentra2', function () {
-        return view('home.sentra2');
+    Route::get('/artikel-admin', function () {
+        return view('admin.artikel');
     });
     
 });
@@ -69,8 +62,8 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-        Route::get("/admin", [AdminController::class, "tampilanAdmin"])->name('admin')->middleware(['auth', 'akses:admin']);
-        // Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
+        // Route::get("/admin", [AdminController::class, "tampilanAdmin"])->name('admin')->middleware(['auth', 'akses:admin']);
+        Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile/add-user", [AdminController::class, "showAddUser"])->name('admin.adduser')->middleware(['auth', 'akses:admin']);
