@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Kampung Budaya Polowijen</title>
+	<title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -49,11 +49,10 @@
                     @if (Auth::check() && Auth::user()->role == 'user')
                     {{-- <li class="nav-item scrollto"><a href="{{ route('profile.show') }}" class="nav-link">Account</a> --}}
                         <li class="nav-item scrollto @if (Request::is('profiluser')) active @endif"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
-                        <!-- <li class="nav-item scrollto">
+                        <li class="nav-item scrollto">
                             <a href="#" class="nav link">
-                            <img src="" alt="">
-                            Keranjang</a>
-                        </li> -->
+                            <img src="{{ asset('images/icon/cart.svg') }}" alt="" style="height: 30px; margin-right: 30px;" class="mt-4"></a>
+                        </li>
                         <li class="nav-item scrollto"><a href="/logout" class="nav-link">Logout</a></li>
                     @endif
 				</ul>
@@ -121,7 +120,7 @@
                 <div class="col-md-12 text-center">
 
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7 
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>

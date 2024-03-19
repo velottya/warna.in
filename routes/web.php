@@ -14,32 +14,29 @@ Route::group(['prefix' => ''], function () {
     Route::get('/', fn () => view('home.home'));
     Route::get('/about', fn () => view('home.about'));
 
-    Route::get('/galeri', fn () => view('home.galeri.galeri'));
-    Route::get('/galeri1', fn () => view('home.galeri.galeri1'));
-    Route::get('/galeri2', fn () => view('home.galeri.galeri2'));
-    Route::get('/galeri3', fn () => view('home.galeri.galeri3'));
+    Route::get('/galeri', fn () => view('home.galeri'));
+    Route::get('/galeri1', fn () => view('home.galeri1'));
+    Route::get('/galeri2', fn () => view('home.galeri2'));
+    Route::get('/galeri3', fn () => view('home.galeri3'));
 
     Route::get('/blog', fn () => view('home.blog'));
 
     Route::get('/contact', fn () => view('home.contact'));
+    
+    Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
+    Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
+    Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
+    Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
+    Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
-    Route::get('/chart', fn() => view('home.sentra.addchart'));
-    Route::get('/cekout', fn() => view('home.sentra.cekout'));
-    Route::get('/sentra', fn () => view('home.sentra.sentra'));
-    Route::get('/sentra1', fn () => view('home.sentra.sentra1'));
-    Route::get('/sentra2', fn () => view('home.sentra.sentra2'));
-
-
-    Route::get('/admin1', function () {
-        return view('admin.index');
-    });
-    Route::get('/artikel-admin', function () {
-        return view('admin.artikel');
-    });
     Route::get('/sentra11', function () {
-        return view('home.sentra11');
-    });
+        return view('home.sentra.sentra11');
+    }); 
+});
 
+Route::group(['prefix' => 'admin1'], function () {
+    Route::get('/', fn() => view('admin.index'))->name('admin');
+    Route::get('/artikel', fn() => view('admin.artikel'))->name('artikel');
 });
 
 Route::middleware(['guest'])->group(function () {
@@ -65,7 +62,7 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-        // Route::get("/admin", [AdminController::class, "tampilanAdmin"])->name('admin')->middleware(['auth', 'akses:admin']);
+        Route::get("/admin", [AdminController::class, "tampilanAdmin"])->name('admin')->middleware(['auth', 'akses:admin']);
         Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
@@ -76,8 +73,6 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/dat-reg-asesmen/delete/{idasesi}", [AdminController::class, "AsesmenDeleteAll"])->name('admin.datregasesmen.delete')->middleware(['auth', 'akses:admin']);
         Route::get("/dat-reg-asesi/{idasesi}", [AdminController::class, "showRegAsesi"])->name('admin.datregasesi')->middleware(['auth', 'akses:admin']);
         Route::post('/dat-reg-asesi/store', [AdminController::class, 'storeDatRegAsesi'])->name('admin.datregasesi.store')->middleware(['auth', 'akses:admin']);
-
-
     });
 });
 
