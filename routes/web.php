@@ -43,6 +43,9 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra2', function () {
         return view('home.sentra2');
     });
+    Route::get('/sentra11', function () {
+        return view('home.sentra11');
+    });
     
 });
 

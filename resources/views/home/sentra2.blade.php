@@ -29,7 +29,7 @@
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
                 <h3><a href="#">BATIK</a></h3>
-
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
@@ -41,8 +41,7 @@
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
                 <h3><a href="#">TOPENG</a></h3>
-
-
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
@@ -54,11 +53,49 @@
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
                 <h3><a href="#">SOUVENIR </a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
+                <span class="price">$550</span>
+              </a>
+              <div class="text p-4">
+                <span class="days">15:00-17:00</span>
+                <h3><a href="#">TOPENG</a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
+                <span class="price">$550</span>
+              </a>
+              <div class="text p-4">
+                <span class="days">15:00-17:00</span>
+                <h3><a href="#">TOPENG</a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
+                <span class="price">$550</span>
+              </a>
+              <div class="text p-4">
+                <span class="days">15:00-17:00</span>
+                <h3><a href="#">TOPENG</a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
       
     <section class="ftco-intro ftco-section ftco-no-pt">
       <div class="container">

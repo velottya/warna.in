@@ -17,7 +17,8 @@
         </div>
       </div>
     </section>
-    <h1 class="mb-0 bread text-center pt-5 font-weight-bold">BOOKING</h1>
+    
+    <h1 class="mb-0 bread text-center pt-5 font-weight-bold">PAKET KEGIATAN</h1>
     <section class="ftco-section">
       <div class="container">
         <div class="row">
@@ -28,7 +29,7 @@
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
                 <h3><a href="#">Sinau Tembang Klangenan</a></h3>
-
+                <p><a href="/sentra11" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
@@ -39,8 +40,7 @@
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
                 <h3><a href="#">Sinau Jula Juli & Ludruk Malang</a></h3>
-
-
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
@@ -51,42 +51,40 @@
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
                 <h3><a href="#">Sinau Budaya Malang </a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
       <p class="text-center"><a href="/sentra1" class="btn btn-primary">Selengkapnya</a></p>
-
     </section>
-    <h1 class="mb-0 bread text-center font-weight-bold">PEMBELIAN</h1>
+    <h1 class="mb-0 bread text-center font-weight-bold">PRODUK</h1>
     <section class="ftco-section">
       <div class="container">
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 11.png);">
-                <span class="price">$550</span>
+              <a href="#" class="img" style="background-image: url(images/bm.jpg);">
+                <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">13:00-15:00</span>
-                <h3><a href="#">BATIK</a></h3>
-
+                <span class="days">Batik</span>
+                <h3><a href="#">Batik Malang</a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
+
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
-                <span class="price">$550</span>
+              <a href="#" class="img" style="background-image: url(images/tm.jpeg);">
+                <span class="price">Rp 75.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">TOPENG</a></h3>
-
-
+                <span class="days">Topeng</span>
+                <h3><a href="#">Topeng Malangan</a></h3>
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
@@ -98,17 +96,13 @@
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
                 <h3><a href="#">SOUVENIR </a></h3>
-
-
+                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
       <p class="text-center"><a href="/sentra2" class="btn btn-primary">Selengkapnya</a></p>
-
     </section>
 
     <section class="ftco-intro ftco-section ftco-no-pt">
