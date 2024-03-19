@@ -31,17 +31,16 @@
         <div class="row">
           <div class="col-md-12 col-lg-5 d-flex align-self-stretch ftco-animate">
             <div class="services services-1 d-block img" style="background-image: url(images/sarsehan.jpeg);">
-
               <div class="media-body">
-                <h3 class="heading mb-3" style="visibility: hidden;">Sejarah</h3>
-                <p style="visibility: hidden;">Sejaran rinci dari Kampung Budaya Polowijen</p>
+                <h3 class="heading mb-3" style="visibility: hidden;"></h3>
+                <p style="visibility: hidden;"></p>
               </div>
             </div>
           </div>
           <div class="col-md-12 col-lg-5 d-flex align-self-stretch ftco-animate">
             <div class="services services-1 d-block img" style="background-image: url(images/pengesahan.jpg);">
               <div class="media-body">
-                <h3 class="heading mb-3" style="visibility: hidden;">Sentra Produk</h3>
+                <h3 class="heading mb-3" style="visibility: hidden;"></h3>
                 <p style="visibility: hidden;">A small river named Duden flows by their place and supplies it with the necessary</p>
               </div>
             </div>
@@ -97,129 +96,6 @@
                 <p align="justify">Adapun prosesnya dimulai dengan memberikan ornament bambu pada rumah warga RT 03 RW 02 Polowijen sebanyak 15 rumah dan menambahkan gazebo di depan rumah masing masing warga. Prosesnya dengan swadaya mandiri dengan prinsip gotong royong secara bertahap. Butuh waktu 2 tahun untuk melakukan pembenahan infrasturktur agar desain kampung lebih unik antik, indah dan menarik.</p>
                 <p align="justify">Kampung Budaya Polowijen diresmikan pada tanggal 2 April 2017 selah 1 hari HUT Kota Malang oleh Walikota Malang, H.Moh Anton. Peresmian di meriahkan dengan Gerakan Senam Sehat, Menanam 100 Pohon, Peletakan Batu Pertama Sasana Budaya, Fragmen Wayang Topeng Tari Topeng Grebeg Jowo 100 Orang, Permainan Dolanan, Albanjari Dan Tari Topeng Gunungsari Dan Sarasehan Kampung Budaya Poloiwjen dengan tema mencari Hari jadi Polowijen oleh Arkelog UM Dwi Cahyono, Kepala Disbudpar Kota Malang Anggota DPRD Kota Malang, Camat Blimbing dan Lurah Polowijen</p>
                 <p><a href="#" class="btn btn-primary">Lihat Blog</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/slider.jpg);">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row justify-content-center pb-4">
-      <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-        <span class="subheading">Testimonial</span>
-        <h2 class="mb-4">Feedback Pengunjung</h2>
-      </div>
-    </div>
-    <div class="row ftco-animate">
-      <div class="col-md-12">
-        <div class="carousel-testimony owl-carousel">
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                <p class="star">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                  <div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                <p class="star">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                  <div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                <p class="star">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                  <div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                <p class="star">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                  <div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                <p class="star">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                  <div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

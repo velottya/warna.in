@@ -36,6 +36,9 @@ Route::group(['prefix' => ''], function () {
     Route::get('/artikel-admin', function () {
         return view('admin.artikel');
     });
+    Route::get('/sentra11', function () {
+        return view('home.sentra11');
+    });
     
 });
 
