@@ -11,21 +11,20 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\PembelianController;
 
 Route::group(['prefix' => ''], function () {
-    Route::get('/', fn () => view('home.home'));
-    Route::get('/about', fn () => view('home.about'));
+    Route::get('/', fn () => view('home.home'))->name('home');
+    Route::get('/about', fn () => view('home.about'))->name('about');
 
-    Route::get('/galeri', fn () => view('home.galeri'));
-    Route::get('/galeri1', fn () => view('home.galeri1'));
-    Route::get('/galeri2', fn () => view('home.galeri2'));
-    Route::get('/galeri3', fn () => view('home.galeri3'));
+    Route::get('/galeri', fn () => view('home.galeri.galeri'))->name('galeri');
+    Route::get('/galeri1', fn () => view('home.galeri.galeri1'))->name('galeri1');
+    Route::get('/galeri2', fn () => view('home.galeri.galeri2'))->name('galeri2');
+    Route::get('/galeri3', fn () => view('home.galeri.galeri3'))->name('galeri3');
 
     Route::get('/blog', fn () => view('home.blog.blog'))->name('blog');
     Route::get('/blog1', fn () => view('home.blog.blog1'))->name('blog1');
     Route::get('/blog2', fn () => view('home.blog.blog2'))->name('blog2');
 
 
-
-    Route::get('/contact', fn () => view('home.contact'));
+    Route::get('/contact', fn () => view('home.contact'))->name('contact');
     
     Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
     Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
