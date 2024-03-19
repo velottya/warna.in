@@ -23,6 +23,8 @@
         <div class="w-100">
           <span class="subheading"></span>
           <h2 class="mb-4">Sinau Jula Juli & Ludruk Malang</h2>
+          <p align="justify"><b>Gratis</b></p>
+          <p align="justify"><b>15.00-17.00</b></p>
           <p align="justify">Sinau Jula Juli dan Ludruk Malang adalah dua bentuk seni pertunjukan tradisional dari Jawa Timur, Indonesia. Sinau Jula Juli menggabungkan seni bela diri, tarian, dan drama dalam pertunjukannya, sementara Ludruk Malang lebih fokus pada komedi dan cerita lokal yang menghibur. Keduanya memiliki peran penting dalam melestarikan dan memperkaya warisan budaya daerah serta menyampaikan pesan-pesan moral kepada masyarakat.</p>
         </div>
       </div>

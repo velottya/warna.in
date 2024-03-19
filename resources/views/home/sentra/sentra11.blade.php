@@ -23,7 +23,10 @@
         <div class="w-100">
           <span class="subheading"></span>
           <h2 class="mb-4">Sinau Tembang Klangenan</h2>
+          <p align="justify"><b>Gratis</b></p>
+          <p align="justify"><b>13.00-15.00</b></p>
           <p align="justify">Sinau Tembang Klangenan adalah sebuah kegiatan yang mengandalkan kearifan lokal dan tradisi budaya sebagai sarana pembelajaran dan pelestarian seni tradisional, khususnya dalam konteks kampung budaya Polowijen. Kegiatan ini bertujuan untuk menjaga keberlangsungan dan menghargai warisan budaya yang dimiliki oleh masyarakat Polowijen, serta mengajarkan generasi muda tentang keindahan dan kekayaan seni tradisional Jawa. Melalui Sinau Tembang Klangenan, para peserta diajak untuk mempelajari berbagai tembang atau lagu tradisional Jawa yang mencakup aspek-aspek seperti lirik, melodi, serta makna dan filosofi yang terkandung di dalamnya.</p>
+          <p align="justify">Gratis</p>
         </div>
       </div>
       <div class="col-md-6">
