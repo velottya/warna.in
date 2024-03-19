@@ -37,6 +37,13 @@ Route::group(['prefix' => ''], function () {
     Route::get('/contact', function () {
         return view('home.contact');
     });
+    Route::get('/sentra1', function () {
+        return view('home.sentra1');
+    });
+    Route::get('/sentra2', function () {
+        return view('home.sentra2');
+    });
+    
 });
 
 Route::middleware(['guest'])->group(function () {

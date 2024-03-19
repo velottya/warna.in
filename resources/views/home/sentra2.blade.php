@@ -1,10 +1,10 @@
-@extends('layout.layout')
+@extends('home.layout')
 @section('title', 'About Us')
 @section('content')
 <body>
 
     <section class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url('images/galeri3-6.png');">
+      style="background-image: url('images/IMG-20180912-WA0089_1\ 1.png');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -17,55 +17,11 @@
         </div>
       </div>
     </section>
-    <h1 class="mb-0 bread text-center pt-5 font-weight-bold">BOOKING</h1>
+    <h1 class="mb-0 bread text-center pt-5 font-weight-bold">Produk</h1>
     <section class="ftco-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 2.png);">
-              </a>
-              <div class="text p-4">
-                <span class="days">13:00-15:00</span>
-                <h3><a href="#">Sinau Tembang Klangenan</a></h3>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
-              </a>
-              <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">Sinau Jula Juli & Ludruk Malang</a></h3>
-
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 10.png);">
-              </a>
-              <div class="text p-4">
-                <span class="days">19:00-21:00</span>
-                <h3><a href="#">Sinau Budaya Malang </a></h3>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-      <p class="text-center"><a href="/sentra1" class="btn btn-primary">Selengkapnya</a></p>
-
-    </section>
-    <h1 class="mb-0 bread text-center font-weight-bold">PEMBELIAN</h1>
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 ftco-animate">
+        <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
               <a href="#" class="img" style="background-image: url(images/image\ 11.png);">
                 <span class="price">$550</span>
@@ -98,19 +54,12 @@
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
                 <h3><a href="#">SOUVENIR </a></h3>
-
-
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
-      <p class="text-center"><a href="/sentra2" class="btn btn-primary">Selengkapnya</a></p>
-
-    </section>
-
+      
     <section class="ftco-intro ftco-section ftco-no-pt">
       <div class="container">
         <div class="row justify-content-center">
