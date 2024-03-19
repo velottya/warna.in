@@ -4,7 +4,7 @@
 <body>
 
     <section class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url('images/galeri3-6.png');">
+      style="background-image: url('images/headerr.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -17,7 +17,7 @@
         </div>
       </div>
     </section>
-    
+
     <h1 class="mb-0 bread text-center pt-5 font-weight-bold">PAKET KEGIATAN</h1>
     <section class="ftco-section">
       <div class="container">
