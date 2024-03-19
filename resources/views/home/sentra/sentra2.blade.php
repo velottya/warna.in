@@ -22,80 +22,150 @@
       <div class="container">
         <div class="row">
         <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 11.png);">
-                <span class="price">$550</span>
+        <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/bm.jpg);">
+                <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">13:00-15:00</span>
-                <h3><a href="#">BATIK</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Batik Malang</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
-                <span class="price">$550</span>
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/tm.jpeg);">
+                <span class="price">Rp 75.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">TOPENG</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Topeng Malangan</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 13.png);">
-                <span class="price">$550</span>
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/pab.png);">
+                <span class="price">Rp 145.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">19:00-21:00</span>
-                <h3><a href="#">SOUVENIR </a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Topeng Panji Asmoro Bangun </a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
-                <span class="price">$550</span>
+        <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/ds.png);">
+                <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">TOPENG</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Topeng Dewi Sekartaji</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
-                <span class="price">$550</span>
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/gs.png);">
+                <span class="price">Rp 176.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">TOPENG</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Topeng Gunungsari</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 4.png);">
-                <span class="price">$550</span>
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/drk.png);">
+                <span class="price">Rp 175.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">TOPENG</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Topeng Dewi Ragil Kuning </a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+        <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/ks.png);">
+                <span class="price">Rp 100.000</span>
+              </a>
+              <div class="text p-4">
+                <h3><a href="#">Topeng Klana Sewandana</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/b.png);">
+                <span class="price">Rp 175.000</span>
+              </a>
+              <div class="text p-4">
+                <h3><a href="#">Topeng Bapang</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/p.png);">
+                <span class="price">Rp 160.000</span>
+              </a>
+              <div class="text p-4">
+                <h3><a href="#">Topeng Punakawan </a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+        <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/eco.jpg);">
+                <span class="price">Rp 70.000</span>
+              </a>
+              <div class="text p-4">
+                <h3><a href="#">Batik Ecoprint</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 2 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <p class="text-center"><a href="/sentra" class="btn btn-primary">Kembali</a></p>
+
       
     <section class="ftco-intro ftco-section ftco-no-pt">
       <div class="container">

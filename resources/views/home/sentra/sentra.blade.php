@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 2.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_1.jpeg');">
               </a>
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
@@ -35,18 +35,18 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_2.jpeg');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
                 <h3><a href="#">Sinau Jula Juli & Ludruk Malang</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="/sentra12" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 10.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_3.jpg');">
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
@@ -69,9 +69,11 @@
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">Batik</span>
                 <h3><a href="#">Batik Malang</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
@@ -82,21 +84,25 @@
                 <span class="price">Rp 75.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">Topeng</span>
                 <h3><a href="#">Topeng Malangan</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 13.png);">
-                <span class="price">$550</span>
+          <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url(images/pab.png);">
+                <span class="price">Rp 145.000</span>
               </a>
               <div class="text p-4">
-                <span class="days">19:00-21:00</span>
-                <h3><a href="#">SOUVENIR </a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <h3><a href="#">Topeng Panji Asmoro Bangun </a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>

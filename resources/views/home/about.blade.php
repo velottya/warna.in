@@ -95,7 +95,7 @@
               <div class="col-md-12 heading-section ftco-animate">
                 <p align="justify">Adapun prosesnya dimulai dengan memberikan ornament bambu pada rumah warga RT 03 RW 02 Polowijen sebanyak 15 rumah dan menambahkan gazebo di depan rumah masing masing warga. Prosesnya dengan swadaya mandiri dengan prinsip gotong royong secara bertahap. Butuh waktu 2 tahun untuk melakukan pembenahan infrasturktur agar desain kampung lebih unik antik, indah dan menarik.</p>
                 <p align="justify">Kampung Budaya Polowijen diresmikan pada tanggal 2 April 2017 selah 1 hari HUT Kota Malang oleh Walikota Malang, H.Moh Anton. Peresmian di meriahkan dengan Gerakan Senam Sehat, Menanam 100 Pohon, Peletakan Batu Pertama Sasana Budaya, Fragmen Wayang Topeng Tari Topeng Grebeg Jowo 100 Orang, Permainan Dolanan, Albanjari Dan Tari Topeng Gunungsari Dan Sarasehan Kampung Budaya Poloiwjen dengan tema mencari Hari jadi Polowijen oleh Arkelog UM Dwi Cahyono, Kepala Disbudpar Kota Malang Anggota DPRD Kota Malang, Camat Blimbing dan Lurah Polowijen</p>
-                <p><a href="#" class="btn btn-primary">Lihat Blog</a></p>
+                <p><a href="/blog" class="btn btn-primary">Lihat Blog</a></p>
               </div>
             </div>
           </div>

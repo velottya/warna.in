@@ -23,29 +23,29 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 2.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_1.jpeg');">
               </a>
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
                 <h3><a href="#">Sinau Tembang Klangenan</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="/sentra11" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_2.jpeg');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
                 <h3><a href="#">Sinau Jula Juli & Ludruk Malang</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="/sentra12" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 10.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/s1_3.jpg');">
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
@@ -56,7 +56,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/Screenshot 2024-02-28 090441.png');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
@@ -67,7 +67,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/Screenshot 2024-02-28 090704.png');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
@@ -78,7 +78,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/galeri2-9.png');">
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
@@ -89,7 +89,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/Ask.jpg');">
               </a>
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
@@ -100,7 +100,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/image2.png');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
@@ -111,7 +111,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/GladhiTari.png');">
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
@@ -122,7 +122,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/image\ 3.png);">
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/galeri2-5.png');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>

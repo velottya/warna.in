@@ -19,7 +19,11 @@ Route::group(['prefix' => ''], function () {
     Route::get('/galeri2', fn () => view('home.galeri2'));
     Route::get('/galeri3', fn () => view('home.galeri3'));
 
-    Route::get('/blog', fn () => view('home.blog'));
+    Route::get('/blog', fn () => view('home.blog.blog'))->name('blog');
+    Route::get('/blog1', fn () => view('home.blog.blog1'))->name('blog1');
+    Route::get('/blog2', fn () => view('home.blog.blog2'))->name('blog2');
+
+
 
     Route::get('/contact', fn () => view('home.contact'));
     
@@ -31,6 +35,9 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
+    }); 
+    Route::get('/sentra12', function () {
+        return view('home.sentra.sentra12');
     }); 
 });
 

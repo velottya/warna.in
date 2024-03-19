@@ -101,7 +101,7 @@
                         <h2 class="mb-4">Kampung Budaya Polowijen</h2>
                         <p align="justify">Kampung Budaya Polowijen adalah wujud nyata dari semangat pelestarian dan pengembangan warisan budaya yang kaya di Kelurahan Polowijen, Kecamatan Blimbing, Malang. Didirikan dan diprakarsai oleh Sdr. ISA WAHYUDI, serta dirumuskan dengan dukungan penuh dari Pemerintah Kota Malang, kampung budaya ini menjadi pusat kegiatan yang memadukan tradisi dan inovasi.</p>
                         <p align="justify">Kampung Polowijen adalah pusat kebudayaan yang menghidupkan warisan tradisionalnya melalui kegiatan seperti tari, pembuatan topeng, membatik, dan banyak lagi. Di sini, terdapat pelatihan yang menyelenggarakan kelas-kelas untuk menari, membuat batik, dan mengukir topeng, membantu mempertahankan keaslian budaya Polowijen secara berkelanjutan. Dengan beragam aktivitas budaya dan fasilitas pelatihan yang ditawarkan, Kampung Polowijen menjadi destinasi yang menarik bagi mereka yang ingin merasakan kekayaan budaya lokal dan mengembangkan keterampilan seni tradisional.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-4">Sejarah lebih lanjut</a></p>
+                        <p><a href="/about" class="btn btn-primary py-3 px-4">Sejarah lebih lanjut</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
