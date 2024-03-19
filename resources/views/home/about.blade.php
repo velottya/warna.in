@@ -1,6 +1,7 @@
-@extends('home.layout')
+@extends('layout.layout')
 @section('title', 'About Us')
 @section('content')
+
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/sejarah.jpg');">
   <div class="overlay"></div>
   <div class="container">

@@ -18,13 +18,13 @@ Route::group(['prefix' => ''], function () {
         return view('home.about');
     });
     Route::get('/galeri', function () {
-        return view('home.galeri');
+        return view('home.galeri.galeri');
     });
     Route::get('/galeri2', function () {
-        return view('home.galeri2');
+        return view('home.galeri.galeri2');
     });
     Route::get('/galeri3', function () {
-        return view('home.galeri3');
+        return view('home.galeri.galeri3');
     });
     Route::get('/blog', function () {
         return view('home.blog');

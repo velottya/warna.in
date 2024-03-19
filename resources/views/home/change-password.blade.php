@@ -1,4 +1,4 @@
-@extends('home.layout')
+@extends('layout.layout')
 @section('title', 'Change Password')
 @section('content')
     <br><br>

@@ -1,4 +1,4 @@
-@extends('home.layout')
+@extends('layout.layout')
 @section('title', 'About Us')
 @section('content')
 <body>

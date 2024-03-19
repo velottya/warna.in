@@ -1,4 +1,4 @@
-@extends('home.layout')
+@extends('layout.layout')
 @section('title', 'Asesmen')
 @section('content')
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/galeri-cover.jpg');">

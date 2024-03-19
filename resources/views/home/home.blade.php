@@ -1,5 +1,5 @@
-@extends('home.layout')
-@section('title', 'Asesmen')
+@extends('layout.layout')
+@section('title', 'Home | Authentic Polowijen')
 @section('content')
 
 <div class="hero-wrap js-fullheight" style="background-image: url('images/slider.jpg');">
