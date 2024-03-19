@@ -2,7 +2,7 @@
 @section('title', 'About Us')
 @section('content')
 
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/sejarah.jpg');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/headerr2.jpg');">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -68,7 +68,7 @@
 </section>
 
 
-<section class="ftco-section ftco-about img" style="background-image: url(images/content_about_us.png);">
+<section class="ftco-section ftco-about img" style="background-image: url(images/AboutUs2.jpg);">
   <div class="overlay"></div>
   <div class="container py-md-5">
     <div class="row py-md-5">
@@ -87,7 +87,7 @@
       <div class="col-md-12 about-intro">
         <div class="row">
           <div class="col-md-6 d-flex align-items-stretch">
-            <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/content_about2.png);">
+            <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/AboutUs1.jpg);">
             </div>
           </div>
           <div class="col-md-6 pl-md-5 py-5">
