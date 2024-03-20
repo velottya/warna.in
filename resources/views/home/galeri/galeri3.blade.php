@@ -27,7 +27,7 @@
 
               <h3><a href="#">PASAR MINGGU LEGI
                 JAJAN TRADISIONAL</a></h3>
-              <p class="location">Pasar Minggu Legi adalah pasar Jajan
+              <p class="location" align="justify">Pasar Minggu Legi adalah pasar Jajan
                 Tradisional. Pasar ini di buka khusus sebulan
                 sekali dalam hitungan kalender jawa oleh warga KBP.</p>
             </div>
@@ -42,7 +42,7 @@
               <h3><a href="#">PASAR TOPENG
                 KAMPUNG BUDAYA
                 POLOWIJEN</a></h3>
-              <p class="location">Pasar topeng di resmikan oleh Plt. Walikota
+              <p class="location" align="justify">Pasar topeng di resmikan oleh Plt. Walikota
                 Malang, Sutiaji pada tanggal 31 juni 2017 sebagai wadah para seniman topeng.</p>
             </div>
           </div>
@@ -57,7 +57,7 @@
               <h3><a href="#">SARASEHAN
                 KAMPUNG BUDAYA
                 POLOWIJEN</a></h3>
-              <p class="location">Kegiatan yang mambahas tentang
+              <p class="location" align="justify">Kegiatan yang mambahas tentang
                 persoalan budaya yang di hadiri dari berbagai
                 kalangan masyarakat.</p>
             </div>
@@ -73,7 +73,7 @@
 
               <h3><a href="#">SAMBANG KAMPUNG
                 BUDAYA POLOWIJEN</a></h3>
-              <p class="location">
+              <p class="location" align="justify">
                 Sambang
                 Kampung selalu di awali dengan MOU atau
                 kerjasama penyelenggaraan kegiatan, di lakukan secara
@@ -91,7 +91,7 @@
 
               <h3><a href="#">KOTHEKAN MUSIK
                 DOLANAN</a></h3>
-              <p class="location">Kegiatan permainan alat music yang
+              <p class="location" align="justify">Kegiatan permainan alat music yang
                 menggunakan bamboo lesung dan kendang.
                 Umumnya secara modern disebut dengan
                 perkusi.</p>
@@ -107,7 +107,7 @@
 
               <h3><a href="#">PERMAINAN
                 TRADISIONAL</a></h3>
-              <p class="location">Kegiatan pelestarian tentang ragam
+              <p class="location" align="justify">Kegiatan pelestarian tentang ragam
                 macam pernainan tradisioal tempo dulu.
                 Permaian tradisional yang penuh dengan
                 sarat makna di rekonstruksi.</p>
@@ -124,7 +124,7 @@
 
               <h3><a href="#">KRIYA BATIK
                 MALANG</a></h3>
-              <p class="location">Kriya batik polowijen telah merekrut kurang
+              <p class="location" align="justify">Kriya batik polowijen telah merekrut kurang
                 lebih 50 orang untuk belajar membatik dalam
                 kegiatan workshop kriya batik Polowijen
                 sudah sebanyak 4 kali gelombang pelatihan.</p>
@@ -141,7 +141,7 @@
               <h3><a href="#">PERESMIAN
                 KAMPUNG BUDAYA
                 POLOWIJEN</a></h3>
-              <p class="location">Kampung Budaya Polowijen diresmikan para
+              <p class="location" align="justify">Kampung Budaya Polowijen diresmikan para
                 daynggal 2 April 2017 selah 1 hari HUT Kota
                 Malang oleh Walikota Malang, H.Moh Anton.</p>
 
@@ -156,7 +156,7 @@
             <div class="text p-4">
               <h3><a href="#">PROSES
                 PEMBANGUNAN</a></h3>
-              <p class="location">Menyadari seni budaya yang makin lama
+              <p class="location" align="justify">Menyadari seni budaya yang makin lama
                 makin punah, warga mendirikan
                 Kampung Budaya Polowijen untuk melakukan
                 pelestarian budaya.</p>
