@@ -146,7 +146,7 @@
               <div class="text p-4">
                 <span class="days">30 Orang Selebihnya 30k/Orang</span>
                 <h3><a href="#">Paket Kunjungan</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="/sambang1" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@
               <div class="text p-4">
                 <span class="days">Perorang</span>
                 <h3><a href="#">Paket Edukasi</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="/sambang2" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@
               <div class="text p-4">
                 <span class="days">Perorang</span>
                 <h3><a href="#">Paket Makan Minum</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="sambang3" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@
               <div class="text p-4">
                 <span class="days">Perorang</span>
                 <h3><a href="#">Paket Privat Sinau Budaya</a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
+                <p><a href="sambang4" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>

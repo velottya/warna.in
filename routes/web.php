@@ -38,6 +38,18 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra12', function () {
         return view('home.sentra.sentra12');
     }); 
+    Route::get('/sambang1', function () {
+        return view('home.sentra.sambang1');
+    }); 
+    Route::get('/sambang2', function () {
+        return view('home.sentra.sambang2');
+    }); 
+    Route::get('/sambang3', function () {
+        return view('home.sentra.sambang3');
+    }); 
+    Route::get('/sambang4', function () {
+        return view('home.sentra.sambang4');
+    }); 
 });
 
 
