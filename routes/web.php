@@ -40,10 +40,7 @@ Route::group(['prefix' => ''], function () {
     }); 
 });
 
-Route::group(['prefix' => 'admin1'], function () {
-    Route::get('/', fn() => view('admin.index'))->name('admin');
-    Route::get('/artikel', fn() => view('admin.artikel'))->name('artikel');
-});
+
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');

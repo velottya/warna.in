@@ -53,7 +53,7 @@
                             <a href="#" class="nav link">
                             <img src="{{ asset('images/icon/cart.svg') }}" alt="" style="height: 20px; margin-right: 10px;" class="mt-4 ml-2"></a>
                         </li>
-                        <li class="nav-item scrollto"><a href="/logout" class="nav-link">Logout</a></li>
+                        <li class="nav-item scrollto"><a href="{{ url('logout') }}" class="nav-link">Logout</a></li>
                     @endif
 				</ul>
 			</div>
