@@ -23,11 +23,11 @@
         <div class="row">
         <div class="col-md-4 ftco-animate">
         <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/bm.jpg);">
+              <a href="#" class="img" style="background-image: url(images/sundari.jpg);">
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
-                <h3><a href="#">Batik Malang</a></h3>
+                <h3><a href="#">Batik Sundari</a></h3><br>
                 <span class="days">Kondisi : </span>Baru<br>
                 <span class="days">Min. pemesanan : </span>1 Buah<br>
                 <span class="days">Pre-Order 3 Hari</span><br>
@@ -125,7 +125,7 @@
                 <span class="price">Rp 175.000</span>
               </a>
               <div class="text p-4">
-                <h3><a href="#">Topeng Bapang</a></h3>
+                <h3><a href="#">Topeng Bapang</a></h3><br>
                 <span class="days">Kondisi : </span>Baru<br>
                 <span class="days">Min. pemesanan : </span>1 Buah<br>
                 <span class="days">Pre-Order 3 Hari</span><br>
@@ -148,7 +148,7 @@
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-        <div class="project-wrap hotel">
+          <div class="project-wrap hotel">
               <a href="#" class="img" style="background-image: url(images/eco.jpg);">
                 <span class="price">Rp 70.000</span>
               </a>
@@ -157,6 +157,20 @@
                 <span class="days">Kondisi : </span>Baru<br>
                 <span class="days">Min. pemesanan : </span>1 Buah<br>
                 <span class="days">Pre-Order 2 Hari</span><br>
+                <p><a href="#" class="btn btn-primary">Detail</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url('{{ asset('images/claket.jpg') }}');">
+                <span class="price">Rp 175.000</span>
+              </a>
+              <div class="text p-4">
+                <h3><a href="#">Batik Claket</a></h3>
+                <span class="days">Kondisi : </span>Baru<br>
+                <span class="days">Min. pemesanan : </span>1 Buah<br>
+                <span class="days">Pre-Order 3 Hari</span><br>
                 <p><a href="#" class="btn btn-primary">Detail</a></p>
               </div>
             </div>

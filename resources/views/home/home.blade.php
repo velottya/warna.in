@@ -11,7 +11,7 @@
                 <h1 class="mb-4">KAMPUNG BUDAYA POLOWIJEN</h1>
                 <p class="caps">Warisi Tradisi Lestarikan Budaya</p>
             </div>
-            <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+            <a href="https://www.youtube.com/embed/a263e7QfWc27THV2" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
                 <span class="fa fa-play"></span>
             </a>
         </div>
@@ -248,6 +248,7 @@
                             <span class="days">3 KEGIATAN</span>
                             <h3><a href="#">Kriya Topeng Malang</a></h3>
                             <p align="justify"><span></span> Pelajari seni pembuatan topeng tradisional dengan berbagai karakter dan makna yang unik.</p>
+                            <h3></h3><br><br>
                         </div>
                     </div>
                 </div>
@@ -260,7 +261,7 @@
                             <span class="days">5 KEGIATAN</span>
                             <h3><a href="#">Kriya Batik Malang</a></h3>
                             <p align="justify"><span></span>Ciptakan batik khas Polowijen dengan motif-motif tradisional yang sarat makna dan nilai budaya.</p>
-
+                            <h3></h3><br>
                         </div>
                     </div>
                 </div>
@@ -272,9 +273,9 @@
                         </a>
                         <div class="text p-4">
                             <span class="days">25 KEGIATAN</span>
-                            <h3><a href="#">Festival Kampung Budaya Polowijen</a></h3>
+                            <h3><a href="#">Festival Kampung Polowijen</a></h3>
                             <p align="justify"><span></span> Rasakan kemeriahan festival budaya tahunan yang menampilkan berbagai pertunjukan seni, kuliner, dan tradisi lokal.</p>
-                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
@@ -286,7 +287,8 @@
                             <span class="days">7 Kegiatan</span>
                             <h3><a href="#">Kothekan Musik Dolanan</a></h3>
                             <p align="justify"><span></span>Mainkan berbagai alat musik tradisional bersama para warga dan ciptakan kenangan yang tak terlupakan.</p>
-                            </div>
+                            <h3></h3><br>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
@@ -297,8 +299,8 @@
                         <div class="text p-4">
                             <span class="days">2 Kegiatan</span>
                             <h3><a href="#">Grebeg Suro</a></h3>
-                            <p align="justify"><span></span>Merayakan Tahun Baru Islam di Kampung Budaya Polowijen</p>
-                            </div>
+                            <p align="justify"><span></span>Grebeg Suro adalah salah satu tradisi yang dilakukan oleh masyarakat Jawa, terutama di kota Solo, dalam rangka perayaan Tahun Baru Islam atau Muharram. </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,7 +312,7 @@
         <div class="container py-md-5">
             <div class="row py-md-5">
                 <div class="col-md d-flex align-items-center justify-content-center">
-                    <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+                    <a href="https://www.youtube.com/embed/a263e7QfWc27THV2" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
                         <span class="fa fa-play"></span>
                     </a>
                 </div>
@@ -496,7 +498,7 @@
                             </div>
                             <h3 class="heading"><a href="#">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
                             <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                            <p><a href="/blog1" class="btn btn-primary">Read more</a></p>
                         </div>
                     </div>
                 </div>
@@ -517,7 +519,7 @@
                             <h3 class="heading"><a href="#">Pegiat Kampung Budaya Polowijen Bentuk Asosiasi Batik Malang
                             </a></h3>
                             <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="#" class="btn btn-primary">Read more</a></p>
+                            <p><a href="/blog2" class="btn btn-primary">Read more</a></p>
                         </div>
                     </div>
                 </div>
@@ -554,7 +556,7 @@
                         <div class="overlay"></div>
                         <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
                         <p>Warisi Tradisi Lestarikan Budaya</p>
-                        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+                        <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
                     </div>
                 </div>
             </div>
