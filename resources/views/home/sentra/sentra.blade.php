@@ -64,11 +64,11 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url('{{ asset('images/bm.jpg') }}');">
+              <a href="#" class="img" style="background-image: url('{{ asset('images/sundari.jpg') }}');">
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
-                <h3><a href="#">Batik Malang</a></h3>
+                <h3><a href="#">Batik Sundari</a></h3><br>
                 <span class="days">Kondisi : </span>Baru<br>
                 <span class="days">Min. pemesanan : </span>1 Buah<br>
                 <span class="days">Pre-Order 3 Hari</span><br>
@@ -105,6 +105,7 @@
               </div>
             </div>
           </div>
+          
         </div>
       </div>
       <p class="text-center"><a href="/sentra2" class="btn btn-primary">Selengkapnya</a></p>
@@ -118,7 +119,7 @@
               <div class="overlay"></div>
               <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
               <p>Warisi Tradisi Lestarikan Budaya</p>
-              <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+              <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
             </div>
           </div>
         </div>

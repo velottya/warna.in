@@ -31,7 +31,8 @@
          <span class="fa fa-phone"></span>
        </div>
        <h3 class="mb-2">Nomor Telepon</h3>
-       <p><a href="tel://1234567920">+62 815-5181-303</a></p>
+       <p>+62 815-5181-303</p>
+       <p><a href="tel://1234567920"></a></p>
      </div>
    </div>
    <div class="col-md-3 d-flex">
@@ -40,7 +41,7 @@
        <span class="fa fa-paper-plane"></span>
      </div>
      <h3 class="mb-2">Alamat Email</h3>
-     <p><a href="mailto:info@yoursite.com">kampungbudayapolowijen <br> @gmail.com</a></p>
+     <p>kampungbudaya polowijen@gmail.com</p>
    </div>
   </div>
   <div class="col-md-3 d-flex">
@@ -49,7 +50,7 @@
      <span class="fa fa-globe"></span>
    </div>
    <h3 class="mb-2">Website</h3>
-   <p><a href="#">authenticpolowijen.com</a></p>
+   <p>authenticpolowijen .com</p>
   </div>
   </div>
   </div>
@@ -95,7 +96,7 @@
        <div class="overlay"></div>
        <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
        <p>Warisi Tradisi Lestarikan Budaya</p>
-       <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3"  href="contact.html">Ask For A Quote</a></p>
+       <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3"  href="contact.html">Ask For A Quote</a></p>
      </div>
    </div>
   </div>

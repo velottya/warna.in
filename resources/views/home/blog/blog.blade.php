@@ -91,7 +91,7 @@
      </div>
    </div>
    <h3 class="heading"><a href="#">Profil tokoh budaya menjaga kearifan lokal di Kampung Polowijen sebagai pembawa tradisi</a></h3>
-   <p>Isa Wahyudi, Menghidupkan Kampung Budaya Polowijen</p>
+   <p>Isa Wahyudi, Menghidupkan Kampung Budaya Polowijen</p><br>
    <p><a href="#" class="btn btn-primary">Read more</a></p>
   </div>
   </div>

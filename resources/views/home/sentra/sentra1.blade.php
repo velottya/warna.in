@@ -71,7 +71,7 @@
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
-                <h3><a href="#">Sinau Seni Hasta Karya</a></h3>
+                <h3><a href="#">Sinau Seni Hasta Karya</a></h3><br>
                 <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
@@ -82,7 +82,7 @@
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
-                <h3><a href="#">Sinau Tari Topeng Malang</a></h3>
+                <h3><a href="#">Sinau Tari Topeng Malang</a></h3><br>
                 <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
@@ -104,7 +104,7 @@
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
-                <h3><a href="#">Sinau Ngambar Budaya</a></h3>
+                <h3><a href="#">Sinau Ngambar Budaya</a></h3><br>
                 <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
@@ -115,7 +115,7 @@
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
-                <h3><a href="#">Sinau Tari Dolanan Malang</a></h3>
+                <h3><a href="#">Sinau Tari Dolanan Malang</a></h3><br>
                 <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
               </div>
             </div>
@@ -200,7 +200,7 @@
               <div class="overlay"></div>
               <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
               <p>Warisi Tradisi Lestarikan Budaya</p>
-              <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+              <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
             </div>
           </div>
         </div>
