@@ -183,7 +183,7 @@ generasi penerusnya.</p>
             <div class="overlay"></div>
             <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
             <p>Warisi Tradisi Lestarikan Budaya</p>
-            <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+            <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
           </div>
         </div>
       </div>
