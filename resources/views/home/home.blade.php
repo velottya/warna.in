@@ -160,7 +160,7 @@
         </div>
         <div class="container container-2">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <div class="carousel-destination owl-carousel ftco-animate">
                         <div class="item">
                             <div class="project-destination">
