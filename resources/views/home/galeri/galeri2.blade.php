@@ -26,7 +26,7 @@
             <div class="text p-4">
 
               <h3><a href="#">PERGURUAN TINGGI KE KAMPUNG BUDAYA POLOWIJEN</a></h3>
-              <p class="location">Lebih dari 30 Perguruan tinggi berkunjung ke
+              <p class="location"align="justify">Lebih dari 30 Perguruan tinggi berkunjung ke
                 KBP dalam rangka penyelenggaraan belajar
                 budaya bagi mahasiswanya. </p>
             </div>
@@ -39,7 +39,7 @@
             </a>
             <div class="text p-4">
               <h3><a href="#">NEGARA YANG BEKUNJUNG KE KBP</a></h3>
-              <p class="location">Negara yang berkunjung
+              <p class="location" align="justify">Negara yang berkunjung
                 antara lain Thailand, Amerika, Papua Nugini,
                 Uzbekistan, Afganistan, Vietnam, Kamboja, Mesir, India, Korea Selatan, Ukraina, dll.</p>
             </div>
@@ -53,7 +53,7 @@
             <div class="text p-4">
 
               <h3><a href="#">PENITISAN, JAMASAN DAN RUWATAN TOPENG MALANG</a></h3>
-              <p class="location">Satu tradisi yang berkaitan topeng
+              <p class="location" align="justify">Satu tradisi yang berkaitan topeng
 yang secara turun- temurun di wariskan pada
 generasi penerusnya.</p>
             </div>
@@ -68,7 +68,7 @@ generasi penerusnya.</p>
             <div class="text p-4">
 
               <h3><a href="#">PERINGATAN HARI TARI SEDUNIA</a></h3>
-              <p class="location">
+              <p class="location" align="justify">
                 Peringatan Hari Tari Sedunia merupakan hari rayanya para penari yang jatuh pada tanggal 29 Mei. Semua penari bersuka cita merayakan
                 hari raya.
               </p>
@@ -83,7 +83,7 @@ generasi penerusnya.</p>
             <div class="text p-4">
 
               <h3><a href="#">GREBEG SURO</a></h3>
-              <p class="location">Kegiatan yang di selenggarakan
+              <p class="location" align="justify">Kegiatan yang di selenggarakan
                 sebagai bentuk peringatan Tahun Baru Islam.
                 Grebeg Suro di selenggarakan pada
                 tanggal 1-10 Muharram sebagai
@@ -100,7 +100,7 @@ generasi penerusnya.</p>
 
               <h3><a href="#">GEBYAK WAYANG
                 TOPENG POLOWIJEN</a></h3>
-              <p class="location">Pagelaran wayang topeng yang di
+              <p class="location" align="justify">Pagelaran wayang topeng yang di
                 selenggarakan oleh KBP bersama warga
                 LPMK Polowijen sebagai bagian rangkaian
                 Bersih Desa Polowijen.</p>
@@ -117,7 +117,7 @@ generasi penerusnya.</p>
 
               <h3><a href="#">PANAWIDJEN
                 DJAMAN BIJEN</a></h3>
-              <p class="location">Acara peringatan hari Jadi polowijen
+              <p class="location" align="justify">Acara peringatan hari Jadi polowijen
                 yang jatuh pada bulan November di
                 selenggarakan dengan konsep jaman biyen
                 atau tempo dulu.</p>
@@ -133,7 +133,7 @@ generasi penerusnya.</p>
 
               <h3><a href="#">FESTIVAL KAMPUNG
                 BUDAYA POLOWIJEN</a></h3>
-              <p class="location">Festival peringatah Hari Ulang Tahun
+              <p class="location" align="justify">Festival peringatah Hari Ulang Tahun
                 KBP yang di rayakan setahun sekali yang di
                 meriahkan dengan berbagai macam atraksi.</p>
 
@@ -148,7 +148,7 @@ generasi penerusnya.</p>
             <div class="text p-4">
               <h3><a href="#">PAMERAN DAN
                 EVENT</a></h3>
-              <p class="location">KBP selama ini aktif mengikuti
+              <p class="location" align="justify">KBP selama ini aktif mengikuti
                 pameran yang bertemakan investasi,
                 pariwisata dan perdagangan. Pameran yang
                 di selenggarakan oleh Disbudpra Kota Malang.</p>
