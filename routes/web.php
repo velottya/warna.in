@@ -9,7 +9,7 @@ use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
-use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\SentraController;
 
 Route::group(['prefix' => ''], function () {
     Route::get('/', fn () => view('home.home'))->name('home');
@@ -22,11 +22,6 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('/contact', fn () => view('home.contact'))->name('contact');
 
-    // Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
-    // Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
-    // Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
-    // Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
-    // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -48,13 +43,15 @@ Route::group(['prefix' => ''], function () {
     });
 });
 
-
+    // Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
+    // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('/galeri', [GaleriController::class, 'galeri'])->name('galeri');
-    Route::get('/galeri1', [GaleriController::class, 'galeri1'])->name('galeri1');
-    Route::get('/galeri2', [GaleriController::class, 'galeri2'])->name('galeri2');
-    Route::get('/galeri3', [GaleriController::class, 'galeri3'])->name('galeri3');
+
+    Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
+
+    Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+
 
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');
     Route::post('/regist', [UserRegisterController::class, 'register'])->name('register.process');
@@ -63,7 +60,7 @@ Route::middleware(['guest'])->group(function () {
 });
 Route::middleware(['auth', 'akses:user'])->group(function () {
     Route::group(['prefix' => 'user'], function () {
-        Route::get('/sentra',[PembelianController::class,'sentra'])->name('sentra');
+        Route::get('/sentra',[SentraController::class,'sentra'])->name('sentra');
         Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
         Route::get('/my-profile', [UserDataController::class, 'showUserData'])->name('profile.show');
         Route::get('/my-profile/edit', [UserDataController::class, 'editUserData'])->name('profile.edit')->middleware(['auth', 'akses:user']);

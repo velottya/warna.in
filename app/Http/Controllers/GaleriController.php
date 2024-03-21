@@ -7,10 +7,7 @@ use Illuminate\Http\Request;
 
 class GaleriController extends Controller
 {
-    public function galeri()
-    {
-        return view('home.galeri.galeri');
-    }
+
     public function galeri1()
     {
         return view('home.galeri.galeri1');
@@ -22,5 +19,17 @@ class GaleriController extends Controller
     public function galeri3()
     {
         return view('home.galeri.galeri3');
+    }
+    public function galeri($page = null)
+    {
+        if ($page == 1){
+            return view('home.galeri.galeri1');
+        } else if ($page == 2){
+            return view('home.galeri.galeri2');
+        } else if ($page == 3){
+            return view('home.galeri.galeri3');
+        } else {
+            return view('home.galeri.galeri');
+        }
     }
 }

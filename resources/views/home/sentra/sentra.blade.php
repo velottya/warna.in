@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_1.jpeg') }}');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/sentra/kegiatan/s1_1.jpeg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">13:00-15:00</span>
@@ -34,7 +34,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_2.jpeg') }}');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/sentra/kegiatan/s1_2.jpeg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">15:00-17:00</span>
@@ -45,7 +45,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/s1_3.jpg') }}');">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/sentra/kegiatan/s1_3.jpg') }}');">
               </a>
               <div class="text p-4">
                 <span class="days">19:00-21:00</span>
@@ -56,7 +56,12 @@
           </div>
         </div>
       </div>
-      <p class="text-center"><a href="/sentra1" class="btn btn-primary">Selengkapnya</a></p>
+      @guest
+        <p class="text-center"><a href="{{url ('/sentra/kegiatan')}}" class="btn btn-primary">Selengkapnya</a></p>
+      @endguest
+      @if (Auth::check() && Auth::user()->role == 'user')
+        <p class="text-center"><a href="{{url ('/user/sentra/kegiatan')}}" class="btn btn-primary">Selengkapnya</a></p>
+      @endif
     </section>
     <h1 class="mb-0 bread text-center font-weight-bold">PRODUK</h1>
     <section class="ftco-section">
@@ -108,7 +113,12 @@
           
         </div>
       </div>
-      <p class="text-center"><a href="/sentra2" class="btn btn-primary">Selengkapnya</a></p>
+      @guest
+        <p class="text-center"><a href="{{url ('/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
+      @endguest
+      @if (Auth::check() && Auth::user()->role == 'user')
+        <p class="text-center"><a href="{{url ('/user/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
+      @endif    
     </section>
 
     <section class="ftco-intro ftco-section ftco-no-pt">
