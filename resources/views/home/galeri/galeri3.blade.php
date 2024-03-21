@@ -168,12 +168,21 @@
       <div class="row mt-5">
         <div class="col text-center">
           <div class="block-27">
-            <ul>
-              <li><a href="/galeri3">&lt;</a></li>
-              <li><a href="/galeri">1</a></li>
-              <li><a href="/galeri3">2</a></li>
-              <li class="active"><span>3</span></li>
+          <ul>
+            @guest
+              <li><a href="#">&lt;</a></li>
+              <li><a href="{{url ('galeri')}}">1</a> </li>
+              <li><a href="{{url ('galeri/2')}}">2</a></li>
+              <li class="active"><a href="{{url ('galeri/3')}}">3</a></li>
               <li><a href="#">&gt;</a></li>
+            @endguest
+            @if (Auth::check() && Auth::user()->role == 'user')
+              <li><a href="#">&lt;</a></li>
+              <li><a href="{{url ('user/galeri')}}">1</a> </li>
+              <li><a href="{{url ('user/galeri/2')}}">2</a></li>
+              <li class="active"><a href="{{url ('user/galeri/3')}}">3</a></li>
+              <li><a href="#">&gt;</a></li>
+            @endif
             </ul>
           </div>
         </div>

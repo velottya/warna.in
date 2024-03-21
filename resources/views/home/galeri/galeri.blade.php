@@ -1,7 +1,7 @@
 @extends('layout.layout')
 @section('title', 'Asesmen')
 @section('content')
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/galeri-cover.jpg');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{asset('images/galeri-cover.jpg')}}');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/tembang-mocapat.png);">
+            <a href="#" class="img" style="background-image: url('{{asset ('images/tembang-mocapat.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -33,7 +33,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/budaya-tandur.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/budaya-tandur.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/hari-tari-sedunia.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/hari-tari-sedunia.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -60,7 +60,7 @@
 
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/temu-topeng.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/temu-topeng.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/perpustakaan.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/perpustakaan.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -87,7 +87,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri-foto.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri-foto.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -101,7 +101,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/duta-budaya.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/duta-budaya.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -114,7 +114,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/KriyaTopengMalang.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/KriyaTopengMalang.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -128,7 +128,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/gladi\ tari\ topeng.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/gladitaritopeng.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -144,11 +144,20 @@
         <div class="col text-center">
           <div class="block-27">
             <ul>
-              <li><a href="#">&lt;</a></li>
-              <li class="active"><span>1</span></li>
-              <li><a href="/galeri2">2</a></li>
-              <li><a href="/galeri3">3</a></li>
-              <li><a href="/galeri2">&gt;</a></li>
+              @guest
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><a href="{{url ('galeri')}}">1</a> </li>
+                <li><a href="{{url ('galeri/2')}}">2</a></li>
+                <li><a href="{{url ('galeri/3')}}">3</a></li>
+                <li><a href="#">&gt;</a></li>
+              @endguest
+              @if (Auth::check() && Auth::user()->role == 'user')
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><a href="{{url ('user/galeri')}}">1</a> </li>
+                <li><a href="{{url ('user/galeri/2')}}">2</a></li>
+                <li><a href="{{url ('user/galeri/3')}}">3</a></li>
+                <li><a href="#">&gt;</a></li>
+              @endif
             </ul>
           </div>
         </div>
@@ -162,7 +171,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
-          <div class="img" style="background-image: url(images/ask.jpg);">
+          <div class="img" style="background-image: url('{{asset('images/ask.jpg')}}');">
             <div class="overlay"></div>
             <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
             <p>Warisi Tradisi Lestarikan Budaya</p>
