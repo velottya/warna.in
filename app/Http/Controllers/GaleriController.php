@@ -18,4 +18,9 @@ class GaleriController extends Controller
             return view('home.galeri.galeri');
         }
     }
+
+    public function adminGaleri()
+    {
+        return view('admin.galeri');
+    }
 }

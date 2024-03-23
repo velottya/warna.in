@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\GaleriController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -21,7 +22,6 @@ Route::group(['prefix' => ''], function () {
 
 
     Route::get('/contact', fn () => view('home.contact'))->name('contact');
-
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -49,7 +49,6 @@ Route::group(['prefix' => ''], function () {
 Route::middleware(['guest'])->group(function () {
 
     Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
-
     Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
 
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');
@@ -59,7 +58,11 @@ Route::middleware(['guest'])->group(function () {
 });
 Route::middleware(['auth', 'akses:user'])->group(function () {
     Route::group(['prefix' => 'user'], function () {
-        Route::get('/sentra',[SentraController::class,'sentra'])->name('sentra');
+        Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
+        Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+        Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
+        Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
+        Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
         Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
         Route::get('/my-profile', [UserDataController::class, 'showUserData'])->name('profile.show');
         Route::get('/my-profile/edit', [UserDataController::class, 'editUserData'])->name('profile.edit')->middleware(['auth', 'akses:user']);
@@ -75,6 +78,11 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
+        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+        Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
+        Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
+
 
 
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);

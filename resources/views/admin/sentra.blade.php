@@ -1,10 +1,7 @@
 @extends('layout.sidebar')
+@section('sentra', 'active')
 @section('title', 'Admin | Sentra')
 @section('content')
-
-<!-- Layout container -->
-<div class="layout-page">
-
 
   <!-- Content wrapper -->
   <div class="content-wrapper">
@@ -299,5 +296,4 @@
       </div>
       <!--/ Basic Bootstrap Table -->
     </div>
-  </div>
 @endsection

@@ -1,4 +1,5 @@
 @extends('layout.sidebar')
+@section('notifikasi', 'active')
 @section('title', 'Admin | Galeri')
 @section('content')
 <!-- Content wrapper -->
