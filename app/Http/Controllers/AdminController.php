@@ -17,21 +17,9 @@ class AdminController extends Controller
         $showUser->onEachSide(1);
         return view('userprofile', ['showUser' => $showUser]);
     }
-<<<<<<< HEAD
-
-    public function tampilanAdmin()
-    {
-        return view('admin');
-    }
-
-    public function galeriAdmin()
-    {
-        return view('admin.galeri');
-=======
     public function dashboard()
     {
         return view('admin.index');
->>>>>>> 53f68cdeebca67d9cf5db542f4744a32da19146e
     }
 
 
