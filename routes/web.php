@@ -22,15 +22,6 @@ Route::group(['prefix' => ''], function () {
 
 
     Route::get('/contact', fn () => view('home.contact'))->name('contact');
-<<<<<<< HEAD
-
-    Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
-    Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
-    Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
-    Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
-    Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
-=======
->>>>>>> 53f68cdeebca67d9cf5db542f4744a32da19146e
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -50,12 +41,6 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sambang4', function () {
         return view('home.sentra.sambang4');
     });
-<<<<<<< HEAD
-    Route::get('/galeriadmin', function () {
-        return view('admin.galeri');
-    });
-=======
->>>>>>> 53f68cdeebca67d9cf5db542f4744a32da19146e
 });
 
     // Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
@@ -92,11 +77,6 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-<<<<<<< HEAD
-        Route::get("/admin", [AdminController::class, "tampilanAdmin"])->name('admin')->middleware(['auth', 'akses:admin']);
-        // Route::get("/galeriadmin", [AdminController::class, "galeriAdmin"])->name('galeriadmin')->middleware(['auth', 'akses:admin']);
-        Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
-=======
         Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
@@ -105,7 +85,6 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
 
 
 
->>>>>>> 53f68cdeebca67d9cf5db542f4744a32da19146e
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile/add-user", [AdminController::class, "showAddUser"])->name('admin.adduser')->middleware(['auth', 'akses:admin']);
