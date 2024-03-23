@@ -1,5 +1,5 @@
-@extends('admin.layout')
-@section('title', 'Admin | Booking - desa')
+@extends('layout.sidebar')
+@section('title', 'Admin | Booking Desa')
 @section('content')
 <!-- Layout container -->
 <div class="layout-page">

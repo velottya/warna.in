@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('layout.sidebar')
 @section('title', 'Admin | Artikel')
 @section('content')
 

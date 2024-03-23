@@ -59,7 +59,7 @@
                     @endif
                     
                     @if (Auth::check() && Auth::user()->role == 'admin')
-                    <li class="nav-item scrollto"><a href="{{ route('admin') }}" class="nav-link">Admin</a></li>
+                    <li class="nav-item scrollto"><a href="{{ route('dashboard') }}" class="nav-link">Admin</a></li>
                     @endif
                     </ul>
                 </div>

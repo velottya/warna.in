@@ -52,7 +52,6 @@ Route::middleware(['guest'])->group(function () {
 
     Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
 
-
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');
     Route::post('/regist', [UserRegisterController::class, 'register'])->name('register.process');
     Route::get('/login', [SesiController::class, 'index'])->name('login');
@@ -75,8 +74,9 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-        Route::get("/admin", [AdminController::class, "dashboard"])->name('dashboard')->middleware(['auth', 'akses:admin']);
-        Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
+        Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
+
+
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile/add-user", [AdminController::class, "showAddUser"])->name('admin.adduser')->middleware(['auth', 'akses:admin']);
