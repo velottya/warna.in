@@ -58,7 +58,7 @@
               <div class="dropdown-divider"></div>
             </li>
             <li>
-              <a class="dropdown-item" href="auth-login-basic.html">
+              <a class="dropdown-item" a href="{{ url('logout') }}">
                 <i class="bx bx-power-off me-2"></i>
                 <span class="align-middle">Log Out</span>
               </a>
@@ -115,7 +115,7 @@
                         <div> <span class="badge bg-label-success me-1">Success</span> </div>
                       </div>
                     </a>
-                  </div>  
+                  </div>
                 </li>
                 <li class="d-flex mb-4 pb-1">
                   <div class="list-group list-group-flush w-100">
@@ -131,8 +131,8 @@
                         <div> <span class="badge bg-label-success me-1">Success</span> </div>
                       </div>
                     </a>
-                  </div>  
-                </li>                        
+                  </div>
+                </li>
                 <li class="d-flex mb-4 pb-1">
                   <div class="list-group list-group-flush w-100">
                     <a href="javascript:void(0);" class="list-group-item list-group-item-action">
@@ -147,7 +147,7 @@
                         <div> <span class="badge bg-label-success me-1">Success</span> </div>
                       </div>
                     </a>
-                  </div>  
+                  </div>
                 </li>
               </ul>
             </div>
@@ -263,7 +263,7 @@
                   </div>
                   <span class="fw-semibold d-block mb-1">Stok Produk</span>
                   <!-- dibuat jumlah dari stok produk(nyambung ke bgian stok) -->
-                  <h3 class="card-title mb-2">63</h3> 
+                  <h3 class="card-title mb-2">63</h3>
                 </div>
               </div>
             </div>
@@ -372,4 +372,4 @@
       </div>
     </div>
     <!-- / Content -->
-@endsection 
+@endsection

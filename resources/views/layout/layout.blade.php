@@ -100,7 +100,8 @@
                             <li><a href="#" class="py-2 d-block">Paket Kegiatan</a></li>
                             <li><a href="#" class="py-2 d-block">Galeri dan Video</a></li>
                             <li><a href="#" class="py-2 d-block">Berita</a></li>
-                            <li><a href="#" class="py-2 d-block">Produk</a></li>                        </ul>
+                            <li><a href="#" class="py-2 d-block">Produk</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md pt-5 border-left">

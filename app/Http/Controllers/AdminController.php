@@ -17,17 +17,22 @@ class AdminController extends Controller
         $showUser->onEachSide(1);
         return view('userprofile', ['showUser' => $showUser]);
     }
+
     public function tampilanAdmin()
     {
-
         return view('admin');
+    }
 
+    public function galeriAdmin()
+    {
+        return view('admin.galeri');
     }
 
     public function showAddUser()
     {
         return view('adduser');
     }
+
     public function addUser(Request $request)
     {
         $this->validate($request, [

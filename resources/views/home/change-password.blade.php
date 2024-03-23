@@ -1,11 +1,10 @@
 @extends('layout.layout')
 @section('title', 'Change Password')
 @section('content')
-    <br><br>
     <div class="container mt-5 pt-5 mb-5" data-aos="fade-up">
         <div class="card border-0 shadow">
-            <div class="card-header bg-danger">
-                <h4 class="card-title text-white text-center mt-2">Change Password Form</h4>
+            <div class="card-header bg-primary">
+                <h4 class="card-title text-white text-center mt-2">Change Your Password</h4>
             </div>
             <div class="card-content">
                 <div class="card-body">
@@ -67,9 +66,9 @@
                         </div>
                         <div class="col col-12">
                             <div class="mt-4 mb-3 text-center">
-                                <button class="btn btn-outline-danger" name="submit" type="submit">Change
+                                <button class="btn btn-primary py-3 px-4" name="submit" type="submit">Change
                                     Password</button>
-                                <a href="{{ route('profile.edit') }}" class="btn btn-outline-dark">Back</a>
+                                <a href="{{ route('profile.edit') }}" class="btn btn-primary py-3 px-4">Back</a>
                             </div>
                         </div>
                     </form>
