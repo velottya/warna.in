@@ -1,6 +1,8 @@
-@extends('admin.layout')
+@extends('layout.sidebar')
+@section('dashboard', 'active')
 @section('title', 'Admin | Dashboard')
 @section('content')
+<<<<<<< HEAD
  <!-- Layout container -->
  <div class="layout-page">
   <!-- Navbar -->
@@ -71,11 +73,12 @@
   </nav>
 
   <!-- / Navbar -->
+=======
+>>>>>>> 53f68cdeebca67d9cf5db542f4744a32da19146e
 
   <!-- Content wrapper -->
   <div class="content-wrapper">
     <!-- Content -->
-
     <div class="container-xxl flex-grow-1 container-p-y">
       <div class="row">
         <!-- Transactions -->

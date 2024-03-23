@@ -113,7 +113,8 @@
                                     </li>
                                 </ul>
                                 <div class="text-center">
-                                    <a href="#" class="btn btn-first " 
+                                    <!-- INI BELOM FIKS -->
+                                    <a href="{{route('sentra.bayar', ['page' => $page, 'productName' => $productName])}}" class="btn btn-first " 
                                     style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;" >
                                     Payment Form</a>
                                 </div>
