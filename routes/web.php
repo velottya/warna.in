@@ -34,12 +34,13 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sambang4', function () {
         return view('home.sentra.sambang4');
     });
+    // Route::get('/', fn() => view('home.home'))->name('home');
 });
 
-    // Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
     // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
 Route::middleware(['guest'])->group(function () {
+    Route::get('/', [ViewController::class, 'home'])->name('home');
     Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
     Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
     Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
@@ -50,16 +51,22 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/login', [SesiController::class, 'index'])->name('login');
     Route::post('/login', [SesiController::class, 'login']);
 });
+
 Route::middleware(['auth', 'akses:user'])->group(function () {
     Route::group(['prefix' => 'user'], function () {
+        Route::get('/', [ViewController::class, 'home'])->name ('home');
+
         Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
+
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
         Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
         Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
         Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
+        
         Route::get('/about', [ViewController::class, 'about'])->name('about');
-        Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
+        Route::get('/contact', [UserDataController::class, 'contact'])->name('contact');
+        // Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
 
         Route::get('/my-profile', [UserDataController::class, 'showUserData'])->name('profile.show');
         Route::get('/my-profile/edit', [UserDataController::class, 'editUserData'])->name('profile.edit')->middleware(['auth', 'akses:user']);

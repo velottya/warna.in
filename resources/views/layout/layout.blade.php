@@ -43,13 +43,13 @@
                     @endguest
 
                     @if (Auth::check() && Auth::user()->role == 'user')
-                    <li class="nav-item scrollto @yield('home')"> <a href="{{ url('') }}" class="nav-link">Home</a></li>
+                    <li class="nav-item scrollto @yield('home')"> <a href="{{ url('user') }}" class="nav-link">Home</a></li>
 					<li class="nav-item scrollto @yield('about')"> <a href="{{ url('user/about') }}" class="nav-link">About</a></li>
 					<li class="nav-item scrollto @yield('sentra')"> <a href="{{ url('user/sentra') }}" class="nav-link">Sentra</a></li>
 					<li class="nav-item scrollto @yield('galeri')"><a href="{{ url('user/galeri') }}" class="nav-link">Galeri</a></li>
 					<li class="nav-item scrollto @yield('blog')"><a href="{{ url('user/blog') }}" class="nav-link">Blog</a></li>
 					<li class="nav-item scrollto @yield('contact')"><a href="{{ url('user/contact') }}" class="nav-link">Contact</a></li>
-                    <li class="nav-item scrollto {{ Request()->is('profiluser') ? 'active' : '' }}"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
+                    <li class="nav-item scrollto @yield('profile')"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
                     <li class="nav-item scrollto">
                         <a href="#" class="nav link">
                             <img src="{{ asset('images/icon/cart.svg') }}" alt="Cart" style="height: 30px; margin-right: 10px; margin-top: 17px;" class="ml-2">
