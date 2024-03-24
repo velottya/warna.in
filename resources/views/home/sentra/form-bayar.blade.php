@@ -1,5 +1,6 @@
 @extends('layout.layout')
-@section('title', 'Checkout')
+@section('sentra', 'active')
+@section('title', 'Form Pembayaran')
 @section('content')
 
 <section class="main-content" style=" position: absolute; z-index: 1; padding-left: 150px; padding-top: 80px; padding-bottom: 17px; display: flex; flex-direction: column; min-height: 100vh;">

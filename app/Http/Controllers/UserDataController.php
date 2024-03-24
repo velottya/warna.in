@@ -25,8 +25,6 @@ class UserDataController extends Controller
             'subject' => $request->subject,
             'message' => $request->message,
         ];
-
-
         return redirect()->route('home');
     }
     public function showUserData()

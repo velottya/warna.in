@@ -1,4 +1,5 @@
 @extends('layout.layout')
+@section('home', 'active')
 @section('title', 'Home | Authentic Polowijen')
 @section('content')
 

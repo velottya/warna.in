@@ -1,5 +1,6 @@
 @extends('layout.layout')
-@section('title', 'Detail Product')
+@section('sentra', 'active')
+@section('title', 'Sentra')
 @section('content')
 
 <section class="hero-wrap hero-wrap-2 js-fullheight"

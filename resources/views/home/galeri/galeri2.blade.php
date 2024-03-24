@@ -1,6 +1,8 @@
 @extends('layout.layout')
-@section('title', 'Asesmen')
+@section('galeri', 'active')
+@section('title', 'Galeri')
 @section('content')
+
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{asset('images/galeri-cover.jpg')}}');">
     <div class="overlay"></div>
     <div class="container">

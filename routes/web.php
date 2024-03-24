@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChangePasswordController;
@@ -13,15 +15,6 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\SentraController;
 
 Route::group(['prefix' => ''], function () {
-    Route::get('/', fn () => view('home.home'))->name('home');
-    Route::get('/about', fn () => view('home.about'))->name('about');
-
-    Route::get('/blog', fn () => view('home.blog.blog'))->name('blog');
-    Route::get('/blog1', fn () => view('home.blog.blog1'))->name('blog1');
-    Route::get('/blog2', fn () => view('home.blog.blog2'))->name('blog2');
-
-
-    Route::get('/contact', fn () => view('home.contact'))->name('contact');
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -47,9 +40,10 @@ Route::group(['prefix' => ''], function () {
     // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
 Route::middleware(['guest'])->group(function () {
-
+    Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
     Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
     Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+    Route::get('/about', [ViewController::class, 'about'])->name('about');
 
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');
     Route::post('/regist', [UserRegisterController::class, 'register'])->name('register.process');
@@ -58,12 +52,15 @@ Route::middleware(['guest'])->group(function () {
 });
 Route::middleware(['auth', 'akses:user'])->group(function () {
     Route::group(['prefix' => 'user'], function () {
+        Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
         Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
         Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
         Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
+        Route::get('/about', [ViewController::class, 'about'])->name('about');
         Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
+
         Route::get('/my-profile', [UserDataController::class, 'showUserData'])->name('profile.show');
         Route::get('/my-profile/edit', [UserDataController::class, 'editUserData'])->name('profile.edit')->middleware(['auth', 'akses:user']);
         Route::patch('/my-profile/edit', [UserDataController::class, 'update'])->name('profile.update')->middleware(['auth', 'akses:user']);

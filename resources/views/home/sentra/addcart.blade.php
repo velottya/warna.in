@@ -1,4 +1,5 @@
 @extends('layout.layout')
+@section('sentra', 'active')
 @section('title', 'My Cart')
 @section('content')
 

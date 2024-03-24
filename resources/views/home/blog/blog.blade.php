@@ -1,12 +1,14 @@
 @extends('layout.layout')
-@section('title', 'Asesmen')
+@section('blog', 'active')
+@section('title', 'Blog')
 @section('content')
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/sentratop.png');">
+
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{asset('images/sentratop.png')}}');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
         <div class="col-md-9 ftco-animate pb-5 text-center">
-         <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
+         <p class="breadcrumbs"><span class="mr-2"><a href="{{url('')}}">Home <i class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
          <h1 class="mb-0 bread">Blog</h1>
        </div>
      </div>
@@ -16,26 +18,40 @@
   <section class="ftco-section">
     <div class="container">
       <div class="row d-flex">
+
+      <!-- 1 Blog -->
         <div class="col-md-4 d-flex ftco-animate">
-         <div class="blog-entry justify-content-end">
-          <a href="blog-single.html" class="block-20" style="background-image: url('images/image3.png');">
-          </a>
-          <div class="text">
-           <div class="d-flex align-items-center mb-4 topp">
-            <div class="one">
-             <span class="day">2</span>
-           </div>
-           <div class="two">
-             <span class="yr">2024</span>
-             <span class="mos">Februari</span>
-           </div>
-         </div>
-         <h3 class="heading"><a href="#">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
-         <p>Virus tari Topeng Malang harus terus menerus ditularkan agar tujuan membangun kesadaran... </p>
-         <p><a href="/blog1" class="btn btn-primary">Read more</a></p>
-       </div>
-     </div>
-   </div>
+          <div class="blog-entry justify-content-end">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image3.png')}}');">
+            </a>
+            <div class="text">
+              <div class="d-flex align-items-center mb-4 topp">
+                <div class="one">
+                  <span class="day">2</span>
+                </div>
+                <div class="two">
+                  <span class="yr">2024</span>
+                  <span class="mos">Februari</span>
+                </div>
+              </div>
+              @if (Auth::check() && Auth::user()->role == 'user')
+              <h3 class="heading"><a href="{{url('user/blog/1')}}">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
+              @endif
+              @guest
+              <h3 class="heading"><a href="{{url('user/blog/1')}}">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
+              @endguest
+              <p>Virus tari Topeng Malang harus terus menerus ditularkan agar tujuan membangun kesadaran... </p>
+              @if (Auth::check() && Auth::user()->role == 'user')
+              <p><a href="{{url('user/blog/1')}}" class="btn btn-primary">Read more</a></p>
+              @endif
+              @guest
+              <p><a href="{{url('blog/1')}}" class="btn btn-primary">Read more</a></p>
+              @endguest
+            </div>
+          </div>
+        </div>
+      <!-- End 1 Blog -->
+
    <div class="col-md-4 d-flex ftco-animate">
      <div class="blog-entry justify-content-end">
       <a href="blog-single.html" class="block-20" style="background-image: url('images/image6.png');">
@@ -141,13 +157,20 @@
     <div class="col text-center">
       <div class="block-27">
         <ul>
-          <li><a href="#">&lt;</a></li>
-          <li class="active"><span>1</span></li>
-          <li><a href="#">2</a></li>
-          {{-- <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li> --}}
-          <li><a href="#">&gt;</a></li>
+          @guest
+            <li><a href="#">&lt;</a></li>
+            <li class="active"><a href="{{url ('blog')}}">1</a> </li>
+            <li><a href="#">2</a></li>
+            <!-- <li><a href="{{url ('blog/2')}}">3</a></li> -->
+            <li><a href="#">&gt;</a></li>
+          @endguest
+          @if (Auth::check() && Auth::user()->role == 'user')
+            <li><a href="#">&lt;</a></li>
+            <li class="active"><a href="{{url ('user/blog')}}">1</a> </li>
+            <li><a href="#">2</a></li>
+            <!-- <li><a href="{{url ('user/blog/2')}}">3</a></li> -->
+            <li><a href="#">&gt;</a></li>
+          @endif
         </ul>
       </div>
     </div>

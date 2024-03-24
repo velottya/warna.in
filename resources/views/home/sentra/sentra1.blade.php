@@ -1,4 +1,5 @@
 @extends('layout.layout')
+@section('sentra', 'active')
 @section('title', 'Sentra')
 @section('content')
 <body>
