@@ -1,6 +1,7 @@
 @extends('layout.layout')
 @section('title', 'Change Password')
 @section('content')
+
     <br><br>
     <div class="container mt-5 pt-5 mb-5" data-aos="fade-up">
         <div class="card border-0 shadow">

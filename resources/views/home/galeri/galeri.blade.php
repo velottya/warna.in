@@ -1,13 +1,15 @@
 @extends('layout.layout')
-@section('title', 'Asesmen')
+@section('galeri', 'active')
+@section('title', 'Galeri')
 @section('content')
+
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{asset('images/galeri-cover.jpg')}}');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
         <div class="col-md-9 ftco-animate pb-5 text-center">
-          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                  class="fa fa-chevron-right"></i></a></span> <span>Galeri <i class="fa fa-chevron-right"></i></span>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home 
+            <i class="fa fa-chevron-right"></i></a></span> <span>Galeri <i class="fa fa-chevron-right"></i></span>
           </p>
           <h1 class="mb-0 bread">Galeri</h1>
         </div>

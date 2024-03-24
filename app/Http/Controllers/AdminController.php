@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
-
     public function showUser()
     {
         $showUser = User::where('role', 'user')->paginate(15);
@@ -21,7 +20,6 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
-
 
 
     public function showAddUser()

@@ -1,7 +1,7 @@
 @extends('layout.layout')
+@section('sentra', 'active')
 @section('title', 'Sentra')
 @section('content')
-<body>
 
   <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{ asset('images/headerr.jpg') }}');">
       <div class="overlay"></div>

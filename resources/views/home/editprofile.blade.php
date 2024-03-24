@@ -1,6 +1,7 @@
 @extends('layout.layout')
 @section('title', 'Edit User Profile')
 @section('content')
+
     <br><br>
     <div class="container rounded bg-white mt-5 mb-5 pt-5" data-aos="fade-up">
         <div class="card border-0 shadow">
