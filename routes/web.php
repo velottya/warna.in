@@ -63,7 +63,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
         Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
         Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
-        
+
         Route::get('/about', [ViewController::class, 'about'])->name('about');
         Route::get('/contact', [UserDataController::class, 'contact'])->name('contact');
         // Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');

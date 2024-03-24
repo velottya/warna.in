@@ -35,7 +35,7 @@ class SesiController extends Controller
             if (Auth::user()->role == 'admin') {
                 return redirect()->route('dashboard');
             } else if (Auth::user()->role == 'user') {
-                    return redirect()->route('sentra');
+                    return redirect()->route('home');
             }
         } else {
             return redirect('/login')->with('error', 'Username or Password not Registered')->withInput();
