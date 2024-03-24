@@ -58,6 +58,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
 
         Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
+        // Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
 
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
         Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');

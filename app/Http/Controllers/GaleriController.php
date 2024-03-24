@@ -8,6 +8,10 @@ use App\Models\Galeri;
 class GaleriController extends Controller
 {
 
+
+
+
+
     public function galeri($page = null)
     {
         if ($page == 2){
@@ -19,10 +23,17 @@ class GaleriController extends Controller
         }
     }
 
+    // public function adminGaleri()
+    // {
+    //     return view('admin.galeri');
+    // }
+
     public function adminGaleri()
-    {
-        return view('admin.galeri');
-    }
+{
+    $galeri = Galeri::all(); // Mengambil semua data galeri dari database
+
+    return view('admin.galeri', compact('galeri')); // Mengirim data galeri ke tampilan 'admin.galeri'
+}
 
     public function tambahGaleri(Request $request)
     {
