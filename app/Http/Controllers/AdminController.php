@@ -26,6 +26,7 @@ class AdminController extends Controller
     {
         return view('adduser');
     }
+
     public function addUser(Request $request)
     {
         $this->validate($request, [
