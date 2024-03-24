@@ -80,6 +80,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
+        Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
         Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 

@@ -2,7 +2,7 @@
 @section('galeri', 'active')
 @section('title', 'Admin | Galeri')
 @section('content')
-  
+
    <!-- Content wrapper -->
     <div class="content-wrapper">
       <!-- Content -->
@@ -21,48 +21,43 @@
           <!-- Modal -->
           <div class="modal fade" id="tambahGaleri" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel1">Tambah Galeri</h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="mb-3">
-                      <label for="formFile" class="form-label">Pilih Gambar</label>
-                      <input class="form-control" type="file" id="formFile" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col mb-3">
-                      <label for="nameBasic" class="form-label">Judul</label>
-                      <input type="text" id="nameBasic" class="form-control" placeholder="Tambahkan Judul" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col mb-3">
-                      <label for="nameBasic" class="form-label">Deskripsi Galeri</label>
-                      <input type="text" id="nameBasic" class="form-control" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
-                    </div>
-                  </div>
-                  <div class="row g-2">
-                    <div class="col-6 mb-0">
-                      <label for="dobBasic" class="form-label">Time Stamp</label>
-                      <input type="text" id="dobBasic" class="form-control" placeholder="12 / 02 / 2024" />
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <div class="modal-content">
+                    <form action="{{ route('galeri.tambah') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Tambah Galeri</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Pilih Gambar</label>
+                                    <input class="form-control" type="file" id="formFile" name="gambar" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="nameBasic" class="form-label">Judul</label>
+                                    <input type="text" id="nameBasic" class="form-control" name="judul" placeholder="Tambahkan Judul" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="nameBasic" class="form-label">Deskripsi Galeri</label>
+                                    <input type="text" id="nameBasic" class="form-control" name="deskripsi" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-6 mb-0">
+                                    <label for="dobBasic" class="form-label">Time Stamp</label>
+                                    <input type="text" id="dobBasic" class="form-control" name="timestamp" placeholder="12 / 02 / 2024" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
               </div>
             </div>
           </div>
@@ -175,7 +170,7 @@
                           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                             Close
                           </button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                       </div>
                     </div>
@@ -196,7 +191,7 @@
                     </ul>
                   </td>
                   <td>
-                    <i class="fab fa-angular fa-lg text-danger"></i> 
+                    <i class="fab fa-angular fa-lg text-danger"></i>
                     <strong class="truncate-text">BUDAYA TANDUR ...</strong>
                   </td>
                   <!-- Benahi lagi agar bisa fungsi buat cut judul jadi 2 kata saja -->
@@ -241,7 +236,7 @@
                     </ul>
                   </td>
                   <td>
-                    <i class="fab fa-angular fa-lg text-danger"></i> 
+                    <i class="fab fa-angular fa-lg text-danger"></i>
                     <strong class="truncate-text">SINAU TEMBANG ...</strong>
                   </td>
                   <!-- Benahi lagi agar bisa fungsi buat cut judul jadi 2 kata saja -->
@@ -286,7 +281,7 @@
                     </ul>
                   </td>
                   <td>
-                    <i class="fab fa-angular fa-lg text-danger"></i> 
+                    <i class="fab fa-angular fa-lg text-danger"></i>
                     <strong class="truncate-text">BUDAYA TANDUR ...</strong>
                   </td>
                   <!-- Benahi lagi agar bisa fungsi buat cut judul jadi 2 kata saja -->

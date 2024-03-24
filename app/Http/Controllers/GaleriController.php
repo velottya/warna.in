@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
 use Illuminate\Http\Request;
+use App\Models\Galeri;
+
 
 class GaleriController extends Controller
 {
@@ -22,5 +22,30 @@ class GaleriController extends Controller
     public function adminGaleri()
     {
         return view('admin.galeri');
+    }
+
+    public function tambahGaleri(Request $request)
+    {
+        // Validasi input
+        $request->validate([
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'timestamp' => 'required|string',
+        ]);
+
+        // Simpan gambar ke direktori tertentu
+        $imageName = time().'.'.$request->gambar->extension();
+        $request->gambar->move(public_path('images'), $imageName);
+
+        // Simpan data ke database
+        Galeri::create([
+            'gambar' => $imageName,
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'timestamps' => $request->timestamp,
+        ]);
+
+        return redirect()->back()->with('success','Galeri berhasil ditambahkan.');
     }
 }
