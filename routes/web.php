@@ -91,10 +91,11 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
-        // Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
-        // Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.destroy');
-        // Route::delete('admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.destroy');
-
+        // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
+        Route::delete('/admin/galeri/delete/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.delete');
+        // Rute untuk menampilkan halaman edit
+        Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
+        Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
 
 
 

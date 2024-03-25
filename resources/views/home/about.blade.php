@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-5 d-flex align-self-stretch ftco-animate">
-            <div class="services services-1 d-block img" style="background-image: url(asset{{('images/Services-4.png')}});">
+            <div class="services services-1 d-block img" style="background-image: url({{asset('images/galeri2-5.png')}});">
               <div class="media-body">
                 <h3 class="heading mb-3" style="visibility: hidden;">Blog</h3>
                 <p style="visibility: hidden;">A small river named Duden flows by their place and supplies it with the necessary</p>
