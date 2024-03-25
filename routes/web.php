@@ -60,6 +60,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
         // Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
 
+
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
         Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
         Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
@@ -88,6 +89,11 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
         Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
+        Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
+        // Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('galeri.destroy');
+        // Route::delete('/admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.destroy');
+        // Route::delete('admin/galeri/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.destroy');
+
 
 
 
