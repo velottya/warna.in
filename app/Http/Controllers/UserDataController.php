@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Mail;
 
 class UserDataController extends Controller
 {
+    // Sementara
+    public function contactView()
+    {
+        return view("home.contact");
+    }
     public function contact(Request $request)
     {
         $request->validate([

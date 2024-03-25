@@ -45,6 +45,7 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
     Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
     Route::get('/about', [ViewController::class, 'about'])->name('about');
+    Route::get('/contact', [UserDataController::class, 'contactView'])->name('contact');
 
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');
     Route::post('/regist', [UserRegisterController::class, 'register'])->name('register.process');
@@ -67,7 +68,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
 
         Route::get('/about', [ViewController::class, 'about'])->name('about');
-        Route::get('/contact', [UserDataController::class, 'contact'])->name('contact');
+        Route::get('/contact', [UserDataController::class, 'contactView'])->name('contact'); //sementara
         // Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
 
         Route::get('/my-profile', [UserDataController::class, 'showUserData'])->name('profile.show');
