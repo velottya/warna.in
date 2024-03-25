@@ -22,11 +22,11 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('/contact', fn () => view('home.contact'))->name('contact');
 
-    // Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
-    // Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
-    // Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
-    // Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
-    // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
+    Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
+    Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
+    Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
+    Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
+    Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -46,6 +46,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sambang4', function () {
         return view('home.sentra.sambang4');
     });
+   
 });
 
 

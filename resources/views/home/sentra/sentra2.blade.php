@@ -31,7 +31,7 @@
                 <span class="days">Kondisi : </span>Baru<br>
                 <span class="days">Min. pemesanan : </span>1 Buah<br>
                 <span class="days">Pre-Order 3 Hari</span><br>
-                <p><a href="#" class="btn btn-primary">Detail</a></p>
+                <p><a href="/single" class="btn btn-primary">Detail</a></p>
               </div>
             </div>
           </div>

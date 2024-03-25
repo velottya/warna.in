@@ -21,13 +21,15 @@
 
 	<link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+   
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">Authentic Polowijen<span></span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
+				<szpan class="oi oi-menu"></span> Menu
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
@@ -116,7 +118,8 @@
                             <ul>
                                 <li><span class="icon fa fa-map-marker"></span><span class="text">Jl. Cakalang, RT.3/RW.2, Polowijen, Kec. Blimbing, Kota Malang, Jawa Timur</span></li>
                                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+62 815-5181-303</span></a></li>
-                                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">kampungbudayapolowijen@gmail.com</span></a></li>
+                                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">kampungbudayapolowijen
+                                    @gmail.com</span></a></li>
                             </ul>
                         </div>
                     </div>
