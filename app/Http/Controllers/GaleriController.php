@@ -3,16 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Galeri;
+
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
 
 class GaleriController extends Controller
 {
-
-
-
-
 
     public function galeri($page = null)
     {
@@ -116,5 +113,21 @@ class GaleriController extends Controller
 
         // Redirect atau berikan respons sesuai kebutuhan
         return redirect()->back()->with('success', 'Data galeri berhasil diperbarui');
+    }
+
+    public function user($page = null)
+    {
+        // $galeri = Galeri::all(); // Mengambil semua data galeri dari database
+        $perPage = 9; // Jumlah galeri per halaman
+
+        $galeri = Galeri::paginate($perPage);
+
+        if ($page == 2) {
+            return view('home.galeri.galeri2', compact('galeri'));
+        } elseif ($page == 3) {
+            return view('home.galeri.galeri3', compact('galeri'));
+        } else {
+            return view('home.galeri.galeri', compact('galeri'));
+        }
     }
 }

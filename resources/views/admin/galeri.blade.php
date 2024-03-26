@@ -31,28 +31,22 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="mb-3">
-                                    <label for="formFile" class="form-label">Pilih Gambar</label>
-                                    <input class="form-control" type="file" id="formFile"/>
+                                    <label for="gambar" class="form-label">Pilih Gambar</label>
+                                    <input class="form-control" type="file" id="gambar" name="gambar"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label for="nameBasic" class="form-label">Judul</label>
-                                    <input type="text" id="nameBasic" class="form-control" name="judul" placeholder="Tambahkan Judul" />
+                                    <label for="judul" class="form-label">Judul</label>
+                                    <input type="text" id="judul" class="form-control" name="judul" placeholder="Tambahkan Judul" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label for="nameBasic" class="form-label">Deskripsi Galeri</label>
-                                    <input type="text" id="nameBasic" class="form-control" name="deskripsi" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
+                                    <label for="deskripsi" class="form-label">Deskripsi Galeri</label>
+                                    <input type="text" id="deskripsi" class="form-control" name="deskripsi" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
                                 </div>
                             </div>
-                            {{-- <div class="row g-2">
-                                <div class="col-6 mb-0">
-                                    <label for="dobBasic" class="form-label">Time Stamp</label>
-                                    <input type="text" id="dobBasic" class="form-control" name="timestamp" placeholder="12 / 02 / 2024" />
-                                </div>
-                            </div> --}}
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
@@ -73,6 +67,7 @@
                 </tr>
               </thead>
               <tbody class="table-border-bottom-0">
+
                 <!-- Baris Isi Galeri -->
                 @foreach($galeri as $item)
                 <tr>
@@ -124,8 +119,8 @@
                       </div>
                     </td>
                     @endforeach
-            @foreach($galeri as $item)
 
+            @foreach($galeri as $item)
             <!-- Modal Preview-->
               <div class="modal fade" id="previewGaleri{{ $item->id }}" tabindex="-1" aria-hidden="true" aria-labelledby="modalGambarLabel{{ $item->id }}">
                 <div class="modal-dialog modal-dialog-centered modal-sm">

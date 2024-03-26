@@ -60,6 +60,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
         // Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
+        Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
 
 
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
@@ -88,6 +89,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
+        
         Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
@@ -96,6 +98,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         // Rute untuk menampilkan halaman edit
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
+
 
 
 
