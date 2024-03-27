@@ -1,5 +1,6 @@
 @extends('layout.layout')
-@section('title', 'My Chart')
+@section('sentra', 'active')
+@section('title', 'My Cart')
 @section('content')
 
 <div class="content-wrapper">
@@ -29,7 +30,6 @@
                                                                 </a>
                                                                 <span>
                                                                     <small>IDR 120.000</small>
-                                                                    <!-- <small class="text-muted text-decoration-line-through">product_price_label</small> -->
                                                                 </span>
                                                                 <div class="mt-2 small lh-1">
                                                                     <a href="cart_delete_link" onclick="return confirm('Are you sure to delete?')" class="text-decoration-none text-inherit">
@@ -61,7 +61,6 @@
                                                                 </a>
                                                                 <span>
                                                                     <small>IDR 120.000</small>
-                                                                    <!-- <small class="text-muted text-decoration-line-through">product_price_label</small> -->
                                                                 </span>
                                                                 <div class="mt-2 small lh-1">
                                                                     <a href="cart_delete_link" onclick="return confirm('Are you sure to delete?')" class="text-decoration-none text-inherit">
@@ -82,26 +81,16 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <!-- Here, you need to repeat the above list item structure for each item -->
                                         </ul>
                                         <div class="d-flex justify-content-between mt-4">
                                             <a href="products_index_link" class="btn btn-first" 
-                                            style="background-color: #F15D30; 
-                                            color: white; 
-                                            padding: 10px 20px; 
-                                            border-radius: 5px; 
-                                            text-decoration: none;">
+                                            style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
                                             Continue Shopping</a>
                                             <button type="submit" class="btn btn-second" 
-                                            style="background-color: transparent; 
-                                            color: #F15D30; 
-                                            border: 2px solid #F15D30; 
-                                            padding: 10px 20px; 
-                                            border-radius: 5px;">
+                                            style="background-color: transparent;  color: #F15D30;  border: 2px solid #F15D30;  padding: 10px 20px;  border-radius: 5px;">
                                             Update Cart</button>
                                         </div>
     
-                                        <!-- Here, you need to place the form closing tag -->
                                     </div>
                                     <div class="col-12 col-lg-4 col-md-5">
                                         <div class="mb-5 card mt-6">
@@ -145,17 +134,11 @@
                                                         Go to Checkout
                                                         <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
                                                     </button> -->
-                                                    <a href="{{ route('cekout')}}" class="btn d-flex justify-content-between align-items-center" 
-                                                        style="background-color: #F15D30; 
-                                                        color: white; 
-                                                        font-size: 16px; 
-                                                        padding: 10px 20px; 
-                                                        border-radius: 5px;
-                                                        text-decoration: none;">
+                                                    <a href="{{route('sentra.cekout', ['page' => $page])}}" class="btn d-flex justify-content-between align-items-center" 
+                                                        style="background-color: #F15D30;  color: white;  font-size: 16px;  padding: 10px 20px;  border-radius: 5px; text-decoration: none;">
                                                         Go to Checkout
                                                         <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
                                                     </a>
-
                                                 </div>
                                             </div>
                                         </div>

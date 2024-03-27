@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChangePasswordController;
@@ -9,9 +12,10 @@ use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
-use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\SentraController;
 
 Route::group(['prefix' => ''], function () {
+<<<<<<< HEAD
     Route::get('/', fn () => view('home.home'))->name('home');
     Route::get('/about', fn () => view('home.about'))->name('about');
 
@@ -27,6 +31,8 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
     Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
     Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
+=======
+>>>>>>> 5f9422fb5bd1453fb1ae82ca41dcb0b5e2e15939
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -46,26 +52,48 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sambang4', function () {
         return view('home.sentra.sambang4');
     });
+<<<<<<< HEAD
    
+=======
+    // Route::get('/', fn() => view('home.home'))->name('home');
+>>>>>>> 5f9422fb5bd1453fb1ae82ca41dcb0b5e2e15939
 });
 
-
+    // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('/galeri', [GaleriController::class, 'galeri'])->name('galeri');
-    Route::get('/galeri1', [GaleriController::class, 'galeri1'])->name('galeri1');
-    Route::get('/galeri2', [GaleriController::class, 'galeri2'])->name('galeri2');
-    Route::get('/galeri3', [GaleriController::class, 'galeri3'])->name('galeri3');
+    Route::get('/', [ViewController::class, 'home'])->name('home');
+    Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
+    Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
+    Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+    Route::get('/about', [ViewController::class, 'about'])->name('about');
+    Route::get('/contact', [UserDataController::class, 'contactView'])->name('contact');
 
     Route::get('/regist', [UserRegisterController::class, 'showRegistration'])->name('register');
     Route::post('/regist', [UserRegisterController::class, 'register'])->name('register.process');
     Route::get('/login', [SesiController::class, 'index'])->name('login');
     Route::post('/login', [SesiController::class, 'login']);
 });
+
 Route::middleware(['auth', 'akses:user'])->group(function () {
     Route::group(['prefix' => 'user'], function () {
-        Route::get('/sentra',[PembelianController::class,'sentra'])->name('sentra');
-        Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
+        Route::get('/', [ViewController::class, 'home'])->name ('home');
+
+        Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
+        Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
+        // Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
+        Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
+
+
+        Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+        Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
+        Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
+        Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
+
+        Route::get('/about', [ViewController::class, 'about'])->name('about');
+        Route::get('/contact', [UserDataController::class, 'contactView'])->name('contact'); //sementara
+        // Route::post('/contact', [UserDataController::class, 'contact'])->name('contact');
+
         Route::get('/my-profile', [UserDataController::class, 'showUserData'])->name('profile.show');
         Route::get('/my-profile/edit', [UserDataController::class, 'editUserData'])->name('profile.edit')->middleware(['auth', 'akses:user']);
         Route::patch('/my-profile/edit', [UserDataController::class, 'update'])->name('profile.update')->middleware(['auth', 'akses:user']);
@@ -79,8 +107,23 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-        Route::get("/admin", [AdminController::class, "dashboard"])->name('dashboard')->middleware(['auth', 'akses:admin']);
-        Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
+        Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
+        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+        Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
+        Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
+        
+        Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
+        Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
+        // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
+        Route::delete('/admin/galeri/delete/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.delete');
+        // Rute untuk menampilkan halaman edit
+        Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
+        Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
+
+
+
+
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile/add-user", [AdminController::class, "showAddUser"])->name('admin.adduser')->middleware(['auth', 'akses:admin']);

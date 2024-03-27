@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 @extends('layout.layout2')
+=======
+@extends('layout.layout')
+@section('sentra', 'active')
+>>>>>>> 5f9422fb5bd1453fb1ae82ca41dcb0b5e2e15939
 @section('title', 'Sentra')
 @section('content')
 

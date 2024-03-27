@@ -1,6 +1,8 @@
 @extends('layout.layout')
-@section('title', 'Asesmen')
+@section('contact', 'active')
+@section('title', 'Contact')
 @section('content')
+
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/Tokoh\ budaya\ polowijen.jpg');">
     <div class="overlay"></div>
     <div class="container">

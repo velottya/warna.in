@@ -1,7 +1,9 @@
 @extends('layout.layout')
-@section('title', 'Asesmen')
+@section('galeri', 'active')
+@section('title', 'Galeri')
 @section('content')
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/galeri-cover.jpg');">
+
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{{asset('images/galeri-cover.jpg')}}');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -20,7 +22,7 @@
       <div class="row">
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/perguruan-tinggi.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/perguruan-tinggi.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -34,7 +36,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-2.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-2.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -47,7 +49,7 @@
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-3.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-3.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -62,7 +64,7 @@ generasi penerusnya.</p>
 
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-4.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-4.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -77,7 +79,7 @@ generasi penerusnya.</p>
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-5.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-5.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -93,7 +95,7 @@ generasi penerusnya.</p>
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-6.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-6.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -110,7 +112,7 @@ generasi penerusnya.</p>
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-7.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-7.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -126,7 +128,7 @@ generasi penerusnya.</p>
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-8.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-8.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -142,7 +144,7 @@ generasi penerusnya.</p>
         </div>
         <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-            <a href="#" class="img" style="background-image: url(images/galeri2-9.png);">
+            <a href="#" class="img" style="background-image: url('{{asset('images/galeri2-9.png')}}');">
 
             </a>
             <div class="text p-4">
@@ -161,11 +163,20 @@ generasi penerusnya.</p>
         <div class="col text-center">
           <div class="block-27">
             <ul>
-              <li><a href="/galeri">&lt;</a></li>
-              <li><a href="/galeri">1</a></li>
-              <li class="active"><span>2</span></li>
-              <li><a href="/galeri3">3</a></li>
-              <li><a href="/galeri3">&gt;</a></li>
+            @guest
+              <li><a href="#">&lt;</a></li>
+              <li><a href="{{url ('galeri')}}">1</a> </li>
+              <li class="active"><a href="{{url ('galeri/2')}}">2</a></li>
+              <li><a href="{{url ('galeri/3')}}">3</a></li>
+              <li><a href="#">&gt;</a></li>
+            @endguest
+            @if (Auth::check() && Auth::user()->role == 'user')
+              <li><a href="#">&lt;</a></li>
+              <li><a href="{{url ('user/galeri')}}">1</a> </li>
+              <li class="active"><a href="{{url ('user/galeri/2')}}">2</a></li>
+              <li><a href="{{url ('user/galeri/3')}}">3</a></li>
+              <li><a href="#">&gt;</a></li>
+            @endif
             </ul>
           </div>
         </div>
@@ -179,7 +190,7 @@ generasi penerusnya.</p>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
-          <div class="img" style="background-image: url(images/ask.jpg);">
+          <div class="img" style="background-image: url('{{asset('images/ask.jpg')}}');">
             <div class="overlay"></div>
             <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
             <p>Warisi Tradisi Lestarikan Budaya</p>

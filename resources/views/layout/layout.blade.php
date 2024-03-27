@@ -27,7 +27,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Authentic Polowijen<span></span></a>
+			<a class="navbar-brand" href="{{url('')}}">Authentic Polowijen<span></span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<szpan class="oi oi-menu"></span> Menu
 			</button>
@@ -35,33 +35,33 @@
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
                     @guest
-					<li class="nav-item scrollto {{ Request()->is('/') ? 'active' : '' }}"> <a href="{{ url('') }}" class="nav-link">Home</a></li>
-					<li class="nav-item scrollto {{ Request()->is('about') ? 'active' : '' }}"> <a href="{{ url('about') }}" class="nav-link">About</a></li>
-					<li class="nav-item scrollto {{ Request()->is('sentra') ? 'active' : '' }}"> <a href="{{ url('sentra') }}" class="nav-link">Sentra</a></li>
-					<li class="nav-item scrollto {{ Request()->is('galeri') ? 'active' : '' }}"><a href="{{ url('galeri') }}" class="nav-link">Galeri</a></li>
-					<li class="nav-item scrollto {{ Request()->is('blog') ? 'active' : '' }}"><a href="{{ url('blog') }}" class="nav-link">Blog</a></li>
-					<li class="nav-item scrollto {{ Request()->is('contact') ? 'active' : '' }}"><a href="{{ url('contact') }}" class="nav-link">Contact</a></li>
+					<li class="nav-item scrollto @yield('home')"> <a href="{{ url('') }}" class="nav-link">Home</a></li>
+					<li class="nav-item scrollto @yield('about')"> <a href="{{ url('about') }}" class="nav-link">About</a></li>
+					<li class="nav-item scrollto @yield('sentra')"> <a href="{{ url('sentra') }}" class="nav-link">Sentra</a></li>
+					<li class="nav-item scrollto @yield('galeri')"><a href="{{ url('galeri') }}" class="nav-link">Galeri</a></li>
+					<li class="nav-item scrollto @yield('blog')"><a href="{{ url('blog') }}" class="nav-link">Blog</a></li>
+					<li class="nav-item scrollto @yield('contact')"><a href="{{ url('contact') }}" class="nav-link">Contact</a></li>
                     <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
                     @endguest
 
                     @if (Auth::check() && Auth::user()->role == 'user')
-                    <li class="nav-item scrollto {{ Request()->is('/') ? 'active' : '' }}"> <a href="{{ url('') }}" class="nav-link">Home</a></li>
-					<li class="nav-item scrollto {{ Request()->is('about') ? 'active' : '' }}"> <a href="{{ url('user/about') }}" class="nav-link">About</a></li>
-					<li class="nav-item scrollto {{ Request()->is('sentra') ? 'active' : '' }}"> <a href="{{ url('user/sentra') }}" class="nav-link">Sentra</a></li>
-					<li class="nav-item scrollto {{ Request()->is('galeri') ? 'active' : '' }}"><a href="{{ url('user/galeri') }}" class="nav-link">Galeri</a></li>
-					<li class="nav-item scrollto {{ Request()->is('blog') ? 'active' : '' }}"><a href="{{ url('user/blog') }}" class="nav-link">Blog</a></li>
-					<li class="nav-item scrollto {{ Request()->is('contact') ? 'active' : '' }}"><a href="{{ url('user/contact') }}" class="nav-link">Contact</a></li>
-                    <li class="nav-item scrollto {{ Request()->is('profiluser') ? 'active' : '' }}"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
+                    <li class="nav-item scrollto @yield('home')"> <a href="{{ url('user') }}" class="nav-link">Home</a></li>
+					<li class="nav-item scrollto @yield('about')"> <a href="{{ url('user/about') }}" class="nav-link">About</a></li>
+					<li class="nav-item scrollto @yield('sentra')"> <a href="{{ url('user/sentra') }}" class="nav-link">Sentra</a></li>
+					<li class="nav-item scrollto @yield('galeri')"><a href="{{ url('user/galeri') }}" class="nav-link">Galeri</a></li>
+					<li class="nav-item scrollto @yield('blog')"><a href="{{ url('user/blog') }}" class="nav-link">Blog</a></li>
+					<li class="nav-item scrollto @yield('contact')"><a href="{{ url('user/contact') }}" class="nav-link">Contact</a></li>
+                    <li class="nav-item scrollto @yield('profile')"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
                     <li class="nav-item scrollto">
                         <a href="#" class="nav link">
-                            <img src="{{ asset('images/icon/cart.svg') }}" alt="" style="height: 20px; margin-right: 10px;" class="mt-4 ml-2">
+                            <img src="{{ asset('images/icon/cart.svg') }}" alt="Cart" style="height: 30px; margin-right: 10px; margin-top: 17px;" class="ml-2">
                         </a>
                     </li>
                     <li class="nav-item scrollto"><a href="{{ url('logout') }}" class="nav-link">Logout</a></li>
                     @endif
                     
                     @if (Auth::check() && Auth::user()->role == 'admin')
-                    <li class="nav-item scrollto"><a href="{{ route('admin') }}" class="nav-link">Admin</a></li>
+                    <li class="nav-item scrollto"><a href="{{ route('dashboard') }}" class="nav-link">Admin</a></li>
                     @endif
                     </ul>
                 </div>
@@ -108,7 +108,8 @@
                             <li><a href="#" class="py-2 d-block">Paket Kegiatan</a></li>
                             <li><a href="#" class="py-2 d-block">Galeri dan Video</a></li>
                             <li><a href="#" class="py-2 d-block">Berita</a></li>
-                            <li><a href="#" class="py-2 d-block">Produk</a></li>                        </ul>
+                            <li><a href="#" class="py-2 d-block">Produk</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md pt-5 border-left">

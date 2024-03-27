@@ -8,7 +8,7 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/signin-image.png"></figure>
-                        <a href="/regist" class="signup-image-link">Create an account</a>
+                        <a href="/regist" style="text-decoration: none"class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
@@ -34,7 +34,7 @@
 
                             <div class="form-group form-button">
                                 <input type="submit" value="Login" class="btn solid" name="login" /> <br>
-                                <a href="{{ route('password.forgot') }}" style="text-decoration: none">Forgot your Password?</a>
+                                {{-- <a href="{{ route('password.forgot') }}" style="text-decoration: none">Forgot your Password?</a> --}}
                             </form>
                             @if (session('success'))
                                 <div class="alert alert-success">

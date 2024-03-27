@@ -72,7 +72,7 @@
             <!-- Website Information -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Website Informasi</span></li>
             <li class="menu-item">
-              <a href="galeri.html" class="menu-link">
+              <a href="/galeriadmin" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-support"></i>
                 <div data-i18n="Support">Galeri Polowijen</div>
               </a>
@@ -123,7 +123,7 @@
                 </li>
               </ul>
             </li>
-            
+
             <!-- Pages -->
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>

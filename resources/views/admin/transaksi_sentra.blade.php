@@ -1,9 +1,7 @@
-@extends('admin.layout')
+@extends('layout.sidebar')
+@section('transaksi', 'active')
 @section('title', 'Admin | Transaksi Sentra')
 @section('content')
-<!-- Layout container -->
-<div class="layout-page">
-
 
   <!-- Content wrapper -->
   <div class="content-wrapper">
@@ -183,6 +181,5 @@
       </div>
       <!--/ Basic Bootstrap Table -->
     </div>
-  </div>
 
 @endsection
