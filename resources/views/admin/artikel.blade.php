@@ -88,7 +88,7 @@
               var truncateElement = document.getElementById('truncateText');
               var words = truncateElement.textContent.split(' ').slice(0, 2).join(' ');
               truncateElement.textContent = words + ' ...';
-              </script>                       
+              </script>
 
               <td style="max-width: 150px; overflow: hidden; white-space: nowrap;">
                   <p class="truncate-text mt-3" id="truncateIsi"> Kegiatan ini rutin dilakukan pada hari jumat sabtu</p>
@@ -97,7 +97,7 @@
                   var truncateElement = document.getElementById('truncateIsi');
                   var words = truncateElement.textContent.split(' ').slice(0, 7).join(' ');
                   truncateElement.textContent = words + ' ...';
-                  </script>               
+                  </script>
               <td><span class="badge bg-label-primary me-1">12 Januari</span></td>
               <td>
                 <div class="dropdown">
@@ -182,7 +182,7 @@
                 </div>
               </div>
               <!-- End Modal Edit-->
-              
+
             </tr>
           </tbody>
         </table>
@@ -190,5 +190,5 @@
     </div>
     <!--/ Basic Bootstrap Table -->
   </div>
-    
+
 @endsection

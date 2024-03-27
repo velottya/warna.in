@@ -29,9 +29,7 @@
 
               <h3><a href="#">PASAR MINGGU LEGI
                 JAJAN TRADISIONAL</a></h3>
-              <p class="location" align="justify">Pasar Minggu Legi adalah pasar Jajan
-                Tradisional. Pasar ini di buka khusus sebulan
-                sekali dalam hitungan kalender jawa oleh warga KBP.</p>
+              <p class="location" align="justify">Pasar Minggu Legi adalah pasar Jajan Tradisional. Pasar ini di buka khusus sebulan sekali dalam hitungan kalender jawa oleh warga KBP.</p>
             </div>
           </div>
         </div>
@@ -79,7 +77,7 @@
                 Sambang
                 Kampung selalu di awali dengan MOU atau
                 kerjasama penyelenggaraan kegiatan, di lakukan secara
-                resmi dari instansi pemerintah
+                resmi dari instansi pemerintah.
               </p>
             </div>
           </div>
