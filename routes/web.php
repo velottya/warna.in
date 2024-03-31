@@ -15,7 +15,6 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\SentraController;
 
 Route::group(['prefix' => ''], function () {
-<<<<<<< HEAD
     Route::get('/', fn () => view('home.home'))->name('home');
     Route::get('/about', fn () => view('home.about'))->name('about');
 
@@ -31,8 +30,6 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
     Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
     Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
-=======
->>>>>>> 5f9422fb5bd1453fb1ae82ca41dcb0b5e2e15939
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -52,11 +49,8 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sambang4', function () {
         return view('home.sentra.sambang4');
     });
-<<<<<<< HEAD
    
-=======
     // Route::get('/', fn() => view('home.home'))->name('home');
->>>>>>> 5f9422fb5bd1453fb1ae82ca41dcb0b5e2e15939
 });
 
     // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
