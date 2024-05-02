@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 
 class GaleriController extends Controller
 {
-
     public function galeri($page = null)
     {
         if ($page == 2){
@@ -21,11 +20,6 @@ class GaleriController extends Controller
             return view('home.galeri.galeri');
         }
     }
-
-    // public function adminGaleri()
-    // {
-    //     return view('admin.galeri');
-    // }
 
     public function adminGaleri()
     {
@@ -106,7 +100,6 @@ class GaleriController extends Controller
             // Simpan gambar sebagai blob di dalam kolom gambar di tabel galeri
             $galeri->gambar = $gambarBlob;
         }
-
 
         // Simpan perubahan pada data galeri
         $galeri->save();

@@ -27,13 +27,10 @@
                         <div class="col-md-12 nav-link-wrap">
                             <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                 <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">INFORMATION</a>
-
                             </div>
                         </div>
                         <div class="col-md-12 tab-wrap">
-
                             <div class="tab-content" id="v-pills-tabContent">
-
                                 <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
                                     <form action="#" class="search-property-1">
                                         <div class="row no-gutters">
@@ -159,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <div class="container container-2">
+        <div class="container container-2" style="padding-left:200px;">
             <div class="row">
                 <div class="col-md-10">
                     <div class="carousel-destination owl-carousel ftco-animate">

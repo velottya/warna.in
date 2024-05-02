@@ -9,23 +9,12 @@
     <div class="container-xxl flex-grow-1 container-p-y">
       <h4 class="fw-bold py-3 mb-4">Sentra Kampung Budaya Polowijen</h4>
       <div class="card">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg mx-4 mb-4 mt-4"
-          style="width: 200px;"
-          data-bs-toggle="modal"
-          data-bs-target="#tambahGaleri">
+        <button type="button" class="btn btn-primary btn-lg mx-4 mb-4 mt-4" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#tambahGaleri">
           Tambah Jenis Barang
         </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg mx-4 mb-4 mt-4"
-          style="width: 200px;"
-          data-bs-toggle="modal"
-          data-bs-target="#tambahGaleri">
+        <button type="button" class="btn btn-primary btn-lg mx-4 mb-4 mt-4" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#tambahGaleri">
           Tambah Stock
         </button>
-        
         
         <!-- Modal -->
         <div class="modal fade" id="tambahGaleri" tabindex="-1" aria-hidden="true">
