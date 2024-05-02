@@ -32,7 +32,7 @@
       <div class="col-md-6">
         <div class="row">
           <div class="col-md-12 col-lg-5 d-flex align-self-stretch ftco-animate">
-            <div class="services services-1 d-block img" style="background-image: url(images/s1_12.jpeg);">
+            <div class="services services-1 d-block img" style="background-image: url('{{asset('images/sentra/kegiatan/s1_1.jpeg')}}');">
               <div class="media-body">
                 <h3 class="heading mb-3" style="visibility: hidden;"></h3>
                 <p style="visibility: hidden;"></p>
@@ -40,14 +40,14 @@
             </div>
           </div>
           <div class="col-md-12 col-lg-5 d-flex align-self-stretch ftco-animate">
-            <div class="services services-1 d-block img" style="background-image: url(images/s1_1.jpeg);">
+            <div class="services services-1 d-block img" style="background-image: url('{{asset('images/s1_12.jpeg')}}');">
               <div class="media-body">
                 <h3 class="heading mb-3" style="visibility: hidden;"></h3>
                 <p style="visibility: hidden;">A small river named Duden flows by their place and supplies it with the necessary</p>
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
 <body>
 
     <section class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url('images/IMG-20180912-WA0089_1\ 1.png');">
+      style="background-image: url('{{asset('images/galeri3-2.png')}}');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -24,7 +24,7 @@
         <div class="row">
         <div class="col-md-4 ftco-animate">
         <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/sundari.jpg);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/sundari.jpg')}}');">
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
@@ -38,7 +38,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/tm.jpeg);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/tm.jpeg')}}');">
                 <span class="price">Rp 75.000</span>
               </a>
               <div class="text p-4">
@@ -52,7 +52,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/pab.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/pab.png')}}');">
                 <span class="price">Rp 145.000</span>
               </a>
               <div class="text p-4">
@@ -66,7 +66,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
         <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/ds.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/ds.png')}}');">
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
@@ -80,7 +80,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/gs.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/gs.png')}}');">
                 <span class="price">Rp 176.000</span>
               </a>
               <div class="text p-4">
@@ -94,7 +94,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/drk.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/drk.png')}}');">
                 <span class="price">Rp 175.000</span>
               </a>
               <div class="text p-4">
@@ -108,7 +108,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
         <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/ks.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/ks.png')}}');">
                 <span class="price">Rp 100.000</span>
               </a>
               <div class="text p-4">
@@ -122,7 +122,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/b.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/b.png')}}');">
                 <span class="price">Rp 175.000</span>
               </a>
               <div class="text p-4">
@@ -136,7 +136,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/p.png);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/p.png')}}');">
                 <span class="price">Rp 160.000</span>
               </a>
               <div class="text p-4">
@@ -150,7 +150,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
           <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url(images/eco.jpg);">
+              <a href="#" class="img" style="background-image: url('{{asset('images/eco.jpg')}}');">
                 <span class="price">Rp 70.000</span>
               </a>
               <div class="text p-4">
@@ -181,12 +181,12 @@
     </section>
     <p class="text-center"><a href="/sentra" class="btn btn-primary">Kembali</a></p>
 
-      
+
     <section class="ftco-intro ftco-section ftco-no-pt">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
-            <div class="img" style="background-image: url(images/kampung-budaya-polowijen-persiapan.jpg);">
+            <div class="img" style="background-image: url('{{asset('images/kampung-budaya-polowijen-persiapan.jpg')}}');">
               <div class="overlay"></div>
               <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
               <p>Warisi Tradisi Lestarikan Budaya</p>

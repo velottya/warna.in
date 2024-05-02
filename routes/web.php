@@ -28,7 +28,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
     Route::get('/sentra1', fn () => view('home.sentra.sentra1'))->name('sentra1');
     Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
-    Route::get('/chart', fn() => view('home.sentra.addchart'))->name('chart');
+    Route::get('/cart', fn() => view('home.sentra.addcart'))->name('cart');
     Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
     Route::get('/sentra11', function () {
@@ -49,7 +49,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sambang4', function () {
         return view('home.sentra.sambang4');
     });
-   
+
 });
 
     // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
@@ -104,7 +104,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
-        
+
         Route::group(['prefix' => 'admin'], function () {
             Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
             // Route::get("/add", [SentraController::class, "addSentra"])->name('add')->middleware(['auth', 'akses:admin']);
