@@ -50,7 +50,6 @@ Route::group(['prefix' => ''], function () {
         return view('home.sentra.sambang4');
     });
    
-    // Route::get('/', fn() => view('home.home'))->name('home');
 });
 
     // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
@@ -106,7 +105,11 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
         
-        Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+        Route::group(['prefix' => 'admin'], function () {
+            Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+            // Route::get("/add", [SentraController::class, "addSentra"])->name('add')->middleware(['auth', 'akses:admin']);
+            // Route::post("/create", "createProduct")->name('create-product')->middleware(['auth', 'akses:admin']);
+        });
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
@@ -114,7 +117,6 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         // Rute untuk menampilkan halaman edit
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
-
 
 
 
