@@ -59,14 +59,14 @@
               <li class="menu-item @yield('dashboard')">
                 <a href="{{ url('admin/dashboard') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                  <div data-i18n="Analytics">Dashboard</div>
+                  <div data-i18n="dashboard">Dashboard</div>
                 </a>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">Verifikasi</span></li>
               <li class="menu-item @yield('pembayaran')">
                 <a href="{{ url('admin/pembayaran') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-support"></i>
-                  <div data-i18n="Support">Verifikasi pembayaran</div>
+                  <div data-i18n="bayar">Verifikasi pembayaran</div>
                 </a>
               </li>
               <!-- Website Information -->
@@ -74,36 +74,24 @@
               <li class="menu-item @yield('galeri')">
                 <a href="{{ url('admin/galeri') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-support"></i>
-                  <div data-i18n="Support">Galeri Polowijen</div>
+                  <div data-i18n="galeri">Galeri Polowijen</div>
                 </a>
               </li>
               <li class="menu-item @yield('artikel')">
                 <a href="{{ url('admin/artikel') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="Documentation">Artikel</div>
+                  <div data-i18n="artikel">Artikel</div>
                 </a>
               </li>
               <!-- Stock Obname -->
               <li class="menu-header small text-uppercase">
                 <span class="menu-header-text">Sentra Polowijen</span>
               </li>
-              <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <li class="menu-item @yield('sentra')">
+                <a href="{{ url('admin/sentra') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                  <div data-i18n="Account Settings">Stock Obname</div>
+                  <div data-i18n="sentra">Sentra</div>
                 </a>
-                <ul class="menu-sub">
-                  <li class="menu-item @yield('booking')">
-                    <a href="{{ url('admin/booking') }}" class="menu-link">
-                      <div data-i18n="Account">Booking Desa</div>
-                    </a>
-                  </li>
-                  <li class="menu-item @yield('sentra')">
-                    <a href="{{ url('admin/sentra') }}" class="menu-link">
-                      <div data-i18n="Notifications">Sentra</div>
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -113,12 +101,12 @@
                 <ul class="menu-sub">
                   <li class="menu-item @yield('transaksi')">
                     <a href="{{ url('admin/transaksi') }}" class="menu-link" target="_blank">
-                      <div data-i18n="Basic">Transaksi Sentra</div>
+                      <div data-i18n="transaksi">Transaksi Sentra</div>
                     </a>
                   </li>
                   <li class="menu-item @yield('histori')">
                     <a href="{{ url('admin/histori') }}" class="menu-link" target="_blank">
-                      <div data-i18n="Basic">User Histori</div>
+                      <div data-i18n="history">User Histori</div>
                     </a>
                   </li>
                 </ul>
@@ -131,22 +119,17 @@
               <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                  <div data-i18n="Account Settings">Account Settings</div>
+                  <div data-i18n="setting">Account Settings</div>
                 </a>
                 <ul class="menu-sub">
                   <li class="menu-item @yield('akun')">
                     <a href="{{ url('admin/akun') }}" class="menu-link">
-                      <div data-i18n="Account">Account</div>
+                      <div data-i18n="account">Account</div>
                     </a>
                   </li>
                   <li class="menu-item @yield('notifikasi')">
                     <a href="{{ url('admin/notifikasi') }}" class="menu-link">
-                      <div data-i18n="Notifications">Notifications</div>
-                    </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#" class="menu-link">
-                      <div data-i18n="Connections">Connections</div>
+                      <div data-i18n="notification">Notifications</div>
                     </a>
                   </li>
                 </ul>

@@ -75,10 +75,10 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/', [ViewController::class, 'home'])->name ('home');
 
         Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
+
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
         // Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
         Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
-
 
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
         Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
@@ -99,26 +99,12 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
 
 Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
-
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
-        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
-<<<<<<< HEAD
-        
-        Route::group(['prefix' => 'sentra'], function () {
-=======
-
-        Route::group(['prefix' => 'admin'], function () {
->>>>>>> b1098abd0ef3ed671900b6aa85e02b17b2ab6da4
-            Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
-            Route::post("/tambah", [SentraController::class, "tambahSentra"])->name('tambahSentra')->middleware(['auth', 'akses:admin']);
-            Route::post("/delete/{id}", [SentraController::class, "deleteSentra"])->name('deleteSentra')->middleware(['auth', 'akses:admin']);
-            // Route::get("/add", [SentraController::class, "addSentra"])->name('add')->middleware(['auth', 'akses:admin']);
-        });
-        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
         Route::delete('/admin/galeri/delete/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.delete');
@@ -126,7 +112,17 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
 
+        Route::group(['prefix' => 'sentra'], function () {
+            Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+            Route::post("/tambah", [SentraController::class, "tambahSentra"])->name('tambahSentra')->middleware(['auth', 'akses:admin']);
+            Route::post("/delete/{id}", [SentraController::class, "deleteSentra"])->name('deleteSentra')->middleware(['auth', 'akses:admin']);
+            Route::get("/{id}/edit", [SentraController::class, "editSentra"])->name('editSentra')->middleware(['auth', 'akses:admin']);
+            Route::put("/{id}", [SentraController::class, "updateSentra"])->name('updateSentra')->middleware(['auth', 'akses:admin']);
+        });
 
+        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+
+        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);

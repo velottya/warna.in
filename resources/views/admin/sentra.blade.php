@@ -21,7 +21,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
 
-              <form action="{{ route('tambahSentra') }} " method="post" enctype="multipart/form-data" name="productForm" id="productForm">
+              <form action="{{ route('tambahSentra') }}" method="post" enctype="multipart/form-data" name="productForm" id="productForm">
 
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel1">Tambah Product</h5>
@@ -53,7 +53,6 @@
                         </select>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col mb-3">
                       <label for="price" class="form-label">Harga Produk</label>
@@ -66,7 +65,6 @@
                       <p class="errors"></p>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col mb-3">
                       <label for="description" class="form-label">Deskripsi Produk</label>
@@ -74,7 +72,6 @@
                       <p class="errors"></p>
                     </div>
                   </div>
-
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -117,7 +114,6 @@
                   <td>
                     <strong class="truncate-text" id="truncate">{{ Illuminate\Support\Str::limit($item->name, 15) }}</strong>
                   </td>
-                  <!-- Benahi lagi agar bisa fungsi buat cut judul jadi 2 kata saja -->
                   <td class="truncate-text" id="truncate">
                     {{ Illuminate\Support\Str::limit($item->description, 20) }}
                   </td>
@@ -136,9 +132,9 @@
                         <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#previewProduk{{ $item->id }}"
                           ><i class="bx bx-edit-alt me-1"></i> More Preview</a>
                         <!-- INI BELUM -->
-                        <a class="dropdown-item" href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#editGaleri"
+                        <a class="dropdown-item" href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#editProduct"
                           ><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                          
+
                         <form action="{{ route('deleteSentra', $item->id) }}" method="POST">
                               @csrf
                               @method('DELETE')
@@ -155,14 +151,15 @@
                       <div class="modal-dialog modal-dialog-centered modal-sm">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <!-- Dibuat mengambil nama gambar dri database msukannya juga -->
                             <h5 class="modal-title text-center">{{ $item->name }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body text-center">
                             <img src="{{ asset('images/product/'.$item->picture) }}" class="img-fluid" alt="{{ $item->name }}" style="width: 500px;"/>
+                            
                             <!-- INI DI BENAHI LAGI -->
-                            <p class="my-4" style="max-width: 100%; text-align: justify; margin-left: auto; margin-right: auto; word-wrap: break-word;">
+                            <p class="my-4" style="max-width: 100%; text-align: justify; word-wrap: break-word; margin-left: auto; margin-right: auto; word-wrap: break-word;">
+
                             {{ $item->description }}</p>
                           </div>
                         </div>
@@ -170,54 +167,74 @@
                     </div>
                   @endforeach
 
+                  @foreach($product as $item)
                   <!-- Modal Edit-->
-                  <div class="modal fade" id="editGaleri" tabindex="-1" aria-hidden="true">
+                  <div class="modal fade" id="editProduct" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel1">Edit Galeri</h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                         </div>
                         <div class="modal-body">
+                          <form action="{{ route('updateSentra', $item->id) }}" method="POST" enctype="multipart/form-data">
+                          @csrf
+                          @method('PUT')
                           <div class="row">
                             <div class="mb-3">
-                              <label for="formFile" class="form-label">Pilih Gambar</label>
-                              <input class="form-control" type="file" id="formFile" />
+                              <label for="picture" class="form-label">Pilih Foto Produk</label>
+                              <input class="form-control" type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png" />
+                              <p class="errors"></p>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col mb-3">
-                              <label for="nameBasic" class="form-label">Judul</label>
-                              <input type="text" id="nameBasic" class="form-control" placeholder="Tambahkan Judul" />
+                              <label for="name" class="form-label">Nama Produk</label>
+                              <input type="text" id="name" class="form-control" name="name" value="{{ $item->name }}" placeholder="Masukkan Nama Produk"/>
+                              <p class="errors"></p>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col mb-3">
-                              <label for="nameBasic" class="form-label">Deskripsi Galeri</label>
-                              <input type="text" id="nameBasic" class="form-control" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
+                                <label for="category" class="form-label">Kategori Produk</label>
+                                <select class="form-select" id="category" name="category"  value="{{ $category->id }}" >
+                                @if ($category)
+                                  <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endif
+
+                                </select>
                             </div>
                           </div>
-                          <div class="row g-2">
-                            <div class="col-6 mb-0">
-                              <label for="dobBasic" class="form-label">Time Stamp</label>
-                              <input type="text" id="dobBasic" class="form-control" placeholder="12 / 02 / 2024" />
+                          <div class="row">
+                            <div class="col mb-3">
+                              <label for="price" class="form-label">Harga Produk</label>
+                              <input type="number" id="price" name="price" class="form-control"  value="{{ $item->price }}" placeholder="Masukkan Harga Produk"/>
+                              <p class="errors"></p>
+                            </div>
+                            <div class="col mb-3">
+                              <label for="stock" class="form-label">Stok Produk</label>
+                              <input type="number" id="stock" name="stock" class="form-control" value="{{ $item->stock }}"  placeholder="Masukkan Jumlah Produk"/>
+                              <p class="errors"></p>
                             </div>
                           </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                            Close
-                          </button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                          <div class="row">
+                            <div class="col mb-3">
+                              <label for="description" class="form-label">Deskripsi Produk</label>
+                              <input type="text" id="description" name="description"  value="{{ $item->description }}" class="form-control summernote" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
+                              <p class="errors"></p>
+                            </div>
+                          </div>                  
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                              Close
+                            </button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
+                  @endforeach
                 </tr>
               @endforeach
             </tbody>
@@ -271,11 +288,6 @@
         }
       });
     });
-
-
-    var truncateElement = document.getElementById('#truncate');
-    var words = truncateElement.textContent.split(' ').slice(0, 2).join(' ');
-    truncateElement.textContent = words + '...';
 
 
   </script>

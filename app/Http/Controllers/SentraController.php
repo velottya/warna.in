@@ -14,12 +14,18 @@ class SentraController extends Controller
 {
     public function sentra($page = null)
     {
+        $data = 
+        [
+            'category'=>Category::orderBy('name', 'asc')->get(),
+            'product'=>Product::all()
+        ];
+        
         if ($page == 'kegiatan'){
-            return view('home.sentra.sentra1');
+            return view('home.sentra.sentra1', $data);
         } else if ($page == 'produk'){
-            return view('home.sentra.sentra2');
+            return view('home.sentra.sentra2', $data);
         } else {
-            return view('home.sentra.sentra');
+            return view('home.sentra.sentra', $data);
         }
     }
 
@@ -88,29 +94,47 @@ class SentraController extends Controller
             'category_id' => $request->category,
         ]);
         return redirect()->back()->with('success','Galeri berhasil ditambahkan.');
-
-
-        // $validator = Validator::make($request->all(), $rules);
-
-        // if ($validator-> passes()) {
-
-        // } else {
-        //     return response()-> json([
-        //         'status' => false,
-        //         'errors' => $validator->errors()
-        //     ]);
-        // }
     }
 
     public function deleteSentra($id)
     {
-        // Find the resource by its ID
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->back()->with('success', 'Product berhasil dihapus');
+    }
+
+    public function editSentra($id)
+    {
         $product = Product::findOrFail($id);
 
-        // Delete the resource
-        $product->delete();
+        return view('editSentra', compact('galeri'));
+    }
 
-        // Redirect or provide a response as needed
-        return redirect()->back()->with('success', 'Product berhasil dihapus');
+    public function updateSentra(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'description',
+            'picture' => 'required',
+            'price' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'category' => 'required', 
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->stock = $request->stock;
+        $product->category = $request->category;
+        $product->description = $request->description;
+
+        if ($request->hasFile('picture')) {
+            $picture = $request->file('picture');
+            $pictureBlob = file_get_contents($picture->getRealPath());
+            $product->picture = $pictureBlob;
+        }
+        $product->save();
+        return redirect()->back()->with('success', 'Data product berhasil diperbarui');
     }
 }
