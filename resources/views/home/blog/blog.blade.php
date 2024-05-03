@@ -54,7 +54,7 @@
 
    <div class="col-md-4 d-flex ftco-animate">
      <div class="blog-entry justify-content-end">
-      <a href="blog-single.html" class="block-20" style="background-image: url('images/image6.png');">
+      <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image6.png')}}');">
       </a>
       <div class="text">
        <div class="d-flex align-items-center mb-4 topp">
@@ -74,7 +74,7 @@
   </div>
   <div class="col-md-4 d-flex ftco-animate">
    <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('images/image4.png');">
+    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image4.png')}}');">
     </a>
     <div class="text">
      <div class="d-flex align-items-center mb-4 topp">
@@ -94,7 +94,7 @@
   </div>
   <div class="col-md-4 d-flex ftco-animate">
    <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('images/image1.jpg');">
+    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image1.jpg')}}');">
     </a>
     <div class="text">
      <div class="d-flex align-items-center mb-4 topp">
@@ -114,7 +114,7 @@
   </div>
   <div class="col-md-4 d-flex ftco-animate">
    <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('images/galeri3-1.png');">
+    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/galeri3-1.png')}}');">
     </a>
     <div class="text">
      <div class="d-flex align-items-center mb-4 topp">
@@ -134,7 +134,7 @@
   </div>
   <div class="col-md-4 d-flex ftco-animate">
    <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('images/GebyakWayangTopeng.png');">
+    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/GebyakWayangTopeng.png')}}');">
     </a>
     <div class="text">
      <div class="d-flex align-items-center mb-4 topp">
@@ -182,7 +182,7 @@
    <div class="container">
     <div class="row justify-content-center">
      <div class="col-md-12 text-center">
-      <div class="img"  style="background-image: url(images/Ask.jpg);">
+      <div class="img"  style="background-image: url('{{asset('images/Ask.jpg')}}');">
        <div class="overlay"></div>
        <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
        <p>Warisi Tradisi Lestarikan Budaya</p>

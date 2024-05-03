@@ -197,7 +197,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
-            <div class="img" style="background-image: url(images/kampung-budaya-polowijen-persiapan.jpg);">
+            <div class="img" style="background-image: url('{{asset('images/kampung-budaya-polowijen-persiapan.jpg')}}');">
               <div class="overlay"></div>
               <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
               <p>Warisi Tradisi Lestarikan Budaya</p>

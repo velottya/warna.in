@@ -111,9 +111,9 @@ class GaleriController extends Controller
     public function user($page = null)
     {
         // $galeri = Galeri::all(); // Mengambil semua data galeri dari database
-        $perPage = 9; // Jumlah galeri per halaman
+        // Jumlah galeri per halaman
 
-        $galeri = Galeri::paginate($perPage);
+        $galeri = Galeri::all();
 
         if ($page == 2) {
             return view('home.galeri.galeri2', compact('galeri'));

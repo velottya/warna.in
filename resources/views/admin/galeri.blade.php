@@ -89,7 +89,7 @@
                         <strong class="truncate-text">{{ $item->judul }}</strong>
                     </td>
 
-                    <td>{{ $item->deskripsi }}</td>
+                    <td style="max-width: 150px; overflow: hidden; white-space: nowrap;">{{ $item->deskripsi }}</td>
                     <td><span class="badge bg-label-primary me-1">{{ $item->created_at }}</span></td>
                     <td>
                 </form>
@@ -126,12 +126,13 @@
                 <div class="modal-dialog modal-dialog-centered modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
+                      <!-- Dibuat mengambil nama gambar dri database msukannya juga -->
                       <h5 class="modal-title text-center" id="modalGambarLabel{{ $item->id }}">{{ $item->judul }}</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
                       <img src="{{ asset('images/'.$item->gambar) }}" class="img-fluid" alt="Gambar" style="width: 500px;"/>
-                      <p class="my-4">{{ $item->deskripsi }}</p>
+                      <p style="max-width: 310px; overflow: hidden; white-space: nowrap;">{{ $item->deskripsi }}</p>
                     </div>
                   </div>
                 </div>
