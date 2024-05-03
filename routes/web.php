@@ -1,12 +1,14 @@
 <?php
 
-use App\Http\Controllers\ArtikelController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\GaleriController;
-use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ViewController;
 use App\Http\Controllers\SesiController;
 use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\UserRegisterController;
@@ -14,7 +16,6 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\SentraController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CategoryController;
 
 Route::group(['prefix' => ''], function () {
     Route::get('/', fn () => view('home.home'))->name('home');
@@ -23,7 +24,6 @@ Route::group(['prefix' => ''], function () {
     Route::get('/blog', fn () => view('home.blog.blog'))->name('blog');
     Route::get('/blog1', fn () => view('home.blog.blog1'))->name('blog1');
     Route::get('/blog2', fn () => view('home.blog.blog2'))->name('blog2');
-
 
     Route::get('/contact', fn () => view('home.contact'))->name('contact');
 
@@ -81,7 +81,9 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
 
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
-        Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
+
+        Route::get('/sentra/{page?}/cart', [CartController::class, 'cart'])->name('sentra.cart');
+        // Route::get('/sentra/{page?}/cart', [CartController::class, 'addToCart'])->name('sentra.addToCart');
         Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
         Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
 

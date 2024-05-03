@@ -30,10 +30,7 @@ class SentraController extends Controller
     }
 
 
-    public function cart($page)
-    {
-        return view('home.sentra.addcart');
-    }
+
 
     public function cekout($page)
     {

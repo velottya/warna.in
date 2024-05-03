@@ -20,6 +20,13 @@
     <h1 class="mb-0 bread text-center pt-5 font-weight-bold">PAKET KEGIATAN</h1>
     <section class="ftco-section">
       <div class="container">
+      <?php
+      // Ambil 3 data terbaru dari kategori PaketKegiatan
+      $products = App\Models\Product::where('category_id', 1)
+                  ->orderBy('created_at', 'desc')
+                  ->take(3)
+                  ->get();
+      ?>
         @foreach($product as $item)
         @if($item->category_id == 2)
         <div class="row">
@@ -40,10 +47,12 @@
                   <div class="col-md-6">
                     <p>Stock: {{ $item->stock }}</p>
                   </div>
-
                 </div>
-                <p><a href="/sentra11" class="btn btn-primary">Cekout</a></p>
-                <p><a href="#" class="btn btn-primary">Keranjang</a></p>
+                <p><a href="/sentra11" class="btn btn-primary">More</a></p>
+
+                <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#previewProduk{{ $item->id }}"
+                ><i class="bx bx-edit-alt me-1"></i> More</a>
+
               </div>
             </div>
           </div>
@@ -61,6 +70,13 @@
     <h1 class="mb-0 bread text-center font-weight-bold">PRODUK</h1>
     <section class="ftco-section">
       <div class="container">
+      <?php
+      // Ambil 3 data terbaru dari kategori PaketKegiatan
+      $products = App\Models\Product::where('category_id', 1)
+                  ->orderBy('created_at', 'desc')
+                  ->take(3)
+                  ->get();
+      ?>
         @foreach($product as $item)
         @if($item->category_id == 1)
         <div class="row">
@@ -79,11 +95,15 @@
                   <p>Rp. {{ number_format($item->price, 0, ',', '.') }}</p>
                   </div>
                   <div class="col-md-6">
-                    <p>Stock: {{ $item->stock }}</p>
+                    <p>Stok: {{ $item->stock }}</p>
                   </div>
                 </div>
-                <p><a href="/sentra11" class="btn btn-primary">More</a></p>
-                <p><a href="#" class="btn btn-primary">Add Cart</a></p>
+               
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreProduk{{ $item->id }}">
+                  More Details
+                </button>
+
             </div>
           </div>
         @endif
@@ -94,7 +114,44 @@
       @endguest
       @if (Auth::check() && Auth::user()->role == 'user')
         <p class="text-center"><a href="{{url ('/user/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
-      @endif    
+      @endif   
+    
+      <!-- Modal -->
+      @foreach($product as $item)
+      <div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{ $item->name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <img src="{{ asset('images/product/'.$item->picture) }}" class="img-fluid" alt="{{ $item->name }}" style="width: 250px; height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-5 mt-4">
+                            <p><strong>Stok:</strong> {{ $item->stock }}</p>
+                            <p><strong>Harga:</strong> Rp. {{ number_format($item->price, 0, ',', '.') }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="my-4" style="text-align: justify;">{{ $item->description }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="addToCart({{ $product -> id}})" class="btn btn-secondary" data-dismiss="modal">Add To Cart</button>
+
+                    <!-- NI BELOMMM -->
+                    <button type="button" class="btn btn-primary">Cekout</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+      @endforeach
     </section>
 
     <section class="ftco-intro ftco-section ftco-no-pt">

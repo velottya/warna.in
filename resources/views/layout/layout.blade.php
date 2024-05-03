@@ -144,6 +144,7 @@
 
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
