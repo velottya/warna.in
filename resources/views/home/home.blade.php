@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <div class="container container-2" style="padding-left:200px;">
+        <div class="container container-2" style="center">
             <div class="row">
                 <div class="col-md-10">
                     <div class="carousel-destination owl-carousel ftco-animate">
