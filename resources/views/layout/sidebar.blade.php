@@ -21,6 +21,7 @@
       <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
       <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
       <link rel="stylesheet" href="../assets/css/demo.css" />
+      <link rel="stylesheet" href="../extension/summernote/summernote-bs4.min.css">
 
       <!-- Vendors CSS -->
       <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -157,10 +158,7 @@
           <div class="layout-page">
             <!-- Navbar -->
 
-            <nav
-              class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-              id="layout-navbar"
-            >
+            <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar" >
               <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
                 <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
                   <i class="bx bx-menu bx-sm"></i>
@@ -173,7 +171,7 @@
                   <li class="nav-item navbar-dropdown dropdown-user dropdown">
                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                       <div class="avatar avatar-online">
-                        <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                        <img src="/images/default.png" alt class="w-px-40 h-auto rounded-circle" />
                       </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -182,7 +180,7 @@
                           <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                               <div class="avatar avatar-online">
-                                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                <img src="/images/default.png" alt class="w-px-40 h-auto rounded-circle" />
                               </div>
                             </div>
                             <div class="flex-grow-1">
@@ -260,10 +258,20 @@
     <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
     <script src="../assets/vendor/js/menu.js"></script>
+    <script src="../extension/summernote/summernote-bs4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.summernote').summernote({
+          height:200
+        });
+      });
+    </script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
     <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>

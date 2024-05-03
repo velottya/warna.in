@@ -12,8 +12,7 @@ class Category extends Model
     protected $table = 'category';
 
     protected $fillable = [
-        'slug',
-        'name',
+        'name'
     ];
     
     protected static function newFactory()
@@ -23,7 +22,9 @@ class Category extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class, 'category_id');
+        return $this->hasMany(Product::class);
+        // return $this->hasMany(Product::class, 'category_id');
+
         // return $this->belongsToMany('Modules\Shop\Entities\Product', 'product_category', 'product_id', 'category_id');
     }
 }

@@ -126,7 +126,6 @@
                 <div class="modal-dialog modal-dialog-centered modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <!-- Dibuat mengambil nama gambar dri database msukannya juga -->
                       <h5 class="modal-title text-center" id="modalGambarLabel{{ $item->id }}">{{ $item->judul }}</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>

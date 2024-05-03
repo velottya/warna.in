@@ -13,6 +13,8 @@ use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\SentraController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 Route::group(['prefix' => ''], function () {
     Route::get('/', fn () => view('home.home'))->name('home');
@@ -105,10 +107,11 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
         
-        Route::group(['prefix' => 'admin'], function () {
+        Route::group(['prefix' => 'sentra'], function () {
             Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+            Route::post("/tambah", [SentraController::class, "tambahSentra"])->name('tambahSentra')->middleware(['auth', 'akses:admin']);
+            Route::post("/delete/{id}", [SentraController::class, "deleteSentra"])->name('deleteSentra')->middleware(['auth', 'akses:admin']);
             // Route::get("/add", [SentraController::class, "addSentra"])->name('add')->middleware(['auth', 'akses:admin']);
-            // Route::post("/create", "createProduct")->name('create-product')->middleware(['auth', 'akses:admin']);
         });
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
