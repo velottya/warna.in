@@ -14,12 +14,12 @@ class SentraController extends Controller
 {
     public function sentra($page = null)
     {
-        $data = 
+        $data =
         [
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
         ];
-        
+
         if ($page == 'kegiatan'){
             return view('home.sentra.sentra1', $data);
         } else if ($page == 'produk'){
@@ -44,7 +44,7 @@ class SentraController extends Controller
     {
         return view('home.sentra.form-bayar', ['productName' => $productName]);
     }
-    
+
 
 
 
@@ -59,7 +59,7 @@ class SentraController extends Controller
     {
         // $product = Product::all();
 
-        $data = 
+        $data =
         [
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
@@ -77,7 +77,7 @@ class SentraController extends Controller
             'stock' => 'required|numeric',
             'category' => 'required',
         ];
-        
+
         // Simpan gambar ke direktori tertentu
         $imageName = time().'.'.$request->picture->extension();
         $request->picture->move(public_path('images/product'), $imageName);
@@ -118,7 +118,7 @@ class SentraController extends Controller
             'picture' => 'required',
             'price' => 'required|numeric',
             'stock' => 'required|numeric',
-            'category' => 'required', 
+            'category' => 'required',
         ]);
 
         $product = Product::findOrFail($id);
