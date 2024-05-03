@@ -32,6 +32,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
     Route::get('/cart', fn() => view('home.sentra.addcart'))->name('cart');
     Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
+    Route::get('/bayar', fn() => view('home.sentra.form-bayar'))->name('bayar');
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');

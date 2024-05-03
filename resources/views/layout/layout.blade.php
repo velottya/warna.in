@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-   
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -53,13 +53,13 @@
 					<li class="nav-item scrollto @yield('contact')"><a href="{{ url('user/contact') }}" class="nav-link">Contact</a></li>
                     <li class="nav-item scrollto @yield('profile')"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
                     <li class="nav-item scrollto">
-                        <a href="#" class="nav link">
+                        <a href="{{ route('sentra.cart') }}" class="nav link">
                             <img src="{{ asset('images/icon/cart.svg') }}" alt="Cart" style="height: 30px; margin-right: 10px; margin-top: 17px;" class="ml-2">
                         </a>
                     </li>
                     <li class="nav-item scrollto"><a href="{{ url('logout') }}" class="nav-link">Logout</a></li>
                     @endif
-                    
+
                     @if (Auth::check() && Auth::user()->role == 'admin')
                     <li class="nav-item scrollto"><a href="{{ route('dashboard') }}" class="nav-link">Admin</a></li>
                     @endif

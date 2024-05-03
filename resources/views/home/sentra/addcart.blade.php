@@ -57,7 +57,7 @@
                                                         <img src="images/Screenshot 2024-02-28 090458.png" alt="Ecommerce" style="height: 70px; width: 130px; padding-right: 50px; object-fit: cover;">
                                                             <div class="ms-3">
                                                                 <a href="product_link">
-                                                                    <h6 class="mb-1">Topeng Polos  </h6>
+                                                                    <h6 class="mb-1">Topeng Polos</h6>
                                                                 </a>
                                                                 <span>
                                                                     <small>IDR 120.000</small>
@@ -83,14 +83,14 @@
                                             </li>
                                         </ul>
                                         <div class="d-flex justify-content-between mt-4">
-                                            <a href="products_index_link" class="btn btn-first" 
+                                            <a href="products_index_link" class="btn btn-first"
                                             style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
                                             Continue Shopping</a>
-                                            <button type="submit" class="btn btn-second" 
+                                            <button type="submit" class="btn btn-second"
                                             style="background-color: transparent;  color: #F15D30;  border: 2px solid #F15D30;  padding: 10px 20px;  border-radius: 5px;">
                                             Update Cart</button>
                                         </div>
-    
+
                                     </div>
                                     <div class="col-12 col-lg-4 col-md-5">
                                         <div class="mb-5 card mt-6">
@@ -125,20 +125,20 @@
                                                 </div>
                                                 <div class="d-grid mb-1 mt-4">
                                                     <!-- btn -->
-                                                    <!-- <button class="btn d-flex justify-content-between align-items-center" type="submit" 
-                                                    style="background-color: #F15D30; 
-                                                    color: white; 
-                                                    font-size: 16px; 
-                                                    padding: 10px 20px; 
+                                                    <!-- <button class="btn d-flex justify-content-between align-items-center" type="submit"
+                                                    style="background-color: #F15D30;
+                                                    color: white;
+                                                    font-size: 16px;
+                                                    padding: 10px 20px;
                                                     border-radius: 5px;">
                                                         Go to Checkout
                                                         <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
                                                     </button> -->
-                                                    <a href="{{route('sentra.cekout', ['page' => $page])}}" class="btn d-flex justify-content-between align-items-center" 
+                                                    {{-- <a href="{{route('sentra.cekout', ['page' => $page])}}" class="btn d-flex justify-content-between align-items-center"
                                                         style="background-color: #F15D30;  color: white;  font-size: 16px;  padding: 10px 20px;  border-radius: 5px; text-decoration: none;">
                                                         Go to Checkout
                                                         <span class="fw-bold" style="padding-left: 49px;">IDR 228.000</span>
-                                                    </a>
+                                                    </a> --}}
                                                 </div>
                                             </div>
                                         </div>

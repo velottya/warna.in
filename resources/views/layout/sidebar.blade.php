@@ -111,7 +111,7 @@
                   </li>
                 </ul>
               </li>
-              
+
               <!-- Pages -->
               <li class="menu-header small text-uppercase">
                 <span class="menu-header-text">Pages</span>
@@ -167,7 +167,7 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <span class="fw-semibold d-block">John Doe</span>
+                              <span class="fw-semibold d-block">Phoenix</span>
                               <small class="text-muted">Admin</small>
                             </div>
                           </div>
