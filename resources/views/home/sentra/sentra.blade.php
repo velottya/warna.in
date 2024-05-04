@@ -27,7 +27,7 @@
                   ->take(3)
                   ->get();
       ?>
-        @foreach($product as $item)
+        @foreach($products as $item)
         @if($item->category_id == 2)
         <div class="row">
           <div class="col-md-4 ftco-animate">
@@ -77,7 +77,7 @@
                   ->take(3)
                   ->get();
       ?>
-        @foreach($product as $item)
+        @foreach($products as $item)
         @if($item->category_id == 1)
         <div class="row">
           <div class="col-md-4 ftco-animate">
@@ -117,7 +117,7 @@
       @endif   
     
       <!-- Modal -->
-      @foreach($product as $item)
+      @foreach($products as $item)
       <div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
@@ -141,16 +141,15 @@
                     <p class="my-4" style="text-align: justify;">{{ $item->description }}</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" onclick="addToCart({{ $product -> id}})" class="btn btn-secondary" data-dismiss="modal">Add To Cart</button>
+                    @csrf
+                    <a type="button" href="javascript:void(0);" onclick="addCart({{ $item->id }});" class="btn btn-secondary" data-dismiss="modal">Add To Cart</a>
 
                     <!-- NI BELOMMM -->
                     <button type="button" class="btn btn-primary">Cekout</button>
-                    
                 </div>
             </div>
         </div>
-    </div>
-
+      </div>
       @endforeach
     </section>
 
@@ -168,4 +167,5 @@
         </div>
       </div>
     </section>
+
 @endsection

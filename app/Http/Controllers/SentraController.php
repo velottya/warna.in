@@ -5,7 +5,6 @@ use App\Models\Category;
 use App\Models\Product;
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
@@ -24,6 +23,8 @@ class SentraController extends Controller
             return view('home.sentra.sentra1', $data);
         } else if ($page == 'produk'){
             return view('home.sentra.sentra2', $data);
+        } else if ($page == 'cart'){
+            return view('home.sentra.addcart', $data);
         } else {
             return view('home.sentra.sentra', $data);
         }
@@ -32,7 +33,7 @@ class SentraController extends Controller
 
 
 
-    public function cekout($page)
+    public function cekout()
     {
         return view('home.sentra.cekout');
     }
@@ -43,14 +44,11 @@ class SentraController extends Controller
     }
 
 
-
-
     // Nyambung ke admin
     public function adminPembayaran()
     {
         return view('admin.verifikasiBayar');
     }
-
 
     public function adminSentra()
     {

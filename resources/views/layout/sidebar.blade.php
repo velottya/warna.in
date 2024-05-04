@@ -23,14 +23,55 @@
       <link rel="stylesheet" href="../assets/css/demo.css" />
       <link rel="stylesheet" href="../extension/summernote/summernote-bs4.min.css">
 
-      <!-- Vendors CSS -->
       <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
       <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+      <meta name="csrf-token" content="{{ csrf_token() }}">
 
       <!-- Helpers -->
       <script src="../assets/vendor/js/helpers.js"></script>
       <script src="../assets/js/config.js"></script>
+          
+      <script>
+        // call summernote
+        $(document).ready(function(){
+          $(".summernote").summernote({
+            height:200
+          });
+        });
+
+        // Submit Product Form
+        $("#productForm").submit(function(event){
+          event.preventDefault();
+          var formArray = $(this).serializaArray();
+
+          $.ajax({
+            url: '{{ route("tambahSentra") }}',
+            type: 'post',
+            data: formArray,
+            dataType: 'json',
+            success: function(response) {
+              if (response['status'] == true) {
+
+              } else {
+                var errors = response['errors'];
+                $(".error").removeClass('invalid-feedback').html('');
+
+                $("input[type = 'text'], select").removeClass('is-invalid');
+
+                $.each(errors, function(key, value){
+                  $(`#${key}`).addClass('is-invalid')
+                  .siblings('p')
+                  .addClass('invalid-feedback')
+                  .html(value);
+                });
+              }
+            },
+            error: function(){
+              console.log("Something Went Wrong");
+            }
+          });
+        });
+      </script>
     </head>
 
     <body>

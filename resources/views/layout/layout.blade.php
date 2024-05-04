@@ -21,7 +21,52 @@
 
 	<link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <script type="text/javascript">
+        // Fungsi untuk menambahkan produk ke keranjang
+        function addCart(id) {
+            console.log('Product ID:', id); // Periksa apakah ID produk benar
+
+            // Jalankan AJAX untuk menambahkan produk ke keranjang
+            $.ajax({
+                url: '{{ route("sentra.addCart") }}',
+                type: 'post',
+                data: { id: id },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status == true) {
+                        window.location.href = '{{ route("sentra.cart") }}';
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    var errorMessage = "Error: " + xhr.responseText;
+                    alert(errorMessage);
+                    // Menyalin pesan kesalahan ke clipboard
+                    var tempInput = document.createElement("textarea");
+                    tempInput.value = errorMessage;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(tempInput);
+                    alert("Pesan kesalahan telah disalin ke clipboard.");
+                }
+            });
+        }
+
+        // Konfigurasi AJAX untuk menetapkan CSRF token
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        });
+    </script>
 
 </head>
 <body>
@@ -53,7 +98,7 @@
 					<li class="nav-item scrollto @yield('contact')"><a href="{{ url('user/contact') }}" class="nav-link">Contact</a></li>
                     <li class="nav-item scrollto @yield('profile')"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
                     <li class="nav-item scrollto">
-                        <a href="{{ route('sentra.cart') }}" class="nav link">
+                        <a href="{{ url('user/sentra/cart') }}" class="nav link">
                             <img src="{{ asset('images/icon/cart.svg') }}" alt="Cart" style="height: 30px; margin-right: 10px; margin-top: 17px;" class="ml-2">
                         </a>
                     </li>
@@ -129,21 +174,22 @@
             <div class="row">
                 <div class="col-md-12 text-center">
 
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <p> Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7
                     </div>
                 </div>
             </div>
         </footer>
 
-
-
         <!-- loader -->
-        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+        <div id="ftco-loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+            </svg>
+        </div>
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
+        
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>
@@ -158,7 +204,7 @@
         <script src="{{ asset('js/scrollax.min.js') }}"></script>
         <script src="{{ asset('js/google-map.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
 
     </body>
     </html>

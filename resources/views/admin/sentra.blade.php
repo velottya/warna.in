@@ -243,53 +243,5 @@
       </div>
       <!--/ Basic Bootstrap Table -->
     </div>
+
 @endsection
-
-@push('script')
-
-  <script>
-    // call summernote
-    $(document).ready(function(){
-      $(".summernote").summernote({
-        height:200
-      });
-    });
-
-    // Submit Product Form
-    $("#productForm").submit(function(event){
-      event.preventDefault();
-      var formArray = $(this).serializaArray();
-
-      $.ajax({
-        url: '{{ route("tambahSentra") }}',
-        type: 'post',
-        data: formArray,
-        dataType: 'json',
-        success: function(response) {
-          if (response['status'] == true) {
-
-          } else {
-            var errors = response['errors'];
-
-            // $(".error").removeClass('invalid-feedback').html('');
-
-            // $("input[type = 'text'], select").removeClass('is-invalid');
-
-            // $.each(errors, function(key, value){
-            //   $(`#${key}`).addClass('is-invalid')
-            //   .siblings('p')
-            //   .addClass('invalid-feedback')
-            //   .html(value);
-            // });
-          }
-        },
-        error: function(){
-          console.log("Something Went Wrong");
-        }
-      });
-    });
-
-
-  </script>
-  
-@endpush
