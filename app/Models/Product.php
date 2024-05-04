@@ -21,6 +21,13 @@ class Product extends Model
 
     public function category(){
         return $this->belongsTo(Category::class);
-        // return $this->belongsTo(Category::class, 'category_id');
+    }
+    public function carts(){
+        return $this->belongsToMany(Carts::class);
+    }
+
+    public function picture()
+    {
+        return $this->hasOne(Picture::class, 'product_id');
     }
 }

@@ -21,7 +21,6 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-
     public function showAddUser()
     {
         return view('adduser');

@@ -1,12 +1,15 @@
 <?php
 
-use App\Http\Controllers\ArtikelController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\GaleriController;
-use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CartController;
+
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ViewController;
 use App\Http\Controllers\SesiController;
 use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\UserRegisterController;
@@ -14,7 +17,6 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\SentraController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CategoryController;
 
 Route::group(['prefix' => ''], function () {
     Route::get('/', fn () => view('home.home'))->name('home');
@@ -24,7 +26,6 @@ Route::group(['prefix' => ''], function () {
     Route::get('/blog1', fn () => view('home.blog.blog1'))->name('blog1');
     Route::get('/blog2', fn () => view('home.blog.blog2'))->name('blog2');
 
-
     Route::get('/contact', fn () => view('home.contact'))->name('contact');
 
     Route::get('/sentra', fn () => view('home.sentra.sentra'))->name('sentra');
@@ -32,6 +33,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/sentra2', fn () => view('home.sentra.sentra2'))->name('sentra2');
     Route::get('/cart', fn() => view('home.sentra.addcart'))->name('cart');
     Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
+    Route::get('/bayar', fn() => view('home.sentra.form-bayar'))->name('bayar');
 
     Route::get('/sentra11', function () {
         return view('home.sentra.sentra11');
@@ -57,7 +59,7 @@ Route::group(['prefix' => ''], function () {
     // Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('/', [ViewController::class, 'home'])->name('home');
+    Route::get('/home', [ViewController::class, 'home'])->name('home');
     Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
     Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
     Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
@@ -75,14 +77,16 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/', [ViewController::class, 'home'])->name ('home');
 
         Route::get('/blog/{page?}', [BlogController::class, 'blog'])->name('blog');
+
         Route::get('/galeri/{page?}', [GaleriController::class, 'galeri'])->name('galeri');
-        // Route::get('/galeri', [GaleriController::class, 'index'])->name('admin.galeri');
         Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
 
 
         Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
-        Route::get('/sentra/{page?}/cart', [SentraController::class, 'cart'])->name('sentra.cart');
-        Route::get('/sentra/{page?}/cart/checkout', [SentraController::class, 'cekout'])->name('sentra.cekout');
+        Route::get('/sentra/cart', [CartController::class, 'cart'])->name('sentra.cart');
+        Route::post('/sentra/addCart', [CartController::class, 'addCart'])->name('sentra.addCart');
+
+        Route::get('/sentra/cart/ceckout', [SentraController::class, 'cekout'])->name('sentra.cekout');
         Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
 
         Route::get('/about', [ViewController::class, 'about'])->name('about');
@@ -99,11 +103,10 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
 
 Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
-
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
-        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
 
@@ -126,6 +129,17 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         // Rute untuk menampilkan halaman edit
         Route::get('/admin/artikel/{id}/edit', [ArtikelController::class, 'edit'])->name('artikel.edit');
         Route::put('/admin/artikel/{id}', [ArtikelController::class, 'update'])->name('artikel.update');
+        Route::group(['prefix' => 'sentra'], function () {
+            Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
+            Route::post("/tambah", [SentraController::class, "tambahSentra"])->name('tambahSentra')->middleware(['auth', 'akses:admin']);
+            Route::post("/delete/{id}", [SentraController::class, "deleteSentra"])->name('deleteSentra')->middleware(['auth', 'akses:admin']);
+            Route::get("/{id}/edit", [SentraController::class, "editSentra"])->name('editSentra')->middleware(['auth', 'akses:admin']);
+            Route::put("/{id}", [SentraController::class, "updateSentra"])->name('updateSentra')->middleware(['auth', 'akses:admin']);
+        });
+
+        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+
+        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);

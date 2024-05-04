@@ -68,7 +68,7 @@
               </thead>
               <tbody class="table-border-bottom-0">
 
-                <!-- Baris Isi Galeri -->
+                <!-- Baris Isi Artikel -->
                 @foreach($artikel as $item)
                 <tr>
                   <td>
@@ -89,7 +89,7 @@
                         <strong class="truncate-text">{{ $item->judul }}</strong>
                     </td>
 
-                    <td style="max-width: 150px; overflow: hidden; white-space: nowrap;">{{ $item->deskripsi }}</td>
+                    <td style="max-width: 150px; overflow: hidden; white-space: nowrap;">{{ $item->penjelasan }}</td>
                     <td><span class="badge bg-label-primary me-1">{{ $item->created_at }}</span></td>
                     <td>
                 </form>

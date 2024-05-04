@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home 
+            <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home 
               <i class="fa fa-chevron-right"></i></a></span> <span>Sentra <i class="fa fa-chevron-right"></i></span>
             </p>
             <h1 class="mb-0 bread">Sentra</h1>
@@ -20,42 +20,46 @@
     <h1 class="mb-0 bread text-center pt-5 font-weight-bold">PAKET KEGIATAN</h1>
     <section class="ftco-section">
       <div class="container">
+      <?php
+      // Ambil 3 data terbaru dari kategori PaketKegiatan
+      $products = App\Models\Product::where('category_id', 1)
+                  ->orderBy('created_at', 'desc')
+                  ->take(3)
+                  ->get();
+      ?>
+        @foreach($products as $item)
+        @if($item->category_id == 2)
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/sentra/kegiatan/s1_1.jpeg') }}');">
+              <a href="#" class="img" alt="{{ $item->name }}" style="background-image: url('{{ asset('images/product/'.$item->picture) }}');">
+                <span class="price">Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
               </a>
-              <div class="text p-4">
-                <span class="days">13:00-15:00</span>
-                <h3><a href="#">Sinau Tembang Klangenan</a></h3>
-                <p><a href="/sentra11" class="btn btn-primary">Kunjungi</a></p>
+              <div class="text p-4">  
+                <h3><a href="#">{{ $item->name }}</a></h3>
+                <div class="paragraph" style="max-width: 300px; word-wrap: break-word;" >
+                  {{ Illuminate\Support\Str::limit($item->description, 40) }}
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                  <p>Rp. {{ number_format($item->price, 0, ',', '.') }}</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Stock: {{ $item->stock }}</p>
+                  </div>
+                </div>
+                <p><a href="/sentra11" class="btn btn-primary">More</a></p>
+
+                <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#previewProduk{{ $item->id }}"
+                ><i class="bx bx-edit-alt me-1"></i> More</a>
+
               </div>
             </div>
           </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/sentra/kegiatan/s1_2.jpeg') }}');">
-              </a>
-              <div class="text p-4">
-                <span class="days">15:00-17:00</span>
-                <h3><a href="#">Sinau Jula Juli & Ludruk Malang</a></h3>
-                <p><a href="/sentra12" class="btn btn-primary">Kunjungi</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/sentra/kegiatan/s1_3.jpg') }}');">
-              </a>
-              <div class="text p-4">
-                <span class="days">19:00-21:00</span>
-                <h3><a href="#">Sinau Budaya Malang </a></h3>
-                <p><a href="#" class="btn btn-primary">Kunjungi</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
+        @endif
+        @endforeach
       </div>
+
       @guest
         <p class="text-center"><a href="{{url ('/sentra/kegiatan')}}" class="btn btn-primary">Selengkapnya</a></p>
       @endguest
@@ -66,59 +70,87 @@
     <h1 class="mb-0 bread text-center font-weight-bold">PRODUK</h1>
     <section class="ftco-section">
       <div class="container">
+      <?php
+      // Ambil 3 data terbaru dari kategori PaketKegiatan
+      $products = App\Models\Product::where('category_id', 1)
+                  ->orderBy('created_at', 'desc')
+                  ->take(3)
+                  ->get();
+      ?>
+        @foreach($products as $item)
+        @if($item->category_id == 1)
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url('{{ asset('images/sundari.jpg') }}');">
-                <span class="price">Rp 100.000</span>
+              <a href="#" class="img" alt="{{ $item->name }}" style="background-image: url('{{ asset('images/product/'.$item->picture) }}');">
+                <span class="price">Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
               </a>
-              <div class="text p-4">
-                <h3><a href="#">Batik Sundari</a></h3><br>
-                <span class="days">Kondisi : </span>Baru<br>
-                <span class="days">Min. pemesanan : </span>1 Buah<br>
-                <span class="days">Pre-Order 3 Hari</span><br>
-                <p><a href="#" class="btn btn-primary">Detail</a></p>
-              </div>
-            </div>
-          </div>
+              <div class="text p-4">  
+                <h3><a href="#">{{ $item->name }}</a></h3>
+                <div class="paragraph" style="max-width: 300px; word-wrap: break-word;" >
+                  {{ Illuminate\Support\Str::limit($item->description, 40) }}
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                  <p>Rp. {{ number_format($item->price, 0, ',', '.') }}</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Stok: {{ $item->stock }}</p>
+                  </div>
+                </div>
+               
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreProduk{{ $item->id }}">
+                  More Details
+                </button>
 
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url('{{ asset('images/tm.jpeg') }}');">
-                <span class="price">Rp 75.000</span>
-              </a>
-              <div class="text p-4">
-                <h3><a href="#">Topeng Malangan</a></h3>
-                <span class="days">Kondisi : </span>Baru<br>
-                <span class="days">Min. pemesanan : </span>1 Buah<br>
-                <span class="days">Pre-Order 3 Hari</span><br>
-                <p><a href="#" class="btn btn-primary">Detail</a></p>
-              </div>
             </div>
           </div>
-          <div class="col-md-4 ftco-animate">
-          <div class="project-wrap hotel">
-              <a href="#" class="img" style="background-image: url('{{ asset('images/pab.png') }}');">
-                <span class="price">Rp 145.000</span>
-              </a>
-              <div class="text p-4">
-                <h3><a href="#">Topeng Panji Asmoro Bangun </a></h3>
-                <span class="days">Kondisi : </span>Baru<br>
-                <span class="days">Min. pemesanan : </span>1 Buah<br>
-                <span class="days">Pre-Order 3 Hari</span><br>
-                <p><a href="#" class="btn btn-primary">Detail</a></p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
+        @endif
+        @endforeach
       </div>
       @guest
         <p class="text-center"><a href="{{url ('/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
       @endguest
       @if (Auth::check() && Auth::user()->role == 'user')
         <p class="text-center"><a href="{{url ('/user/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
-      @endif    
+      @endif   
+    
+      <!-- Modal -->
+      @foreach($products as $item)
+      <div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{ $item->name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <img src="{{ asset('images/product/'.$item->picture) }}" class="img-fluid" alt="{{ $item->name }}" style="width: 250px; height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-5 mt-4">
+                            <p><strong>Stok:</strong> {{ $item->stock }}</p>
+                            <p><strong>Harga:</strong> Rp. {{ number_format($item->price, 0, ',', '.') }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="my-4" style="text-align: justify;">{{ $item->description }}</p>
+                </div>
+                <div class="modal-footer">
+                    @csrf
+                    <a type="button" href="javascript:void(0);" onclick="addCart({{ $item->id }});" class="btn btn-secondary" data-dismiss="modal">Add To Cart</a>
+
+                    <!-- NI BELOMMM -->
+                    <button type="button" class="btn btn-primary">Cekout</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      @endforeach
     </section>
 
     <section class="ftco-intro ftco-section ftco-no-pt">
@@ -135,4 +167,5 @@
         </div>
       </div>
     </section>
+
 @endsection

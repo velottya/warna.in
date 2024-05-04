@@ -3,12 +3,12 @@
 @section('title', 'Checkout')
 @section('content')
 
-<section class="main-content" style=" position: absolute; z-index: 1; padding-left: 150px; padding-top: 80px; padding-bottom: 120px; display: flex; flex-direction: column; min-height: 100vh;">
-    <div class="container-fluid" style="background-color: white; min-width: 160vh;">
+<section class="main-content" style=" position: absolute; z-index: 1; padding-left: 90px; padding-top: 80px; padding-bottom: 120px; display: flex; flex-direction: column; min-height: 100vh;">
+    <div class="container-fluid" style="background-color: white; min-width: 180vh;">
         <div class="row">
             <section class="col-lg-12 col-md-12 shopping-cart">
                 <div class="card mb-4 bg-light border-0 section-header mt-5 mx-5">
-                    <div class="card-body p-5">
+                    <div class="card-body p-2">
                         <h2 class="mb-0">Checkout</h2>
                     </div>
                 </div>
@@ -16,42 +16,36 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="d-flex justify-content-between">
                             <h5 class="mb-0"><i class='bx bx-map'></i> Delivery Address</h5>
-                            <a href="#" class="btn btn-outline-secondary btn-sm">Add a new address</a>
                         </div>
                         <div class="mt-3">
                             <div class="row">
-                                <div class="col-lg-6 col-12 mb-4">
+                                <div class="col-lg-12 col-12 mb-4">
                                     <div class="card card-body p-6">
-                                        <div class="form-check mb-4">
-                                            <input class="form-check-input delivery-address" value="#" type="radio" name="address_id" id="homeRadio" checked>
-                                            <label class="form-check-label text-dark" for="homeRadio">Rumah</label>
+                                        <!-- Form untuk input alamat pembeli -->
+                                        <form id="addressForm">
+                                            <div class="mb-2">
+                                                <label for="fullName" class="form-label">Full Name</label>
+                                                <input style="font-size: 0.8em;" type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="address" class="form-label">Address</label>
+                                                <textarea style="font-size: 0.8em;" class="form-control" id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                                                <input style="font-size: 0.8em;" type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="catatan" class="form-label">Catatan</label>
+                                                <textarea style="font-size: 0.8em;" class="form-control" id="address" name="address" rows="3" placeholder="Optional " ></textarea>
+                                            </div>
                                         </div>
-                                        <!-- address -->
-                                        <address>
-                                            <strong>Silvana Ovarista</strong>
-                                            <br>
-                                            Jl. Terusan Ambarawan no. 137 Malang
-                                            <br>
-                                            <abbr title="Phone">0864-7389-****</abbr>
-                                        </address>
-                                        <span class="text-danger">Default address</span>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                        <h5 class="mb-0"><i class='bx bxs-truck'></i> Delivery Service</h5>
-                        <div class="mt-3">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input courier-code" type="radio" name="courier_code" id="inlineRadio1" value="ambil" checked>
-                                <label class="form-check-label" for="inlineRadio1">Ambil ditempat</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input courier-code" type="radio" name="courier_code" id="inlineRadio2" value="pos">
-                                <label class="form-check-label" for="inlineRadio2">POS</label>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between mt-4 mb-5">
-                            <a href="products_index_link" class="btn btn-first" style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+                        <div class="d-flex justify-content-between mb-4">
+                            <a href="#" class="btn btn-first" style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
                                 Back to Shopping Cart</a>
                             <a href="#" type="submit" class="btn btn-second" style="background-color: transparent; color: #F15D30; border: 2px solid #F15D30; padding: 10px 20px; border-radius: 5px;">
                                 Place Order</a>
@@ -115,9 +109,9 @@
                                 </ul>
                                 <div class="text-center">
                                     <!-- INI BELOM FIKS -->
-                                    <a href="{{route('sentra.bayar', ['page' => $page, 'productName' => $productName])}}" class="btn btn-first " 
+                                    {{-- <a href="{{route('sentra.bayar', ['page' => $page, 'productName' => $productName])}}" class="btn btn-first "
                                     style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;" >
-                                    Payment Form</a>
+                                    Payment Form</a> --}}
                                 </div>
                             </div>
                         </div>
