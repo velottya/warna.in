@@ -47,7 +47,7 @@ class ArtikelController extends Controller
 
         // Simpan data ke database
         Artikel::create([
-            'gambar' => $imageName,
+            'gambar' => $imageName, // Simpan nama file gambar, bukan blob
             'judul' => $request->judul,
             'penjelasan' => $request->penjelasan,
             // 'timestamps' => $request->timestamp,
@@ -86,10 +86,11 @@ class ArtikelController extends Controller
             $gambar = $request->file('gambar');
 
             // Ubah gambar menjadi blob
-            $gambarBlob = file_get_contents($gambar->getRealPath());
+            $imageName = time().'.'.$gambar->extension();
+            $gambar->move(public_path('images'), $imageName);
 
             // Simpan gambar sebagai blob di dalam kolom gambar di tabel artikel
-            $artikel->gambar = $gambarBlob;
+            $artikel->gambar = $imageName;
         }
 
         // Simpan perubahan pada data artikel

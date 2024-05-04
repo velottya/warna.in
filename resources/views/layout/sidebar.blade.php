@@ -121,7 +121,7 @@
               <li class="menu-item @yield('artikel')">
                 <a href="{{ url('admin/artikel') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-file"></i>
-                  <div data-i18n="artikel">Artikel</div>
+                  <div data-i18n="artikel">Artikel Polowijen</div>
                 </a>
               </li>
               <!-- Stock Obname -->
