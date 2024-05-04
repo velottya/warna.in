@@ -80,9 +80,10 @@
             <li class="menu-item">
               <a href="artikel.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Artikel</div>
+                <div data-i18n="Documentation">Artikel Polowijen</div>
               </a>
             </li>
+            
             <!-- Stock Obname -->
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Sentra Polowijen</span>
