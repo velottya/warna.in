@@ -79,8 +79,8 @@
             </li>
             <li class="menu-item">
               <a href="artikel.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Artikel Polowijen</div>
+                <i class="menu-icon tf-icons bx bx-Support"></i>
+                <div data-i18n="Support">Artikel Polowijen</div>
               </a>
             </li>
             
