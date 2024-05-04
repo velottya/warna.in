@@ -59,4 +59,16 @@ class CartController extends Controller
     {
         return view('home.sentra.addcart');
     }
+
+    public function cekout(Request $request)
+    {
+        $product_id = $request->product_id;
+    
+        // Mengambil data produk berdasarkan ID
+        $product = Product::findOrFail($product_id);
+    
+        // Mengirim data produk ke view cekout
+        return view('home.sentra.cekout', compact('product'));
+    }
+    
 }

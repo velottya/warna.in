@@ -82,12 +82,14 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
 
 
-        Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+        Route::get('/sentra', [SentraController::class, 'sentra'])->name('sentra');
+        Route::get('/sentra/kegiatan', [SentraController::class, 'kegiatan'])->name('sentra.kegiatan');
+        Route::get('/sentra/produk', [SentraController::class, 'produk'])->name('sentra.produk');
         Route::get('/sentra/cart', [CartController::class, 'cart'])->name('sentra.cart');
         Route::post('/sentra/addCart', [CartController::class, 'addCart'])->name('sentra.addCart');
+        Route::get('/sentra/ceckout/{product_id}', [CartController::class, 'cekout'])->name('sentra.cekout');
 
-        Route::get('/sentra/cart/ceckout', [SentraController::class, 'cekout'])->name('sentra.cekout');
-        Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
+        // Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
 
         Route::get('/about', [ViewController::class, 'about'])->name('about');
         Route::get('/contact', [UserDataController::class, 'contactView'])->name('contact'); //sementara

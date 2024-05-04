@@ -145,7 +145,7 @@
                     <a type="button" href="javascript:void(0);" onclick="addCart({{ $item->id }});" class="btn btn-secondary" data-dismiss="modal">Add To Cart</a>
 
                     <!-- NI BELOMMM -->
-                    <button type="button" class="btn btn-primary">Cekout</button>
+                    <a href="{{ route('sentra.cekout', ['product_id' => $item->id]) }}" type="button" class="btn btn-primary">Cekout</a>
                 </div>
             </div>
         </div>
