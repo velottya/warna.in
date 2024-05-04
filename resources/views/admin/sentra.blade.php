@@ -15,7 +15,7 @@
         <!-- <button type="button" class="btn btn-primary btn-lg mx-4 mb-4 mt-4" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#tambahGaleri">
           Tambah Stock
         </button> -->
-        
+
         <!-- Modal -->
         <div class="modal fade" id="tambahSentra" tabindex="-1" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -47,7 +47,7 @@
                     <div class="col mb-3">
                         <label for="category" class="form-label">Kategori Produk</label>
                         <select class="form-select" id="category" name="category">
-                          @foreach ($category as $category) 
+                          @foreach ($category as $category)
                             <option value="{{ $category->id }}" >{{ $category->name }}</option>
                           @endforeach
                         </select>
@@ -130,7 +130,12 @@
                       </button>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#previewProduk{{ $item->id }}"
-                          ><i class="bx bx-edit-alt me-1"></i> More Preview</a>
+                          ><i class="bx bx-edit-alt me-1"></i> More Preview</a><select class="form-select" id="category" name="category">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+
                         <!-- INI BELUM -->
                         <a class="dropdown-item" href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#editProduct"
                           ><i class="bx bx-edit-alt me-1"></i> Edit</a>
@@ -156,7 +161,7 @@
                           </div>
                           <div class="modal-body text-center">
                             <img src="{{ asset('images/product/'.$item->picture) }}" class="img-fluid" alt="{{ $item->name }}" style="width: 500px;"/>
-                            
+
                             <!-- INI DI BENAHI LAGI -->
                             <p class="my-4" style="max-width: 100%; text-align: justify; word-wrap: break-word; margin-left: auto; margin-right: auto; word-wrap: break-word;">
 
@@ -197,12 +202,12 @@
                           <div class="row">
                             <div class="col mb-3">
                                 <label for="category" class="form-label">Kategori Produk</label>
-                                <select class="form-select" id="category" name="category"  value="{{ $category->id }}" >
-                                @if ($category)
-                                  <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endif
-
+                                <select class="form-select" id="category" name="category">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
                                 </select>
+
                             </div>
                           </div>
                           <div class="row">
@@ -223,7 +228,7 @@
                               <input type="text" id="description" name="description"  value="{{ $item->description }}" class="form-control summernote" style="height: 100px;" placeholder="Tambahkan Deskripsi" />
                               <p class="errors"></p>
                             </div>
-                          </div>                  
+                          </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                               Close

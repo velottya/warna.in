@@ -58,13 +58,13 @@ class SentraController extends Controller
     public function adminSentra()
     {
         // $product = Product::all();
-
+        $categories = Category::all();
         $data =
         [
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
         ];
-        return view('admin.sentra', $data);
+        return view('admin.sentra', compact('categories'), $data);
     }
 
     public function tambahSentra(Request $request)
