@@ -104,13 +104,8 @@ class ArtikelController extends Controller
     {    
         $artikel = Artikel::all(); 
     
-<<<<<<< HEAD
         return view('home.blog.blog', compact('artikel'));    
-=======
         $artikel = Artikel::all(); // Mengambil semua data Artikel dari database
-        
-    
->>>>>>> 3013f87a6f140d6fe2866e8bd30d4dea6d170b6f
     }
 
 }
