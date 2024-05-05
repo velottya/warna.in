@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Carts;
 use App\Models\Orders;
+use App\Models\Bayar;
+
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
@@ -80,12 +82,12 @@ class CartController extends Controller
     {
         return view('home.sentra.addcart');
     }
-    
+
     public function cekout(Request $request)
     {
         $product_id = $request->product_id;
         $product = Product::findOrFail($product_id);
-    
+
         // Mengirim data produk ke view cekout
         return view('home.sentra.cekout', compact('product'));
     }
@@ -138,8 +140,8 @@ class CartController extends Controller
     //     //     'address' => $request->address,
     //     //     'phoneNumber' => $request->phoneNumber,
     //     //     'jumlahTransfer' => $request->jumlahTransfer,
-    //     //     'transferMethod' => $request->transferMethod, 
-    //     //     'buktiPembayaran' => $request->buktiPembayaran, 
+    //     //     'transferMethod' => $request->transferMethod,
+    //     //     'buktiPembayaran' => $request->buktiPembayaran,
     //     //     'catatan' => $request->catatan,
 
     //     //     'total_price' => $request->total_price,
@@ -161,28 +163,29 @@ class CartController extends Controller
             'phoneNumber' => 'required',
             'note' => 'nullable',
             'jumlahTransfer' => 'required',
-            'transferMethod' => 'required', 
-            'buktiPembayaran' => 'required', 
+            'transferMethod' => 'required',
+            'buktiPembayaran' => 'required',
             'total_price' => 'required',
         ];
 
         // Simpan gambar ke direktori tertentu
-        $imageName = time().'.'.$request->buktiPembayaran->extension();
-        $request->buktiPembayaran->move(public_path('images/sentra/pembayaran'), $imageName);
+        // $imageName = time().'.'.$request->buktiPembayaran->extension();
+        // $request->buktiPembayaran->move(public_path('images/sentra/pembayaran'), $imageName);
 
-        Orders::create([
+        Bayar::create([
             'product_id' => $request->product_id,
             'full_name' => $request->fullName,
             'address' => $request->address,
             'phone_number' => $request->phoneNumber,
             'total_price' => $request->total_price,
-            'jumlah_transfer' => $request->jumlahTransfer,
+            'jumlah_transfer' => $request->JumlahTransfer,
             'transfer_melalui' => $request->transferMethod,
             'bukti_pembayaran' => $request->buktiPembayaran,
             'note' => $request->catatan,
         ]);
 
-        return redirect()->back()->with('success','PPEMBAYARAN berhasil ditambahkan.');
+        return redirect()->route('sentra')->with('success', 'PEMBAYARAN berhasil ditambahkan.');
+
     }
 
     public function bayar(Request $request)
@@ -192,5 +195,6 @@ class CartController extends Controller
 
         return view('home.sentra.form-bayar', compact('product'));
     }
-    
+
+
 }

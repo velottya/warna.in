@@ -8,11 +8,7 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
-<<<<<<< HEAD
                 <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home
-=======
-                <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home 
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
                     <i class="fa fa-chevron-right"></i></a></span> <span>Sentra <i class="fa fa-chevron-right"></i></span>
                 </p>
                 <h1 class="mb-0 bread">Sentra</h1>
@@ -39,11 +35,7 @@
                     <a href="#" class="img" alt="{{ $item->name }}" style="background-image: url('{{ asset('images/product/'.$item->picture) }}');">
                         <span class="price">Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
                     </a>
-<<<<<<< HEAD
                     <div class="text p-4">
-=======
-                    <div class="text p-4">  
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
                         <h3><a href="#">{{ $item->name }}</a></h3>
                         <div class="paragraph" style="max-width: 300px; word-wrap: break-word;">
                             {{ Illuminate\Support\Str::limit($item->description, 40) }}
@@ -53,11 +45,7 @@
                                 <p>Rp. {{ number_format($item->price, 0, ',', '.') }}</p>
                             </div>
                             <div class="col-md-6">
-<<<<<<< HEAD
-                                <p>Stok: {{ $item->stock }}</p>
-=======
                                 <p>Stock: {{ $item->stock }}</p>
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
                             </div>
                         </div>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreKegiatan{{ $item->id }}">
@@ -97,11 +85,7 @@
                     <a href="#" class="img" alt="{{ $item->name }}" style="background-image: url('{{ asset('images/product/'.$item->picture) }}');">
                         <span class="price">Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
                     </a>
-<<<<<<< HEAD
                     <div class="text p-4">
-=======
-                    <div class="text p-4">  
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
                         <h3><a href="#">{{ $item->name }}</a></h3>
                         <div class="paragraph" style="max-width: 300px; word-wrap: break-word;">
                             {{ Illuminate\Support\Str::limit($item->description, 40) }}
@@ -130,18 +114,10 @@
     @endguest
     @if (Auth::check() && Auth::user()->role == 'user')
     <p class="text-center"><a href="{{url ('/user/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
-<<<<<<< HEAD
     @endif
 
 <!-- Modal -->
 @foreach($product as $item)
-@if($item->category_id == 1)
-=======
-    @endif   
-  
-<!-- Modal -->
-@foreach($product as $item)
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
 <div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
       <div class="modal-content">
@@ -165,15 +141,8 @@
               <p class="my-4" style="text-align: justify;">{{ $item->description }}</p>
           </div>
           <div class="modal-footer">
-<<<<<<< HEAD
-            <form method="POST" action="/sentra/addCart">
-            @csrf
-              <button type="button" class="btn btn-primary" id="cart-btn" onclick="addToCart({{ $item->id }}, '{{ $item->name }}', {{ $item->price }})">Add to Cart</button>
-            </form>
-=======
               @csrf
               <a type="button" href="javascript:void(0);" onclick="addCart({{ $item->id }});" class="btn btn-secondary" data-dismiss="modal">Add To Cart</a>
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
 
               <!-- NI BELOMMM -->
               <a href="{{ route('sentra.cekout', ['product_id' => $item->id]) }}" type="button" class="btn btn-primary">Cekout</a>
@@ -181,53 +150,10 @@
       </div>
   </div>
 </div>
-<<<<<<< HEAD
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<script>
-    $(document).ready(function(){
-        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-
-        // Pindahkan definisi fungsi addToCart ke cakupan global
-        window.addToCart = function(productId, productName, productPrice) {
-            $.ajax({
-                url: '/sentra/addCart',
-                type: 'POST',
-                headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-     },
-                data: {
-                    _token: CSRF_TOKEN,
-                    product_id: productId,
-                    name: productName,
-                    price: productPrice
-                },
-                dataType: 'JSON',
-                success: function(response) {
-                    alert(response.message);
-                        // Di sini Anda dapat memperbarui tampilan keranjang belanja jika diperlukan
-                    },
-                error: function(xhr, status, error) {
-                    console.error(error);
-                    alert('An error occurred. Please try again.');
-                }
-            });
-        };
-
-    });
-    </script>
-
-
-
-@endif
-
-@if($item->category_id == 2)
-=======
 @endforeach
-  
+
 <!-- Modal -->
 @foreach($product as $item)
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
 <div class="modal fade" id="moreKegiatan{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
       <div class="modal-content">
@@ -260,10 +186,6 @@
       </div>
   </div>
 </div>
-<<<<<<< HEAD
-@endif
-=======
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
 @endforeach
 
 </section>

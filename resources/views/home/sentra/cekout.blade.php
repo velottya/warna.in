@@ -89,23 +89,23 @@
                                         <div class="card card-body p-6">
                                             <div class="mb-2">
                                                 <label for="fullName" class="form-label">Nama Lengkap</label>
-                                                <input style="font-size: 0.9em;" type="text" class="form-control" id="fullName" name="fullName" placeholder="Masukkan nama lengkap Anda" required>
+                                                <input style="font-size: 0.9em;" type="text" value="{{ $product->full_name }}" class="form-control" id="fullName" name="fullName" placeholder="Masukkan nama lengkap Anda" required>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="address" class="form-label">Alamat</label>
-                                                <textarea style="font-size: 0.9em;" class="form-control" id="address" name="address" rows="2" placeholder="Masukkan alamat Anda" required></textarea>
+                                                <textarea style="font-size: 0.9em;" class="form-control" value="{{ $product->address }}" id="address" name="address" rows="2" placeholder="Masukkan alamat Anda" required></textarea>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="phoneNumber" class="form-label">Nomor Telepon</label>
-                                                <input style="font-size: 0.9em;" type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Masukkan nomor telepon Anda" required>
+                                                <input style="font-size: 0.9em;" type="number" class="form-control" value="{{ $product->phoneNumber }}" id="phoneNumber" name="phoneNumber" placeholder="Masukkan nomor telepon Anda" required>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="jumlahTransfer" class="form-label">Jumlah Transfer</label>
-                                                <input class="form-control" style="font-size: 0.9em;" type="number" value="IDR {{ number_format($product->price, 0, ',', '.') }}" id="jumlahTransfer" style="height: 10px;" placeholder="Masukkan jumlah transfer">
+                                                <input class="form-control" style="font-size: 0.9em;" type="number" value="{{ $product->JumlahTransfer }}" id="jumlahTransfer" style="height: 10px;" placeholder="Masukkan jumlah transfer" required>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="transferMethod" class="form-label">Transfer Melalui</label>
-                                                <select class="form-control" id="transfer-melalui" name="transferMethod" style="font-size: 0.9em;">
+                                                <select class="form-control" id="transfer-melalui" name="transferMethod" style="font-size: 0.9em;" value="{{ $product->transferMethod}}" required>
                                                     <option value="bri" >BRI (6367 0829 8376 917)</option>
                                                     <option value="bca" >BCA (724 9274 9284)</option>
                                                     <option value="shopeepay" >ShopeePay (0863 8366 8923)</option>
@@ -114,13 +114,15 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="buktiPembayaran" class="form-label">Pilih Foto Produk</label>
-                                                <input class="form-control" type="file" name="buktiPembayaran" id="buktiPembayaran" accept=".jpg, .jpeg, .png" placeholder="Unggah bukti pembayaran Anda"/>
+                                                <input class="form-control" type="file" name="buktiPembayaran" value="{{ $product->buktiPembayaran }}" id="buktiPembayaran" accept=".jpg, .jpeg, .png" placeholder="Unggah bukti pembayaran Anda" required/>
                                                 <p class="errors"></p>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="note" class="form-label">Catatan</label>
-                                                <textarea style="font-size: 0.9em;" class="form-control" id="note" name="note" rows="2" placeholder="Opsional"></textarea>
+                                                <textarea style="font-size: 0.9em;" class="form-control" value="{{ $product->catatan}}" id="note" name="note" rows="2" placeholder="Opsional" required></textarea>
                                             </div>
+
+
                                             <input type="hidden" name="product_id" value="{{ $product->id }}">
                                             <input type="hidden" name="total_price" value="{{ $product->price }}">
                                             <div class="d-flex justify-content-center my-2">
@@ -135,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </section>
             </div>
