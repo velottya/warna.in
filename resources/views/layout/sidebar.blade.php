@@ -141,7 +141,7 @@
                 </a>
                 <ul class="menu-sub">
                   <li class="menu-item @yield('transaksi')">
-                    <a href="{{ url('admin/transaksi') }}" class="menu-link" target="_blank">
+                    <a href="{{ url('admin/transaksi') }}" class="menu-link">
                       <div data-i18n="transaksi">Transaksi Sentra</div>
                     </a>
                   </li>
