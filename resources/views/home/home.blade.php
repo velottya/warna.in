@@ -3,6 +3,27 @@
 @section('title', 'Home | Authentic Polowijen')
 @section('content')
 
+<style>
+    /* Style untuk lightbox */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .lightbox iframe {
+        width: 80%;
+        height: 80%;
+    }
+</style>
+
 <div class="hero-wrap js-fullheight" style="background-image: url('images/slider.jpg');">
     <div class="overlay"></div>
     <div class="container">
@@ -12,9 +33,45 @@
                 <h1 class="mb-4">KAMPUNG BUDAYA POLOWIJEN</h1>
                 <p class="caps">Warisi Tradisi Lestarikan Budaya</p>
             </div>
-            <a href="https://www.youtube.com/embed/a263e7QfWc27THV2" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+            
+            <a href="https://www.youtube.com/embed/O3ZDI1pjr2M?si=hVjtOkSFO5yOo7P6" id="video-link" class="icon-video d-flex align-items-center justify-content-center mb-4">
                 <span class="fa fa-play"></span>
             </a>
+
+            <div id="lightbox" class="lightbox" style="display:none;">
+                <iframe id="video-frame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <script>
+                // Mendapatkan elemen link dan lightbox
+                var videoLink = document.getElementById('video-link');
+                var lightbox = document.getElementById('lightbox');
+                var videoFrame = document.getElementById('video-frame');
+
+                // Menambahkan event listener untuk klik pada link
+                videoLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Menghentikan aksi default dari link
+
+                    // Mendapatkan URL video dari link
+                    var videoUrl = this.getAttribute('href');
+
+                    // Menetapkan URL video ke iframe
+                    videoFrame.src = videoUrl;
+
+                    // Menampilkan lightbox
+                    lightbox.style.display = 'flex';
+                });
+
+                // Menambahkan event listener untuk klik di luar lightbox
+                lightbox.addEventListener('click', function(event) {
+                    if (event.target === this) {
+                        // Menyembunyikan lightbox jika area di luar iframe diklik
+                        lightbox.style.display = 'none';
+                        // Menghentikan video saat lightbox disembunyikan
+                        videoFrame.src = '';
+                    }
+                });
+            </script>
         </div>
     </div>
 </div>
@@ -310,9 +367,44 @@
         <div class="container py-md-5">
             <div class="row py-md-5">
                 <div class="col-md d-flex align-items-center justify-content-center">
-                    <a href="https://www.youtube.com/embed/a263e7QfWc27THV2" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-                        <span class="fa fa-play"></span>
-                    </a>
+                <a href="https://www.youtube.com/embed/O3ZDI1pjr2M?si=hVjtOkSFO5yOo7P6" id="video-link" class="icon-video d-flex align-items-center justify-content-center mb-4">
+                <span class="fa fa-play"></span>
+            </a>
+
+            <div id="lightbox" class="lightbox" style="display:none;">
+                <iframe id="video-frame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <script>
+                // Mendapatkan elemen link dan lightbox
+                var videoLink = document.getElementById('video-link');
+                var lightbox = document.getElementById('lightbox');
+                var videoFrame = document.getElementById('video-frame');
+
+                // Menambahkan event listener untuk klik pada link
+                videoLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Menghentikan aksi default dari link
+
+                    // Mendapatkan URL video dari link
+                    var videoUrl = this.getAttribute('href');
+
+                    // Menetapkan URL video ke iframe
+                    videoFrame.src = videoUrl;
+
+                    // Menampilkan lightbox
+                    lightbox.style.display = 'flex';
+                });
+
+                // Menambahkan event listener untuk klik di luar lightbox
+                lightbox.addEventListener('click', function(event) {
+                    if (event.target === this) {
+                        // Menyembunyikan lightbox jika area di luar iframe diklik
+                        lightbox.style.display = 'none';
+                        // Menghentikan video saat lightbox disembunyikan
+                        videoFrame.src = '';
+                    }
+                });
+            </script>
                 </div>
             </div>
         </div>
