@@ -92,7 +92,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         // Route::post('/sentra/cekout/store', [CartController::class, 'store'])->name('sentra.store');
         Route::post('/sentra/cekout/bayar', [CartController::class, 'kirim'])->name('sentra.kirim');
 
-        
+
         // Route::post('/sentra/cekout/konfirm', [CartController::class, 'konfirm'])->name('sentra.konfirm');
 
         Route::get('/about', [ViewController::class, 'about'])->name('about');
@@ -118,14 +118,22 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
 
+        // Route::get("/dashboard", [AdminController::class, "dashboard"])->name('admin.dashboard');
+
+        Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('admin.galeri')->middleware(['auth', 'akses:admin']);
+        Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('admin.galeri.tambah');
+
         // Galeri Admin
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('admin.galeri.edit');
         // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
         Route::delete('/admin/galeri/delete/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.delete');
         // Rute untuk menampilkan halaman edit
+        Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
+        Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
+
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('admin.galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('admin.galeri.update');
-        
+
         // Artikel Admin
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('admin.artikel')->middleware(['auth', 'akses:admin']);
         Route::post("/artikel/tambah", [ArtikelController::class, "tambahArtikel"])->name('admin.artikel.tambah');
