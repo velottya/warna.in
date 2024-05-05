@@ -10,21 +10,21 @@
       <div class="col-md-15 order-md-last heading-section pl-md-20 ftco-animate d-flex align-items-center">
         <div class="w-100">
           <span class="subheading"></span>
-          <h2 class="mb-4">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</h2>
-          <p align="justify">Momen paling menggembirakan dan dinantikan oleh anak-anak sekolah adalah masa perayaan kelulusan atau wisuda sekolah. Suasana haru, riang, dan gembira melalui prosesi wisuda sebagai ajang perpisahan/pelepasan siswa untuk melanjutkan pendidikan yang lebih tinggi. Suasana seperti itulah, salah satunya terjadi di SDN 3 Polowijen, Blimbing, Kota Malang, Jawa Timur, Senin (22/5/2017).</p>
-          <p align="justify">Kepala sekolah SDN 3 Polowijen Dra. Endang Tripuji dalam pidatonya menitipkan pesan kepada anak-anak dan wali murid yang hadir mendampingi agar tetaplah semangat belajar meraih prestasi tinggi dan mengembangkan seni budaya untuk membangun karakter pribadi berbudi pekerti luhur. "Itulah sejatinya pencapaian prestasi belajar dan pendidikan," terang Endang.</p>
-          <p align="justify">Ditegaskan Endang, sebagai warga Polowijen patutlah berbangga dengan kekayaan sejarah seni tradisi dan kebudayaan, bahwa Polowijen itu dulu sebagai daerah otonom atau desa perdikan yang disebut Sima atau Swatantra Panawidyan karena ada Mandala Mahayana Mpu Purwa yang tidak lain adalah ayahnya Ken Dedes.</p>
-          <p align="justify">"Swatantra Panawidyan kala itu sebagai pusat pendidikan dan penyebaran keagamaan pada abad X kerajaan Kanjuruhan," katanya. </p>
-          <p align="justify">"Oleh karena itu siswa-siswa Polowijen harus maju dan berprestasi dalam bidang pendidikan dan kebudayaan," tandasnya.</p>
-          <p align="justify">Panggung hiburan wisuda SDN 3 Polowijen dipentaskan beberapa tarian topeng oleh siswa-siswa setempat, diantaranya Tari Topeng Grebeg Jowo, Grebeg Sabrang, Bapang, dan Gunungsari, serta tari-tari kreasi lain seperti Tari Merak, Jaran Kore, Khuntul, Dor-Dor, Onclang dan Gagak.</p>
-        </div>
+          <h2 class="mb-4">{{ $artikel->judul }}</h2>
+          <p align="justify"> {{$artikel->penjelasan}}</p>
+      </div>
       </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<p class="text-center"><a href="/blog" class="btn btn-primary">Kembali</a></p>
+@if (Auth::check() && Auth::user()->role == 'user')
+  <p class="text-center"><a href="{{ url('/user/blog')}}" class="btn btn-primary">Kembali</a></p>
+
+@else
+<p class="text-center"><a href="{{ url('/blog')}}" class="btn btn-primary">Kembali</a></p>
+@endif
 
 <section class="ftco-intro ftco-section ftco-no-pt">
   <div class="container pt-5">
@@ -41,3 +41,12 @@
   </div>
 </section>
 @endsection
+
+
+    <!-- <p align="justify">Momen paling menggembirakan dan dinantikan oleh anak-anak sekolah adalah masa perayaan kelulusan atau wisuda sekolah. Suasana haru, riang, dan gembira melalui prosesi wisuda sebagai ajang perpisahan/pelepasan siswa untuk melanjutkan pendidikan yang lebih tinggi. Suasana seperti itulah, salah satunya terjadi di SDN 3 Polowijen, Blimbing, Kota Malang, Jawa Timur, Senin (22/5/2017).</p>
+          <p align="justify">Kepala sekolah SDN 3 Polowijen Dra. Endang Tripuji dalam pidatonya menitipkan pesan kepada anak-anak dan wali murid yang hadir mendampingi agar tetaplah semangat belajar meraih prestasi tinggi dan mengembangkan seni budaya untuk membangun karakter pribadi berbudi pekerti luhur. "Itulah sejatinya pencapaian prestasi belajar dan pendidikan," terang Endang.</p>
+          <p align="justify">Ditegaskan Endang, sebagai warga Polowijen patutlah berbangga dengan kekayaan sejarah seni tradisi dan kebudayaan, bahwa Polowijen itu dulu sebagai daerah otonom atau desa perdikan yang disebut Sima atau Swatantra Panawidyan karena ada Mandala Mahayana Mpu Purwa yang tidak lain adalah ayahnya Ken Dedes.</p>
+          <p align="justify">"Swatantra Panawidyan kala itu sebagai pusat pendidikan dan penyebaran keagamaan pada abad X kerajaan Kanjuruhan," katanya. </p>
+          <p align="justify">"Oleh karena itu siswa-siswa Polowijen harus maju dan berprestasi dalam bidang pendidikan dan kebudayaan," tandasnya.</p>
+          <p align="justify">Panggung hiburan wisuda SDN 3 Polowijen dipentaskan beberapa tarian topeng oleh siswa-siswa setempat, diantaranya Tari Topeng Grebeg Jowo, Grebeg Sabrang, Bapang, dan Gunungsari, serta tari-tari kreasi lain seperti Tari Merak, Jaran Kore, Khuntul, Dor-Dor, Onclang dan Gagak.</p> -->
+        

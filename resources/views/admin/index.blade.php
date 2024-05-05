@@ -222,7 +222,7 @@
                     </div>
                   </div>
                   <span class="fw-semibold d-block mb-1">Total Artikel</span>
-                  <h3 class="card-title text-nowrap mb-2">-</h3>
+                  <h3 class="card-title text-nowrap mb-2">{{ \App\Models\Artikel::count() }}</h3>
                 </div>
               </div>
             </div>
@@ -263,7 +263,7 @@
                         <h5 class="text-nowrap">Website Viewer</h5>
                       </div>
                       <div class="mt-1">
-                        <h3 class="mb-1">185</h3>
+                        <h3 class="mb-1">12</h3>
                       </div>
                     </div>
                     <div id="profileReportChart" class="mt-1"></div>

@@ -40,9 +40,6 @@ class SentraController extends Controller
         return view('home.sentra.sentra2', $data);
     }
 
-
-
-
     public function bayar($page, $productName)
     {
         return view('home.sentra.form-bayar', ['productName' => $productName]);

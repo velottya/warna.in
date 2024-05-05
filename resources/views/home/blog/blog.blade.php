@@ -18,165 +18,42 @@
   <section class="ftco-section">
     <div class="container">
       <div class="row d-flex">
-
       <!-- 1 Blog -->
+      @foreach ($artikel as $item)
       <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry justify-content-end">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image3.png')}}');">
-            </a>
-            <div class="text">
-              <div class="d-flex align-items-center mb-4 topp">
-                <div class="one">
-                  <span class="day">2</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2024</span>
-                  <span class="mos">Februari</span>
-                </div>
+              <a href="#" class="block-20" style="background-image: url('{{ asset('images/'.$item->gambar) }}');"></a>
+              <div class="text">
+                  <div class="d-flex align-items-center mb-4 topp">
+                  <div class="one">
+                      <span class="day" style="font-size: 32px;">{{ $item->created_at->format('d') }}</span>
+                  </div>
+                  <div class="two">
+                      <span class="yr">{{ $item->created_at->format('Y') }}</span>
+                      <span class="mos">{{ $item->created_at->format('M') }}</span>
+                  </div>
+
+                  </div>
+                  @if (Auth::check() && Auth::user()->role == 'user')
+                  <h3 class="heading"><a href="{{ url('user/blog/' . $item->id) }}">{{ Illuminate\Support\Str::limit($item->judul, 60) }}</a></h3>
+                  @else
+                  <h3 class="heading"><a href="{{ url('blog/' . $item->id) }}">{{ Illuminate\Support\Str::limit($item->judul, 60) }}</a></h3>
+                  @endif
+
+                  <p>{{ Illuminate\Support\Str::limit($item->penjelasan, 80) }}</p>
+
+                  @if (Auth::check() && Auth::user()->role == 'user')
+                  <p><a href="{{ url('user/blog/' . $item->id) }}" class="btn btn-primary">Read more</a></p>
+                  @else
+                  <p><a href="{{ url('blog/' . $item->id) }}" class="btn btn-primary">Read more</a></p>
+                  @endif
               </div>
-              @if (Auth::check() && Auth::user()->role == 'user')
-              <h3 class="heading"><a href="{{url('user/blog/1')}}">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
-              @endif
-              @guest
-              <h3 class="heading"><a href="{{url('user/blog/1')}}">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
-              @endguest
-              <p>Virus tari Topeng Malang harus terus menerus ditularkan agar tujuan membangun kesadaran... </p>
-              @if (Auth::check() && Auth::user()->role == 'user')
-              <p><a href="{{url('user/blog/1')}}" class="btn btn-primary">Read more</a></p>
-              @endif
-              @guest
-              <p><a href="{{url('blog/1')}}" class="btn btn-primary">Read more</a></p>
-              @endguest
-            </div>
           </div>
-        </div>
-      <!-- End 1 Blog -->
-
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image6.png')}}');">
-            </a>
-            <div class="text">
-            <div class="d-flex align-items-center mb-4 topp">
-              <div class="one">
-              <span class="day">21</span>
-            </div>
-            <div class="two">
-              <span class="yr">2024</span>
-              <span class="mos">Januari</span>
-            </div>
-          </div>
-          <h3 class="heading"><a href="#">Pegiat Kampung Budaya Polowijen Bentuk Asosiasi Batik Malang </a></h3>
-          <p>Dari 30 pengusaha dan pengrajin batik yang kami kelola ada yang sukses go internasional...</p>
-          <p><a href="/blog2" class="btn btn-primary">Read more</a></p>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry">
-          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image4.png')}}');">
-          </a>
-          <div class="text">
-          <div class="d-flex align-items-center mb-4 topp">
-            <div class="one">
-            <span class="day">9</span>
-          </div>
-          <div class="two">
-            <span class="yr">2023</span>
-            <span class="mos">November</span>
-          </div>
-        </div>
-        <h3 class="heading"><a href="#">Kampung Budaya Polowijen Gelar Festival Topeng Malang</a></h3>
-        <p>Kampung Budaya Polowijen (KBP) untuk pertama kalinya menggelar Festival Topeng...</p>
-        <p><a href="#" class="btn btn-primary">Read more</a></p>
-        </div>
-        </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry">
-          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image1.jpg')}}');">
-          </a>
-          <div class="text">
-          <div class="d-flex align-items-center mb-4 topp">
-            <div class="one">
-            <span class="day">7</span>
-          </div>
-          <div class="two">
-            <span class="yr">2023</span>
-            <span class="mos">Oktober</span>
-          </div>
-        </div>
-        <h3 class="heading"><a href="#">Profil tokoh budaya menjaga kearifan lokal di Kampung Polowijen sebagai pembawa tradisi</a></h3>
-        <p>Isa Wahyudi, Menghidupkan Kampung Budaya Polowijen</p><br>
-        <p><a href="#" class="btn btn-primary">Read more</a></p>
-        </div>
-        </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry">
-          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/galeri3-1.png')}}');">
-          </a>
-          <div class="text">
-          <div class="d-flex align-items-center mb-4 topp">
-            <div class="one">
-            <span class="day">11</span>
-          </div>
-          <div class="two">
-            <span class="yr">2023</span>
-            <span class="mos">Agustus</span>
-          </div>
-        </div>
-        <h3 class="heading"><a href="#">Menghidupkan Ekonomi Kreatif: Pasar Jajan Tradisional di Kampung Budaya Polowijen</a></h3>
-        <p>Pasar Jajan Tradisional Kampung Budaya Polowijen Mampu Dongkrak Ekonomi Kreatif</p>
-        <p><a href="#" class="btn btn-primary">Read more</a></p>
-        </div>
-        </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry">
-          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/GebyakWayangTopeng.png')}}');">
-          </a>
-          <div class="text">
-          <div class="d-flex align-items-center mb-4 topp">
-            <div class="one">
-            <span class="day">13</span>
-          </div>
-          <div class="two">
-            <span class="yr">2023</span>
-            <span class="mos">Juni</span>
-          </div>
-        </div>
-        <h3 class="heading"><a href="#">Pesona Seni dan Budaya Lokal: Keindahan Kampung Budaya Polowijen di Malang</a></h3>
-        <p>Indahnya Kampung Budaya Polowijen Seindah Seni dan Budaya Lokal Malang</p>
-        <p><a href="#" class="btn btn-primary">Read more</a></p>
-        </div>
-        </div>
-        </div> 
-
+      </div>
+      @endforeach
   </div>
 
-  {{-- <div class="row mt-5">
-    <div class="col text-center">
-      <div class="block-27">
-        <ul>
-          @guest
-            <li><a href="#">&lt;</a></li>
-            <li class="active"><a href="{{url ('blog')}}">1</a> </li>
-            <li><a href="#">2</a></li>
-            <!-- <li><a href="{{url ('blog/2')}}">3</a></li> -->
-            <li><a href="#">&gt;</a></li>
-          @endguest
-          @if (Auth::check() && Auth::user()->role == 'user')
-            <li><a href="#">&lt;</a></li>
-            <li class="active"><a href="{{url ('user/blog')}}">1</a> </li>
-            <li><a href="#">2</a></li>
-            <!-- <li><a href="{{url ('user/blog/2')}}">3</a></li> -->
-            <li><a href="#">&gt;</a></li>
-          @endif
-        </ul>
-      </div>
-    </div>
-  </div> --}}
+
   </div>
   </section>
 
