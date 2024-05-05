@@ -20,7 +20,8 @@
                         <div class="mt-3">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
-                                    <form id="addressForm">
+                                    <form id="addressForm" method="POST" action="{{ route('sentra.store') }}">
+                                        @csrf
                                         <div class="card card-body p-6">
                                             <!-- Form untuk input alamat pembeli -->
                                             <div class="mb-2">
@@ -33,18 +34,23 @@
                                             </div>
                                             <div class="mb-2">
                                                 <label for="phoneNumber" class="form-label">Phone Number</label>
-                                                <input style="font-size: 0.8em;" type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                                                <input style="font-size: 0.8em;" type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="catatan" class="form-label">Catatan</label>
-                                                <textarea style="font-size: 0.8em;" class="form-control" id="address" name="address" rows="3" placeholder="Optional " ></textarea>
+                                                <textarea style="font-size: 0.8em;" class="form-control" id="address" name="catatan" rows="3" placeholder="Optional" required ></textarea>
                                             </div>
                                         </div>
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                        <input type="hidden" name="total_price" value="{{ $product->price }}">
                                         <div class="d-flex justify-content-between mb-4">
                                             <a href="#" class="btn btn-first" style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
                                                 Back to Shopping Cart</a>
-                                            <a href="#" type="submit" class="btn btn-second" style="background-color: transparent; color: #F15D30; border: 2px solid #F15D30; padding: 10px 20px; border-radius: 5px;">
-                                                Place Order</a>
+                                            <!-- <a href="{{ route('sentra.bayar', ['product_id' => $product->id]) }}" onclick="event.preventDefault(); document.getElementById('addressForm').submit();"  type="submit" class="btn btn-second" style="background-color: transparent; color: #F15D30; border: 2px solid #F15D30; padding: 10px 20px; border-radius: 5px;">
+                                                Place Order</a> -->
+                                            <button type="submit" class="btn btn-second" style="background-color: transparent; color: #F15D30; border: 2px solid #F15D30; padding: 10px 20px; border-radius: 5px;">
+                                                Place Order
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
