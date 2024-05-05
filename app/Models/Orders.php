@@ -16,16 +16,14 @@ class Orders extends Model
         'phone_number',
         'note',
         'total_price',
-        'status'
+        'jumlah_transfer',
+        'transfer_melalui',
+        'bukti_pembayaran',
+        'status',
+        'confirmation_status',
     ];
 
-    // Definisikan hubungan one-to-one dengan model Transaction
-    public function transaction()
-    {
-        return $this->hasOne(Transaction::class);
-    }
-
-    // Definisikan hubungan one-to-many dengan model Product
+    // Definisikan hubungan dengan model Product
     public function product()
     {
         return $this->belongsTo(Product::class);

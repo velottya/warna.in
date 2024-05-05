@@ -280,8 +280,10 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+    appearance: button;
+    -webkit-appearance: button; /* Properti standar untuk kompatibilitas */
 }
+
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -340,8 +342,10 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
+  appearance: none; /* Properti standar untuk kompatibilitas */
   -webkit-appearance: none;
 }
+
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -13777,12 +13781,14 @@ textarea.form-control {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
+  backface-visibility: hidden; /* Properti standar untuk kompatibilitas */
   -webkit-backface-visibility: hidden;
+  transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
 }
+
 
 .mfp-with-zoom.mfp-ready .mfp-container {
   opacity: 1;
@@ -13868,7 +13874,9 @@ textarea.form-control {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#207ce5', endColorstr='#13d42a', GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text; /* Properti standar untuk kompatibilitas */
 }
+
 
 @media (max-width: 767.98px) {
   .ftco-counter .counter-wrap {

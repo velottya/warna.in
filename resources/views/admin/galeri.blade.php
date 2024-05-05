@@ -22,7 +22,7 @@
           <div class="modal fade" id="tambahGaleri" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <form action="{{ route('galeri.tambah') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.galeri.tambah') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel1">Tambah Galeri</h5>
@@ -103,7 +103,7 @@
                             ><i class="bx bx-book-open me-1"></i> More Preview</a>
 
                             <!-- Tombol Edit -->
-                            <a class="dropdown-item" href="{{ route('galeri.edit', $item->id) }}" data-bs-toggle="modal" data-bs-target="#editGaleri{{ $item->id }}">
+                            <a class="dropdown-item" href="{{ route('admin.galeri.edit', $item->id) }}" data-bs-toggle="modal" data-bs-target="#editGaleri{{ $item->id }}">
                                 <i class="bx bx-edit-alt me-1"></i> Edit
                             </a>
 
@@ -151,7 +151,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ route('galeri.update', $item->id) }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.galeri.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="row">

@@ -14,14 +14,11 @@ class GaleriController extends Controller
     {
     $galeri = Galeri::all();
     return view('home.galeri.galeri', ['galeri' => $galeri]);
-    
-
     }
 
     public function adminGaleri()
     {
         $galeri = Galeri::all(); // Mengambil semua data galeri dari database
-
         return view('admin.galeri', compact('galeri')); // Mengirim data galeri ke tampilan 'admin.galeri'
     }
 
