@@ -23,7 +23,10 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
     <script type="text/javascript">
         // Fungsi untuk menambahkan produk ke keranjang
@@ -66,7 +69,7 @@
                 }
             });
         });
-    </script> --}}
+    </script>
 
 </head>
 <body>
@@ -97,11 +100,6 @@
 					<li class="nav-item scrollto @yield('blog')"><a href="{{ url('user/blog') }}" class="nav-link">Blog</a></li>
 					<li class="nav-item scrollto @yield('contact')"><a href="{{ url('user/contact') }}" class="nav-link">Contact</a></li>
                     <li class="nav-item scrollto @yield('profile')"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
-                    <li class="nav-item scrollto">
-                        <a href="{{ url('user/sentra/cart') }}" class="nav link">
-                            <img src="{{ asset('images/icon/cart.svg') }}" alt="Cart" style="height: 30px; margin-right: 10px; margin-top: 17px;" class="ml-2">
-                        </a>
-                    </li>
                     <li class="nav-item scrollto"><a href="{{ url('logout') }}" class="nav-link">Logout</a></li>
                     @endif
 

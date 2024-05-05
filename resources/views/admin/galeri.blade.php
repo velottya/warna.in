@@ -86,11 +86,11 @@
                     </td>
                     <td>
                         <i class="fab fa-angular fa-lg text-danger"></i>
-                        <strong class="truncate-text">{{ $item->judul }}</strong>
+                        <strong class="truncate-text">{{ Illuminate\Support\Str::limit($item->judul, 15) }}</strong>
                     </td>
 
-                    <td style="max-width: 150px; overflow: hidden; white-space: nowrap;">{{ $item->deskripsi }}</td>
-                    <td><span class="badge bg-label-primary me-1">{{ $item->created_at }}</span></td>
+                    <td style="max-width: 150px; overflow: hidden; white-space: nowrap;">{{ Illuminate\Support\Str::limit($item->deskripsi, 30) }}</td>
+                    <td><span class="badge bg-label-primary me-1">{{ \Carbon\Carbon::parse($item->created_at)->toDateString() }}</span></td>
                     <td>
                 </form>
 

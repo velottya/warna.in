@@ -7,7 +7,7 @@ use App\Models\Product;
 use App\Models\Carts;
 use App\Models\Orders;
 use App\Models\Bayar;
-
+use App\Models\MetodePembayaran;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
@@ -162,7 +162,7 @@ class CartController extends Controller
             'address' => 'required',
             'phoneNumber' => 'required',
             'note' => 'nullable',
-            'jumlahTransfer' => 'required',
+            // 'jumlahTransfer' => 'required',
             'transferMethod' => 'required',
             'buktiPembayaran' => 'required',
             'total_price' => 'required',
@@ -171,18 +171,22 @@ class CartController extends Controller
         // Simpan gambar ke direktori tertentu
         // $imageName = time().'.'.$request->buktiPembayaran->extension();
         // $request->buktiPembayaran->move(public_path('images/sentra/pembayaran'), $imageName);
-
+        // MetodePembayaran::create([
+        //     'product_id' => $request->product_id,
+        // ]);
         Bayar::create([
             'product_id' => $request->product_id,
             'full_name' => $request->fullName,
             'address' => $request->address,
             'phone_number' => $request->phoneNumber,
             'total_price' => $request->total_price,
-            'jumlah_transfer' => $request->JumlahTransfer,
+            // 'jumlah_transfer' => $request->JumlahTransfer,
             'transfer_melalui' => $request->transferMethod,
             'bukti_pembayaran' => $request->buktiPembayaran,
             'note' => $request->catatan,
         ]);
+        // $metodes = MetodePembayaran::orderBy('name', 'desc')->get();
+
 
         return redirect()->route('sentra')->with('success', 'PEMBAYARAN berhasil ditambahkan.');
 

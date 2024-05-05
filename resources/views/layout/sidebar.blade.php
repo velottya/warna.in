@@ -134,24 +134,24 @@
                   <div data-i18n="sentra">Sentra</div>
                 </a>
               </li>
-              <li class="menu-item">
+              {{-- <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                   <div data-i18n="Authentications">Transaksi</div>
                 </a>
                 <ul class="menu-sub">
                   <li class="menu-item @yield('transaksi')">
-                    <a href="{{ url('admin/transaksi') }}" class="menu-link">
+                    <a href="{{ url('admin/pembayaran') }}" class="menu-link">
                       <div data-i18n="transaksi">Transaksi Sentra</div>
                     </a>
-                  </li>
-                  <li class="menu-item @yield('histori')">
+                  </li> --}}
+                  {{-- <li class="menu-item @yield('histori')">
                     <a href="{{ url('admin/histori') }}" class="menu-link" target="_blank">
                       <div data-i18n="history">User Histori</div>
                     </a>
-                  </li>
-                </ul>
-              </li>
+                  </li> --}}
+                {{-- </ul>
+              </li> --}}
 
               <!-- Pages -->
               <li class="menu-header small text-uppercase">

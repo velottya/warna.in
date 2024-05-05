@@ -99,10 +99,10 @@
                                                 <label for="phoneNumber" class="form-label">Nomor Telepon</label>
                                                 <input style="font-size: 0.9em;" type="number" class="form-control" value="{{ $product->phoneNumber }}" id="phoneNumber" name="phoneNumber" placeholder="Masukkan nomor telepon Anda" required>
                                             </div>
-                                            <div class="mb-2">
+                                            {{-- <div class="mb-2">
                                                 <label for="jumlahTransfer" class="form-label">Jumlah Transfer</label>
                                                 <input class="form-control" style="font-size: 0.9em;" type="number" value="{{ $product->JumlahTransfer }}" id="jumlahTransfer" style="height: 10px;" placeholder="Masukkan jumlah transfer" required>
-                                            </div>
+                                            </div> --}}
                                             <div class="mb-2">
                                                 <label for="transferMethod" class="form-label">Transfer Melalui</label>
                                                 <select class="form-control" id="transfer-melalui" name="transferMethod" style="font-size: 0.9em;" value="{{ $product->transferMethod}}" required>
@@ -112,14 +112,26 @@
                                                     <option value="mandiri" >Mandiri (2467 8247 91)</option>
                                                 </select>
                                             </div>
+                                            {{-- <div class="mb-2">
+                                                <label for="transferMethod" class="form-label">Transfer Melalui</label>
+                                                @if(isset($metodes))
+                                            <select class="form-control" id="transfer-melalui" name="transferMethod" style="font-size: 0.9em;" required>
+                                                @foreach ($metodes as $metode)
+                                                    <option value="{{ $metode->id }}">{{ $metode->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        @else
+                                            <!-- Display a message or a default option if $metodes is not defined -->
+                                            <p>No transfer methods available.</p>
+                                        @endif --}}
                                             <div class="mb-3">
-                                                <label for="buktiPembayaran" class="form-label">Pilih Foto Produk</label>
+                                                <label for="buktiPembayaran" class="form-label">Foto Bukti Transfer</label>
                                                 <input class="form-control" type="file" name="buktiPembayaran" value="{{ $product->buktiPembayaran }}" id="buktiPembayaran" accept=".jpg, .jpeg, .png" placeholder="Unggah bukti pembayaran Anda" required/>
                                                 <p class="errors"></p>
                                             </div>
                                             <div class="mb-2">
                                                 <label for="note" class="form-label">Catatan</label>
-                                                <textarea style="font-size: 0.9em;" class="form-control" value="{{ $product->catatan}}" id="note" name="note" rows="2" placeholder="Opsional" required></textarea>
+                                                <textarea style="font-size: 0.9em;" class="form-control" value="{{ $product->catatan}}" id="note" name="note" rows="2" placeholder="Opsional"></textarea>
                                             </div>
 
 
