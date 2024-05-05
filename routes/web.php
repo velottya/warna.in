@@ -32,24 +32,24 @@ Route::group(['prefix' => ''], function () {
     Route::get('/cekout', fn() => view('home.sentra.cekout'))->name('cekout');
     Route::get('/bayar', fn() => view('home.sentra.form-bayar'))->name('bayar');
 
-    Route::get('/sentra11', function () {
-        return view('home.sentra.sentra11');
-    });
-    Route::get('/sentra12', function () {
-        return view('home.sentra.sentra12');
-    });
-    Route::get('/sambang1', function () {
-        return view('home.sentra.sambang1');
-    });
-    Route::get('/sambang2', function () {
-        return view('home.sentra.sambang2');
-    });
-    Route::get('/sambang3', function () {
-        return view('home.sentra.sambang3');
-    });
-    Route::get('/sambang4', function () {
-        return view('home.sentra.sambang4');
-    });
+    // Route::get('/sentra11', function () {
+    //     return view('home.sentra.sentra11');
+    // });
+    // Route::get('/sentra12', function () {
+    //     return view('home.sentra.sentra12');
+    // });
+    // Route::get('/sambang1', function () {
+    //     return view('home.sentra.sambang1');
+    // });
+    // Route::get('/sambang2', function () {
+    //     return view('home.sentra.sambang2');
+    // });
+    // Route::get('/sambang3', function () {
+    //     return view('home.sentra.sambang3');
+    // });
+    // Route::get('/sambang4', function () {
+    //     return view('home.sentra.sambang4');
+    // });
 
 });
 
@@ -114,7 +114,6 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::get("/dashboard", [AdminController::class, "orders"])->name('dashboard');
         Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
 
-
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
 
@@ -152,6 +151,9 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
             Route::put("/{id}", [SentraController::class, "updateSentra"])->name('updateSentra')->middleware(['auth', 'akses:admin']);
         });
 
+        // INI BELUM MUNCUL
+        Route::get("/transaksi", [AdminController::class, "transaksi"])->name('admin.transaksi')->middleware(['auth', 'akses:admin']);
+        
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
 
         Route::get("/account", [AdminController::class, "account"])->name('account');

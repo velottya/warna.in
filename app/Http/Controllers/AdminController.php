@@ -20,7 +20,22 @@ class AdminController extends Controller
     }
     public function dashboard()
     {
-        return view('admin.index');
+        $products = Product::all();
+        $galeri = Galeri::all();
+        $orders = Orders::all();
+        
+        $jumlahOrders = $orders->count();
+        $jumlahProducts = $products->count();
+        $jumlahProductsKategori1 = $products->where('kategori', 1)->count();
+        $jumlahProductsKategori2 = $products->where('kategori', 2)->count();
+        $jumlahGaleri = $galeri->count();
+        
+        return view('admin.index', compact('products', 'galeri', 'orders', 'jumlahOrders', 'jumlahProducts', 'jumlahProductsKategori1', 'jumlahProductsKategori2', 'jumlahGaleri'));
+    }
+    
+    public function transaksi()
+    {
+        return view('admin.transaksiSentra');
     }
 
     public function showAddUser()
