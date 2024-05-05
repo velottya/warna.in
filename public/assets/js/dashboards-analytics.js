@@ -427,8 +427,8 @@
         width: 130,
         type: 'donut'
       },
-      labels: ['Electronic', 'Sports', 'Decor', 'Fashion'],
-      series: [85, 15, 50, 50],
+      labels: ['Booking', 'Topeng', 'Batik', 'Aksesoris'],
+      series: [25, 15, 40, 20],
       colors: [config.colors.primary, config.colors.secondary, config.colors.info, config.colors.success],
       stroke: {
         width: 5,
@@ -473,9 +473,9 @@
                 show: true,
                 fontSize: '0.8125rem',
                 color: axisColor,
-                label: 'Weekly',
+                label: 'Total',
                 formatter: function (w) {
-                  return '38%';
+                  return '100%';
                 }
               }
             }
