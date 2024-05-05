@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use App\Models\Orders;
 
 class AdminController extends Controller
 {
@@ -104,6 +105,13 @@ class AdminController extends Controller
         $admin->update($data);
 
         return redirect()->route('account');
+    }
+
+    public function orders()
+    {
+        $orders = Orders::all();
+        return view('admin.index', compact('orders'));
+        
     }
 
 }

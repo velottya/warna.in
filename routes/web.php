@@ -111,19 +111,35 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
+<<<<<<< HEAD
+        Route::get("/dashboard", [AdminController::class, "orders"])->name('dashboard');
+        Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
+
+
+        Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
+        Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
+
+=======
         Route::get("/dashboard", [AdminController::class, "dashboard"])->name('admin.dashboard');
 
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('admin.galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('admin.galeri.tambah');
         
+>>>>>>> 5077c4ab4845a26325ef08367f7c45e18c8b915e
         // Galeri Admin
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('admin.galeri.edit');
         // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
         Route::delete('/admin/galeri/delete/{id}', [GaleriController::class, 'destroy'])->name('admin.galeri.delete');
         // Rute untuk menampilkan halaman edit
+<<<<<<< HEAD
+        Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
+        Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
+
+=======
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('admin.galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('admin.galeri.update');
         
+>>>>>>> 5077c4ab4845a26325ef08367f7c45e18c8b915e
         // Artikel Admin
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('admin.artikel')->middleware(['auth', 'akses:admin']);
         Route::post("/artikel/tambah", [ArtikelController::class, "tambahArtikel"])->name('admin.artikel.tambah');
@@ -143,6 +159,12 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         });
 
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+
+        Route::get("/account", [AdminController::class, "account"])->name('account');
+        Route::get("edit-account", [AdminController::class, "editaccount"])->name('editaccount');
+        Route::patch("/simpanaccount", [AdminController::class, 'simpanaccount'])->name('simpanaccount');
+
+        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
