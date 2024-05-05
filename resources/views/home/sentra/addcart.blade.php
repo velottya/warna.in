@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="content-wrapper">
-    <section class="main-content" style= " position: absolute; z-index: 1; margin-top: 80px; margin-left: 120px; display: flex; flex-direction: column; min-height: 100vh;" >
+    <section class="main-content" style= " position: absolute; z-index: 1; margin-top: 120px; margin-left: 240px; display: flex; flex-direction: column; min-height: 100vh;" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">

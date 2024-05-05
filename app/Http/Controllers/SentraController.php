@@ -19,24 +19,29 @@ class SentraController extends Controller
             'product'=>Product::all()
         ];
 
-        if ($page == 'kegiatan'){
-            return view('home.sentra.sentra1', $data);
-        } else if ($page == 'produk'){
-            return view('home.sentra.sentra2', $data);
-        } else if ($page == 'cart'){
-            return view('home.sentra.addcart', $data);
-        } else {
-            return view('home.sentra.sentra', $data);
-        }
+        return view('home.sentra.sentra', $data);
+        
+    }
+    public function kegiatan($page = null) {
+        $data =
+        [
+            'category'=>Category::orderBy('name', 'asc')->get(),
+            'product'=>Product::all()
+        ];
+        return view('home.sentra.sentra1', $data);
+    }
+
+    public function produk($page = null) {
+        $data =
+        [
+            'category'=>Category::orderBy('name', 'asc')->get(),
+            'product'=>Product::all()
+        ];
+        return view('home.sentra.sentra2', $data);
     }
 
 
 
-
-    public function cekout()
-    {
-        return view('home.sentra.cekout');
-    }
 
     public function bayar($page, $productName)
     {
@@ -53,13 +58,13 @@ class SentraController extends Controller
     public function adminSentra()
     {
         // $product = Product::all();
-
+        $categories = Category::all();
         $data =
         [
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
         ];
-        return view('admin.sentra', $data);
+        return view('admin.sentra', compact('categories'), $data);
     }
 
     public function tambahSentra(Request $request)

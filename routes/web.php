@@ -82,12 +82,19 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
         Route::get('/galeri/{page?}', [GaleriController::class, 'user'])->name('galeri');
 
 
-        Route::get('/sentra/{page?}', [SentraController::class, 'sentra'])->name('sentra');
+        Route::get('/sentra', [SentraController::class, 'sentra'])->name('sentra');
+        Route::get('/sentra/kegiatan', [SentraController::class, 'kegiatan'])->name('sentra.kegiatan');
+        Route::get('/sentra/produk', [SentraController::class, 'produk'])->name('sentra.produk');
         Route::get('/sentra/cart', [CartController::class, 'cart'])->name('sentra.cart');
         Route::post('/sentra/addCart', [CartController::class, 'addCart'])->name('sentra.addCart');
+        Route::get('/sentra/cekout/{product_id}', [CartController::class, 'cekout'])->name('sentra.cekout');
+        Route::post('/sentra/cekout/store', [CartController::class, 'store'])->name('sentra.checkout.store');
 
-        Route::get('/sentra/cart/ceckout', [SentraController::class, 'cekout'])->name('sentra.cekout');
-        Route::get('/sentra/{page?}/cart/checkout/{productName}/bayar', [SentraController::class, 'bayar'])->name('sentra.bayar');
+        // POST (buat ngirim form alamatnya???)
+        // Route::get('/sentra/ceckout/{product_id}', [CartController::class, 'cekout'])->name('sentra.cekout');
+
+        Route::get('/sentra/cekout/bayar', [CartController::class, 'bayar'])->name('sentra.bayar');
+        Route::post('/sentra/cekout/store', [CartController::class, 'store'])->name('sentra.store');
 
         Route::get('/about', [ViewController::class, 'about'])->name('about');
         Route::get('/contact', [UserDataController::class, 'contactView'])->name('contact'); //sementara
@@ -109,11 +116,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
 
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
-
-        Route::get("/sentra", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
-        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
-        Route::post("/artikel/tambah", [ArtikelController::class, "tambahArtikel"])->name('artikel.tambah');
-
+        
         // Galeri Admin
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
@@ -121,14 +124,17 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         // Rute untuk menampilkan halaman edit
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
-
+        
         // Artikel Admin
+        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
+        Route::post("/artikel/tambah", [ArtikelController::class, "tambahArtikel"])->name('artikel.tambah');
         Route::get('/admin/artikel/{id}/edit', [ArtikelController::class, 'edit'])->name('artikel.edit');
-        // Route::delete('/admin/artikel/{id}', 'ArtikelController@destroy')->name('admin.artikel.destroy');
         Route::delete('/admin/artikel/delete/{id}', [ArtikelController::class, 'destroy'])->name('admin.artikel.delete');
         // Rute untuk menampilkan halaman edit
         Route::get('/admin/artikel/{id}/edit', [ArtikelController::class, 'edit'])->name('artikel.edit');
         Route::put('/admin/artikel/{id}', [ArtikelController::class, 'update'])->name('artikel.update');
+        // Route::delete('/admin/artikel/{id}', 'ArtikelController@destroy')->name('admin.artikel.destroy');
+
         Route::group(['prefix' => 'sentra'], function () {
             Route::get("/", [SentraController::class, "adminSentra"])->name('sentra')->middleware(['auth', 'akses:admin']);
             Route::post("/tambah", [SentraController::class, "tambahSentra"])->name('tambahSentra')->middleware(['auth', 'akses:admin']);
@@ -138,8 +144,6 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         });
 
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
-
-        Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
