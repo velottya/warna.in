@@ -36,25 +36,47 @@
                   </div>
 
                   </div>
-                  @if (Auth::check() && Auth::user()->role == 'user')
-                  <h3 class="heading"><a href="{{ url('user/blog/' . $item->id) }}">{{ Illuminate\Support\Str::limit($item->judul, 60) }}</a></h3>
-                  @else
-                  <h3 class="heading"><a href="{{ url('blog/' . $item->id) }}">{{ Illuminate\Support\Str::limit($item->judul, 60) }}</a></h3>
-                  @endif
+                  <h3 class="heading"><a href=" ">{{ Illuminate\Support\Str::limit($item->judul, 60) }}</a></h3>
 
                   <p>{{ Illuminate\Support\Str::limit($item->penjelasan, 80) }}</p>
 
-                  @if (Auth::check() && Auth::user()->role == 'user')
-                  <p><a href="{{ url('user/blog/' . $item->id) }}" class="btn btn-primary">Read more</a></p>
-                  @else
-                  <p><a href="{{ url('blog/' . $item->id) }}" class="btn btn-primary">Read more</a></p>
-                  @endif
+                  <p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#moreProduk{{ $item->id }}">
+                      Read More
+                    </button>
+                  </p>
               </div>
           </div>
       </div>
       @endforeach
   </div>
 
+  
+<!-- Modal -->
+@foreach($artikel as $item)
+<div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">{{ $item->judul }}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-4 mt-3">
+                      <img src="{{ asset('images/'.$item->gambar) }}" class="img-fluid" alt="{{ $item->name }}" style="width: 250px; height: 250px; object-fit: cover;">
+                  </div>
+                  <div class="col-md-8 mt-2">
+                      <p>{{ $item->penjelasan }}</p>
+                  </div>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+@endforeach
 
   </div>
   </section>

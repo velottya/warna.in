@@ -50,12 +50,6 @@
             @endif
             @endforeach
         </div>
-        <!-- @guest
-        <p class="text-center"><a href="{{url ('/sentra/kegiatan')}}" class="btn btn-primary">Selengkapnya</a></p>
-        @endguest
-        @if (Auth::check() && Auth::user()->role == 'user')
-        <p class="text-center"><a href="{{url ('/user/sentra/kegiatan')}}" class="btn btn-primary">Selengkapnya</a></p>
-        @endif -->
     </div>
 </section>
 
