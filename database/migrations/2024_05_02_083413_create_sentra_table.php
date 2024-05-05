@@ -24,41 +24,6 @@ return new class extends Migration
             $table->timestamps();
 
         });
-
-        Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->decimal('total_price', 15, 2);
-            $table->string('status');
-            $table->timestamps();
-
-        });
-
-        Schema::create('payments', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('order_id')->index();
-            $table->decimal('amount', 15, 2);
-            $table->string('method');
-            $table->dateTime('paid_at')->nullable();
-            $table->string('status')->default('pending'); // pending, confirmed, rejected
-            $table->timestamps();
-
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-        });
-
-        Schema::create('payment_confirmations', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('order_id')->index();
-            $table->string('name');
-            $table->string('email');
-            $table->string('payment_method');
-            $table->decimal('amount', 15, 2);
-            $table->string('proof_of_payment')->nullable(); // path to uploaded file
-            $table->string('status')->default('pending'); // pending, verified, rejected
-            $table->timestamps();
-
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-        });
-
     }
 
     /**
@@ -66,11 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payment_confirmations');
-        Schema::dropIfExists('payments');
-        Schema::dropIfExists('orders');
-        Schema::dropIfExists('cart_items');
-        Schema::dropIfExists('carts');
         Schema::dropIfExists('product_category');
         Schema::dropIfExists('categories');
         Schema::dropIfExists('products');

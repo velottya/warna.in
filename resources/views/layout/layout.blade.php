@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <script type="text/javascript">
         // Fungsi untuk menambahkan produk ke keranjang
@@ -66,7 +66,7 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 
 </head>
 <body>
@@ -189,7 +189,7 @@
         </div>
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-        
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>

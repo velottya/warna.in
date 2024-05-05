@@ -10,21 +10,15 @@ use Illuminate\Support\Facades\DB;
 
 class GaleriController extends Controller
 {
-    public function galeri($page = null)
+    public function galeri()
     {
-        if ($page == 2){
-            return view('home.galeri.galeri2');
-        }  else if ($page == 3){
-            return view('home.galeri.galeri3');
-        } else {
-            return view('home.galeri.galeri');
-        }
+    $galeri = Galeri::all();
+    return view('home.galeri.galeri', ['galeri' => $galeri]);
     }
 
     public function adminGaleri()
     {
         $galeri = Galeri::all(); // Mengambil semua data galeri dari database
-
         return view('admin.galeri', compact('galeri')); // Mengirim data galeri ke tampilan 'admin.galeri'
     }
 

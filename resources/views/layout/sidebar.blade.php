@@ -30,7 +30,7 @@
       <!-- Helpers -->
       <script src="../assets/vendor/js/helpers.js"></script>
       <script src="../assets/js/config.js"></script>
-          
+
       <script>
         // call summernote
         $(document).ready(function(){
@@ -114,7 +114,7 @@
               <li class="menu-header small text-uppercase"><span class="menu-header-text">Website Informasi</span></li>
               <li class="menu-item @yield('galeri')">
                 <a href="{{ url('admin/galeri') }}" class="menu-link">
-                  <i class="menu-icon tf-icons bx bx-support"></i>
+                  <i class="menu-icon tf-icons bx bx-folder"></i>
                   <div data-i18n="galeri">Galeri Polowijen</div>
                 </a>
               </li>
@@ -155,24 +155,24 @@
 
               <!-- Pages -->
               <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">Pages</span>
+                <span class="menu-header-text">Edit</span>
               </li>
               <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                  <div data-i18n="setting">Account Settings</div>
+                  <i class="menu-icon tf-icons bx bx-user"></i>
+                  <div data-i18n="setting">Account</div>
                 </a>
                 <ul class="menu-sub">
-                  <li class="menu-item @yield('akun')">
-                    <a href="{{ url('admin/akun') }}" class="menu-link">
+                  <li class="menu-item @yield('account')">
+                    <a href="{{ url('admin/account') }}" class="menu-link">
                       <div data-i18n="account">Account</div>
                     </a>
                   </li>
-                  <li class="menu-item @yield('notifikasi')">
+                  {{-- <li class="menu-item @yield('notifikasi')">
                     <a href="{{ url('admin/notifikasi') }}" class="menu-link">
                       <div data-i18n="notification">Notifications</div>
                     </a>
-                  </li>
+                  </li> --}}
                 </ul>
               </li>
             </ul>
@@ -208,8 +208,8 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <span class="fw-semibold d-block">Phoenix</span>
-                              <small class="text-muted">Admin</small>
+                              <span class="fw-semibold d-block">Admin</span>
+                              <small class="text-muted">Polowijen</small>
                             </div>
                           </div>
                         </a>
@@ -218,17 +218,17 @@
                         <div class="dropdown-divider"></div>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{ url('admin/account') }}">
                           <i class="bx bx-user me-2"></i>
                           <span class="align-middle">My Profile</span>
                         </a>
                       </li>
-                      <li>
+                      {{-- <li>
                         <a class="dropdown-item" href="#">
                           <i class="bx bx-cog me-2"></i>
                           <span class="align-middle">Settings</span>
                         </a>
-                      </li>
+                      </li> --}}
                       <li>
                         <div class="dropdown-divider"></div>
                       </li>

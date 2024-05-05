@@ -138,7 +138,7 @@
                 <div class="col-md-12 text-center">
 
                     <p> Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7
-                    </div>
+                    </div> 
                 </div>
             </div>
         </footer>

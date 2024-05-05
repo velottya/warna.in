@@ -6,7 +6,7 @@
         <h1 class="title">
             Data User Registered
         </h1>
-        <a href="{{ route('admin.adduser') }}"><button class="button light">Add Data</button></a>
+        <a href="{{ route('admin.show.adduser') }}"><button class="button light">Add Data</button></a>
     </div>
 </section>
 <section class="section main-section">

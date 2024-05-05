@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use App\Models\Orders;
 
 class AdminController extends Controller
 {
@@ -57,4 +59,59 @@ class AdminController extends Controller
         $admin = Auth::user();
         return view('profile', compact('admin'));
     }
+    public function notifikasi()
+    {
+        return view('admin.notifications');
+    }
+
+    public function account()
+    {
+    $admins = User::where('role', 'admin')->get();
+    return view('admin.account', compact('admins'));
+    }
+
+    public function editaccount()
+    {
+        $admins = User::where('role', 'admin')->get();
+        return view('admin.editaccount', compact('admins'));
+    }
+    public function simpanaccount(Request $request)
+    {
+        $admins = User::where('role', 'admin')->get();
+
+        $request->validate([
+            'username' => 'required|string|max:10|unique:users',
+            'fullname' => 'required|string|max:100',
+            'image' => 'file|image|max:2048|dimensions:ratio=1/1',
+        ]);
+
+        $data = $request->only(['fullname', 'username']);
+
+        // Assuming you're updating the profile of the first admin user
+        $admin = $admins->first();
+
+        $previousPhoto = $admin->image;
+
+        if ($request->hasFile('image')) {
+            if ($previousPhoto && File::exists(public_path('profile/' . $previousPhoto)) !== 'images/default.png') {
+                File::delete(public_path('profile/' . $previousPhoto));
+            }
+            $extFile = $request->file('image')->getClientOriginalExtension();
+            $nameFile = 'profile-' . time() . "." . $extFile;
+            $request->file('image')->move('profile', $nameFile);
+            $data['image'] = $nameFile;
+        }
+
+        $admin->update($data);
+
+        return redirect()->route('account');
+    }
+
+    public function orders()
+    {
+        $orders = Orders::all();
+        return view('admin.index', compact('orders'));
+        
+    }
+
 }
