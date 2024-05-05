@@ -4,10 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateArtikelYable extends Migration
 {
     /**
      * Run the migrations.
+     * 
+     * @return void
      */
     public function up()
     {
@@ -16,7 +18,7 @@ return new class extends Migration
             $table->string('gambar');
             $table->string('judul');
             $table->text('penjelasan');
-            $table->timestamp();
+            $table->timestamps();
 
         });
     }
