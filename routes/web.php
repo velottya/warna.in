@@ -113,6 +113,11 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get("/dashboard", [AdminController::class, "orders"])->name('dashboard');
         Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
+        Route::get("/pembayaran", [AdminController::class, "adminPembayaran"])->name('pembayaran');
+        Route::post('/order/accept/{id}', 'AdminController@accept')->name('order.accept');
+        Route::post('/order/reject/{id}', 'AdminController@reject')->name('order.reject');
+
+
 
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
@@ -153,8 +158,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
 
         // INI BELUM MUNCUL
         Route::get("/transaksi", [AdminController::class, "transaksi"])->name('admin.transaksi')->middleware(['auth', 'akses:admin']);
-        
-        Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
+
 
         Route::get("/account", [AdminController::class, "account"])->name('account');
         Route::get("edit-account", [AdminController::class, "editaccount"])->name('editaccount');

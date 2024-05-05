@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\Orders;
+use App\Models\Bayar;
 
 class AdminController extends Controller
 {
@@ -30,7 +31,7 @@ class AdminController extends Controller
         ];
         return view('admin.index', compact('categories'), $data);
     }
-    
+
     public function transaksi()
     {
         return view('admin.transaksiSentra');
@@ -122,9 +123,34 @@ class AdminController extends Controller
 
     public function orders()
     {
-        $orders = Orders::all();
+        $orders = Bayar::all();
         return view('admin.index', compact('orders'));
-        
+
     }
+
+    public function adminPembayaran()
+    {
+        $orders = Bayar::all();
+        return view('admin.verifikasiBayar', compact('orders'));
+    }
+    public function accept($id)
+{
+    $order = Orders::findOrFail($id);
+
+    // Proses untuk mengirim ke tabel lain
+
+    return redirect()->back()->with('success', 'Pesanan telah diterima.');
+}
+
+public function reject($id)
+{
+    $order = Orders::findOrFail($id);
+
+    // Proses untuk menghapus pesanan dari database
+
+    $order->delete();
+
+    return redirect()->back()->with('success', 'Pesanan telah ditolak dan dihapus.');
+}
 
 }
