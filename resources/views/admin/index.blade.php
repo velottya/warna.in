@@ -30,7 +30,7 @@
               </div>
             </div>
 
-            <div class="card-body mt-3">
+            <div class="card-body mt-3"> 
                 <ul class="p-0 m-0">
                     @foreach($orders as $order)
                     <li class="d-flex mb-4 pb-1">
