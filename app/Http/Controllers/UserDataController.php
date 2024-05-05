@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Mail;
 
 class UserDataController extends Controller
 {
@@ -38,6 +36,7 @@ class UserDataController extends Controller
         $user = Auth::user();
         return view('home.profile', compact('user'));
     }
+
     public function editUserData()
     {
         $user = Auth::user();
@@ -57,7 +56,7 @@ class UserDataController extends Controller
         $previousPhoto = Auth::user()->image;
 
         if ($request->image) {
-            if ($previousPhoto && File::exists(public_path('profile/' . $previousPhoto) !== 'profile/photo/default.png')) {
+            if ($previousPhoto && File::exists(public_path('profile/' . $previousPhoto) !== '/images/default.png')) {
                 File::delete(public_path('profile/' . $previousPhoto));
             }
             $extFile = $request->image->getClientOriginalExtension();

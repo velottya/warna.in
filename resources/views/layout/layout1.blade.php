@@ -23,52 +23,15 @@
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <script type="text/javascript">
-        // Fungsi untuk menambahkan produk ke keranjang
-        function addCart(id) {
-            console.log('Product ID:', id); // Periksa apakah ID produk benar
-
-            // Jalankan AJAX untuk menambahkan produk ke keranjang
-            $.ajax({
-                url: '{{ route("sentra.addCart") }}',
-                type: 'post',
-                data: { id: id },
-                dataType: 'json',
-                success: function(response) {
-                    if (response.status == true) {
-                        window.location.href = '{{ route("sentra.cart") }}';
-                    } else {
-                        alert(response.message);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    var errorMessage = "Error: " + xhr.responseText;
-                    alert(errorMessage);
-                    // Menyalin pesan kesalahan ke clipboard
-                    var tempInput = document.createElement("textarea");
-                    tempInput.value = errorMessage;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand("copy");
-                    document.body.removeChild(tempInput);
-                    alert("Pesan kesalahan telah disalin ke clipboard.");
-                }
-            });
+    <style>
+        /* Navbar warna hitam */
+        .navbar-dark {
+            background-color: #000 !important;
         }
+    </style>
 
-        // Konfigurasi AJAX untuk menetapkan CSRF token
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-        });
-    </script> --}}
-
-</head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
@@ -117,7 +80,7 @@
     @section('content')
     @show
 
-    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/Ask.jpg);">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md pt-5">
@@ -189,7 +152,7 @@
         </div>
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-
+        
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>
@@ -205,6 +168,21 @@
         <script src="{{ asset('js/google-map.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+
+        <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('ftco-navbar');
+            if (window.scrollY > 0) {
+                // Jika halaman telah digulir, tambahkan kelas navbar-light untuk mengubah warna menjadi putih
+                navbar.classList.remove('navbar-dark');
+                navbar.classList.add('navbar-light');
+            } else {
+                // Jika halaman belum digulir, tambahkan kembali kelas navbar-dark untuk mengembalikan warna menjadi hitam
+                navbar.classList.remove('navbar-light');
+                navbar.classList.add('navbar-dark');
+            }
+        });
+    </script>
 
     </body>
     </html>
