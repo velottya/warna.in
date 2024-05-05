@@ -62,13 +62,13 @@
           <div class="card h-100">
             <div class="card-header d-flex align-items-center justify-content-between pb-0">
               <div class="card-title mb-0">
-                <h5 class="m-0 me-2">Order Statistics</h5>
+                <h5 class="m-0 me-2">Order Statistic</h5>
               </div>
             </div>
             <div class="card-body mt-3">
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <div class="d-flex flex-column align-items-center gap-1">
-                  <h2 class="mb-2">38</h2>
+                  <h2 class="mb-2">{{ $orders->count() }}</h2>
                   <span>Total Transaksi</span>
                 </div>
                 <div id="orderStatisticsChart"></div>
@@ -85,7 +85,7 @@
                       <h6 class="mb-0">Booking</h6>
                     </div>
                     <div class="user-progress">
-                      <small class="fw-semibold">6</small>
+                      <small class="fw-semibold">{{ \App\Models\Product::count() }}</small>
                     </div>
                   </div>
                 </li>
@@ -98,7 +98,7 @@
                       <h6 class="mb-0">Topeng</h6>
                     </div>
                     <div class="user-progress">
-                      <small class="fw-semibold">18</small>
+                      <small class="fw-semibold">{{ \App\Models\Product::where('category', 1)->count() }}</small>
                     </div>
                   </div>
                 </li>
@@ -111,7 +111,7 @@
                       <h6 class="mb-0">Batik</h6>
                     </div>
                     <div class="user-progress">
-                      <small class="fw-semibold">9</small>
+                      <small class="fw-semibold">{{ \App\Models\Product::where('category', 2)->count() }}</small>
                     </div>
                   </div>
                 </li>
@@ -126,7 +126,7 @@
                       <h6 class="mb-0">Aksesoris</h6>
                     </div>
                     <div class="user-progress">
-                      <small class="fw-semibold">99</small>
+                      <small class="fw-semibold">{{ \App\Models\Product::where('category', 1)->count() }}</small>
                     </div>
                   </div>
                 </li>
@@ -135,6 +135,7 @@
           </div>
         </div>
         <!--/ Order Statistics -->
+
         <div class="col-lg-4 col-md-4 mb-4">
           <div class="row">
             <div class="col-lg-6 col-md-12 col-6 mb-4">
@@ -166,7 +167,7 @@
                   </div>
                   <span class="fw-semibold d-block mb-1">Stok Produk</span>
                   <!-- dibuat jumlah dari stok produk(nyambung ke bgian stok) -->
-                  <h3 class="card-title mb-2">63</h3>
+                  <h3 class="card-title mb-2">{{ \App\Models\Product::count() }}</h3>
                 </div>
               </div>
             </div>
@@ -191,7 +192,7 @@
                     </div>
                   </div>
                   <span class="fw-semibold d-block mb-1">Total Galeri</span>
-                  <h3 class="card-title text-nowrap mb-1">26</h3>
+                  <h3 class="card-title text-nowrap mb-1">{{ \App\Models\Galeri::count() }}</h3>
                 </div>
               </div>
             </div>
@@ -221,7 +222,7 @@
                     </div>
                   </div>
                   <span class="fw-semibold d-block mb-1">Total Artikel</span>
-                  <h3 class="card-title text-nowrap mb-2">12</h3>
+                  <h3 class="card-title text-nowrap mb-2">-</h3>
                 </div>
               </div>
             </div>
@@ -249,7 +250,7 @@
                     </div>
                   </div>
                   <span class="fw-semibold d-block mb-1">Paket Booking</span>
-                  <h3 class="card-title mb-2">6</h3>
+                  <h3 class="card-title mb-2">{{ \App\Models\Product::where('category', 2)->count() }}</h3>
                 </div>
               </div>
             </div>

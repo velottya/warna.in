@@ -20,7 +20,7 @@
       <div class="row d-flex">
 
       <!-- 1 Blog -->
-        <div class="col-md-4 d-flex ftco-animate">
+      <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry justify-content-end">
             <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image3.png')}}');">
             </a>
@@ -52,108 +52,110 @@
         </div>
       <!-- End 1 Blog -->
 
-   <div class="col-md-4 d-flex ftco-animate">
-     <div class="blog-entry justify-content-end">
-      <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image6.png')}}');">
-      </a>
-      <div class="text">
-       <div class="d-flex align-items-center mb-4 topp">
-        <div class="one">
-         <span class="day">21</span>
-       </div>
-       <div class="two">
-         <span class="yr">2024</span>
-         <span class="mos">Januari</span>
-       </div>
-     </div>
-     <h3 class="heading"><a href="#">Pegiat Kampung Budaya Polowijen Bentuk Asosiasi Batik Malang </a></h3>
-     <p>Dari 30 pengusaha dan pengrajin batik yang kami kelola ada yang sukses go internasional...</p>
-     <p><a href="/blog2" class="btn btn-primary">Read more</a></p>
-   </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image6.png')}}');">
+            </a>
+            <div class="text">
+            <div class="d-flex align-items-center mb-4 topp">
+              <div class="one">
+              <span class="day">21</span>
+            </div>
+            <div class="two">
+              <span class="yr">2024</span>
+              <span class="mos">Januari</span>
+            </div>
+          </div>
+          <h3 class="heading"><a href="#">Pegiat Kampung Budaya Polowijen Bentuk Asosiasi Batik Malang </a></h3>
+          <p>Dari 30 pengusaha dan pengrajin batik yang kami kelola ada yang sukses go internasional...</p>
+          <p><a href="/blog2" class="btn btn-primary">Read more</a></p>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image4.png')}}');">
+          </a>
+          <div class="text">
+          <div class="d-flex align-items-center mb-4 topp">
+            <div class="one">
+            <span class="day">9</span>
+          </div>
+          <div class="two">
+            <span class="yr">2023</span>
+            <span class="mos">November</span>
+          </div>
+        </div>
+        <h3 class="heading"><a href="#">Kampung Budaya Polowijen Gelar Festival Topeng Malang</a></h3>
+        <p>Kampung Budaya Polowijen (KBP) untuk pertama kalinya menggelar Festival Topeng...</p>
+        <p><a href="#" class="btn btn-primary">Read more</a></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image1.jpg')}}');">
+          </a>
+          <div class="text">
+          <div class="d-flex align-items-center mb-4 topp">
+            <div class="one">
+            <span class="day">7</span>
+          </div>
+          <div class="two">
+            <span class="yr">2023</span>
+            <span class="mos">Oktober</span>
+          </div>
+        </div>
+        <h3 class="heading"><a href="#">Profil tokoh budaya menjaga kearifan lokal di Kampung Polowijen sebagai pembawa tradisi</a></h3>
+        <p>Isa Wahyudi, Menghidupkan Kampung Budaya Polowijen</p><br>
+        <p><a href="#" class="btn btn-primary">Read more</a></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/galeri3-1.png')}}');">
+          </a>
+          <div class="text">
+          <div class="d-flex align-items-center mb-4 topp">
+            <div class="one">
+            <span class="day">11</span>
+          </div>
+          <div class="two">
+            <span class="yr">2023</span>
+            <span class="mos">Agustus</span>
+          </div>
+        </div>
+        <h3 class="heading"><a href="#">Menghidupkan Ekonomi Kreatif: Pasar Jajan Tradisional di Kampung Budaya Polowijen</a></h3>
+        <p>Pasar Jajan Tradisional Kampung Budaya Polowijen Mampu Dongkrak Ekonomi Kreatif</p>
+        <p><a href="#" class="btn btn-primary">Read more</a></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/GebyakWayangTopeng.png')}}');">
+          </a>
+          <div class="text">
+          <div class="d-flex align-items-center mb-4 topp">
+            <div class="one">
+            <span class="day">13</span>
+          </div>
+          <div class="two">
+            <span class="yr">2023</span>
+            <span class="mos">Juni</span>
+          </div>
+        </div>
+        <h3 class="heading"><a href="#">Pesona Seni dan Budaya Lokal: Keindahan Kampung Budaya Polowijen di Malang</a></h3>
+        <p>Indahnya Kampung Budaya Polowijen Seindah Seni dan Budaya Lokal Malang</p>
+        <p><a href="#" class="btn btn-primary">Read more</a></p>
+        </div>
+        </div>
+        </div> 
+
   </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-   <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image4.png')}}');">
-    </a>
-    <div class="text">
-     <div class="d-flex align-items-center mb-4 topp">
-      <div class="one">
-       <span class="day">9</span>
-     </div>
-     <div class="two">
-       <span class="yr">2023</span>
-       <span class="mos">November</span>
-     </div>
-   </div>
-   <h3 class="heading"><a href="#">Kampung Budaya Polowijen Gelar Festival Topeng Malang</a></h3>
-   <p>Kampung Budaya Polowijen (KBP) untuk pertama kalinya menggelar Festival Topeng...</p>
-   <p><a href="#" class="btn btn-primary">Read more</a></p>
-  </div>
-  </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-   <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/image1.jpg')}}');">
-    </a>
-    <div class="text">
-     <div class="d-flex align-items-center mb-4 topp">
-      <div class="one">
-       <span class="day">7</span>
-     </div>
-     <div class="two">
-       <span class="yr">2023</span>
-       <span class="mos">Oktober</span>
-     </div>
-   </div>
-   <h3 class="heading"><a href="#">Profil tokoh budaya menjaga kearifan lokal di Kampung Polowijen sebagai pembawa tradisi</a></h3>
-   <p>Isa Wahyudi, Menghidupkan Kampung Budaya Polowijen</p><br>
-   <p><a href="#" class="btn btn-primary">Read more</a></p>
-  </div>
-  </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-   <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/galeri3-1.png')}}');">
-    </a>
-    <div class="text">
-     <div class="d-flex align-items-center mb-4 topp">
-      <div class="one">
-       <span class="day">11</span>
-     </div>
-     <div class="two">
-       <span class="yr">2023</span>
-       <span class="mos">Agustus</span>
-     </div>
-   </div>
-   <h3 class="heading"><a href="#">Menghidupkan Ekonomi Kreatif: Pasar Jajan Tradisional di Kampung Budaya Polowijen</a></h3>
-   <p>Pasar Jajan Tradisional Kampung Budaya Polowijen Mampu Dongkrak Ekonomi Kreatif</p>
-   <p><a href="#" class="btn btn-primary">Read more</a></p>
-  </div>
-  </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-   <div class="blog-entry">
-    <a href="blog-single.html" class="block-20" style="background-image: url('{{asset('images/GebyakWayangTopeng.png')}}');">
-    </a>
-    <div class="text">
-     <div class="d-flex align-items-center mb-4 topp">
-      <div class="one">
-       <span class="day">13</span>
-     </div>
-     <div class="two">
-       <span class="yr">2023</span>
-       <span class="mos">Juni</span>
-     </div>
-   </div>
-   <h3 class="heading"><a href="#">Pesona Seni dan Budaya Lokal: Keindahan Kampung Budaya Polowijen di Malang</a></h3>
-   <p>Indahnya Kampung Budaya Polowijen Seindah Seni dan Budaya Lokal Malang</p>
-   <p><a href="#" class="btn btn-primary">Read more</a></p>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="row mt-5">
+
+  {{-- <div class="row mt-5">
     <div class="col text-center">
       <div class="block-27">
         <ul>
@@ -174,7 +176,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> --}}
   </div>
   </section>
 

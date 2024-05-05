@@ -20,7 +20,20 @@ class AdminController extends Controller
     }
     public function dashboard()
     {
-        return view('admin.index');
+        $categories = Category::all();
+        $data =
+        [
+            'category'=>Category::orderBy('name', 'asc')->get(),
+            'product'=>Products::all(),
+            'galeri'=>Galeri::all(),
+            'orders'=>Orders::all()
+        ];
+        return view('admin.index', compact('categories'), $data);
+    }
+    
+    public function transaksi()
+    {
+        return view('admin.transaksiSentra');
     }
 
     public function showAddUser()

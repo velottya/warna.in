@@ -8,7 +8,11 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
+<<<<<<< HEAD
                 <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home
+=======
+                <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home 
+>>>>>>> 407bed0c32d312b54a0edae70237610fd0a30696
                     <i class="fa fa-chevron-right"></i></a></span> <span>Sentra <i class="fa fa-chevron-right"></i></span>
                 </p>
                 <h1 class="mb-0 bread">Sentra</h1>
@@ -35,7 +39,11 @@
                     <a href="#" class="img" alt="{{ $item->name }}" style="background-image: url('{{ asset('images/product/'.$item->picture) }}');">
                         <span class="price">Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
                     </a>
+<<<<<<< HEAD
                     <div class="text p-4">
+=======
+                    <div class="text p-4">  
+>>>>>>> 407bed0c32d312b54a0edae70237610fd0a30696
                         <h3><a href="#">{{ $item->name }}</a></h3>
                         <div class="paragraph" style="max-width: 300px; word-wrap: break-word;">
                             {{ Illuminate\Support\Str::limit($item->description, 40) }}
@@ -85,7 +93,11 @@
                     <a href="#" class="img" alt="{{ $item->name }}" style="background-image: url('{{ asset('images/product/'.$item->picture) }}');">
                         <span class="price">Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
                     </a>
+<<<<<<< HEAD
                     <div class="text p-4">
+=======
+                    <div class="text p-4">  
+>>>>>>> 407bed0c32d312b54a0edae70237610fd0a30696
                         <h3><a href="#">{{ $item->name }}</a></h3>
                         <div class="paragraph" style="max-width: 300px; word-wrap: break-word;">
                             {{ Illuminate\Support\Str::limit($item->description, 40) }}
@@ -114,8 +126,13 @@
     @endguest
     @if (Auth::check() && Auth::user()->role == 'user')
     <p class="text-center"><a href="{{url ('/user/sentra/produk')}}" class="btn btn-primary">Selengkapnya</a></p>
+<<<<<<< HEAD
     @endif
 
+=======
+    @endif   
+  
+>>>>>>> 407bed0c32d312b54a0edae70237610fd0a30696
 <!-- Modal -->
 @foreach($product as $item)
 <div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

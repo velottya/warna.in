@@ -48,7 +48,6 @@ class SentraController extends Controller
         return view('home.sentra.form-bayar', ['productName' => $productName]);
     }
 
-
     // Nyambung ke admin
     public function adminPembayaran()
     {
@@ -57,7 +56,6 @@ class SentraController extends Controller
 
     public function adminSentra()
     {
-        // $product = Product::all();
         $categories = Category::all();
         $data =
         [
@@ -137,4 +135,6 @@ class SentraController extends Controller
         $product->save();
         return redirect()->back()->with('success', 'Data product berhasil diperbarui');
     }
+
+
 }
