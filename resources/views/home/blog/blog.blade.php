@@ -215,6 +215,19 @@
           </div>
           </div> 
 
+          @foreach($artikel as $item)
+          <div class="col-md-4 ftco-animate">
+            <div class="project-wrap hotel">
+              <a href="#" class="img" style="background-image: url('{{ asset('images/'.$item->gambar) }}');">
+              </a>
+              <div class="text p-4">
+                <h3><a href="#">{{ $item->judul }}</a></h3>
+                <p class="location" align="justify">{{ $item->penjelasan }}</p>
+              </div>
+            </div>
+          </div>
+          @endforeach
+
     </div>
 
     {{-- <div class="row mt-5">
