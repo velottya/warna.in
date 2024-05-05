@@ -112,11 +112,13 @@ Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'akses:admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-        Route::get("/dashboard", [AdminController::class, "dashboard"])->name('dashboard');
+        Route::get("/dashboard", [AdminController::class, "orders"])->name('dashboard');
+        Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
+
 
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
-        
+
         // Galeri Admin
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         // Route::delete('/admin/galeri/{id}', 'GaleriController@destroy')->name('admin.galeri.destroy');
@@ -124,7 +126,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         // Rute untuk menampilkan halaman edit
         Route::get('/admin/galeri/{id}/edit', [GaleriController::class, 'edit'])->name('galeri.edit');
         Route::put('/admin/galeri/{id}', [GaleriController::class, 'update'])->name('galeri.update');
-        
+
         // Artikel Admin
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
         Route::post("/artikel/tambah", [ArtikelController::class, "tambahArtikel"])->name('artikel.tambah');
@@ -145,15 +147,12 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
 
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
 
-<<<<<<< HEAD
         Route::get("/account", [AdminController::class, "account"])->name('account');
         Route::get("edit-account", [AdminController::class, "editaccount"])->name('editaccount');
         Route::patch("/simpanaccount", [AdminController::class, 'simpanaccount'])->name('simpanaccount');
 
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 
-=======
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile", [AdminController::class, "showUser"])->name('admin.userprofile')->middleware(['auth', 'akses:admin']);
         Route::get("/user-profile/add-user", [AdminController::class, "showAddUser"])->name('admin.adduser')->middleware(['auth', 'akses:admin']);

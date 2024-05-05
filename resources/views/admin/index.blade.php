@@ -29,57 +29,30 @@
                 </div>
               </div>
             </div>
+
             <div class="card-body mt-3">
-              <ul class="p-0 m-0">
-                <li class="d-flex mb-4 pb-1">
-                  <div class="list-group list-group-flush w-100">
-                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
-                      <div class="d-flex  flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                          <h6 class="mb-0">Arin</h6>
+                <ul class="p-0 m-0">
+                    @foreach($orders as $order)
+                    <li class="d-flex mb-4 pb-1">
+                        <div class="list-group list-group-flush w-100">
+                            {{-- <a href="{{ route('orders.show', $order->id) }}" class="list-group-item list-group-item-action"> --}}
+                                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                                    <div class="me-2">
+                                        <h6 class="mb-0">{{ $order->id }}</h6>
+                                    </div>
+                                    <div class="user-progress d-flex align-items-center gap-1">
+                                        <span class="text-muted">Rp</span>
+                                        <h6 class="mb-0">{{ $order->total_price }}</h6>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-label-success me-1">{{ $order->status }}</span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="user-progress d-flex align-items-center gap-1">
-                          <span class="text-muted">Rp</span>
-                          <h6 class="mb-0">1.100.000</h6>
-                        </div>
-                        <div> <span class="badge bg-label-success me-1">Success</span> </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                  <div class="list-group list-group-flush w-100">
-                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
-                      <div class="d-flex  flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                          <h6 class="mb-0">Tatya</h6>
-                        </div>
-                        <div class="user-progress d-flex align-items-center gap-1">
-                          <span class="text-muted">Rp</span>
-                          <h6 class="mb-0">1.100.000</h6>
-                        </div>
-                        <div> <span class="badge bg-label-success me-1">Success</span> </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                  <div class="list-group list-group-flush w-100">
-                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
-                      <div class="d-flex  flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                          <h6 class="mb-0">Vina</h6>
-                        </div>
-                        <div class="user-progress d-flex align-items-center gap-1">
-                          <span class="text-muted">Rp</span>
-                          <h6 class="mb-0">1.100.000</h6>
-                        </div>
-                        <div> <span class="badge bg-label-success me-1">Success</span> </div>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-              </ul>
+                    </li>
+                    @endforeach
+                </ul>
             </div>
           </div>
         </div>

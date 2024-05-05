@@ -19,7 +19,7 @@
             <div class="col-md-12">
                 <div class="border-right border-white mb-4 d-flex justify-content-center align-items-center">
                     <div class="d-flex flex-column align-items-center text-center">
-                        <img class="rounded-circle" width="150px" src="/images/default.png">
+                        <img class="rounded-circle" width="150px" src="/profile/{{ $admin->image }}">
                         <span class="font-weight-bold"></span>
                     </div>
                 </div>
