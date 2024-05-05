@@ -139,6 +139,10 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
 
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
 
+        Route::get("/account", [AdminController::class, "account"])->name('account');
+        Route::get("edit-account", [AdminController::class, "editaccount"])->name('editaccount');
+        Route::patch("/simpanaccount", [AdminController::class, 'simpanaccount'])->name('simpanaccount');
+
         Route::get("/artikel", [ArtikelController::class, "adminArtikel"])->name('artikel')->middleware(['auth', 'akses:admin']);
 
         Route::delete('/user-result/{editusertesdata}', [AdminController::class, 'historyDestroy'])->name('admin.userresult.destroy')->middleware(['auth', 'akses:admin']);
