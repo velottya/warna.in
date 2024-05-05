@@ -5,12 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Carts;
-<<<<<<< HEAD
-use App\Models\Cart;
-=======
 use App\Models\Orders;
-
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
@@ -85,10 +80,7 @@ class CartController extends Controller
     {
         return view('home.sentra.addcart');
     }
-<<<<<<< HEAD
-}
-=======
-
+    
     public function cekout(Request $request)
     {
         $product_id = $request->product_id;
@@ -202,4 +194,3 @@ class CartController extends Controller
     }
     
 }
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708

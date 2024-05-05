@@ -84,7 +84,7 @@
                             <div class="mt-3">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
-                                    <form id="addressForm" method="post" enctype="multipart/form-data" action="{{ route('sentra.store') }}">
+                                    <form id="addressForm" method="post" enctype="multipart/form-data" action="{{ route('sentra.kirim') }}">
                                         @csrf
                                         <div class="card card-body p-6">
                                             <div class="mb-2">

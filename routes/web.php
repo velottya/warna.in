@@ -90,7 +90,7 @@ Route::middleware(['auth', 'akses:user'])->group(function () {
 
         // Route::get('/sentra/cekout/bayar', [CartController::class, 'bayar'])->name('sentra.bayar');
         // Route::post('/sentra/cekout/store', [CartController::class, 'store'])->name('sentra.store');
-        Route::post('/sentra/cekout/bayar', [CartController::class, 'kirim'])->name('sentra.store');
+        Route::post('/sentra/cekout/bayar', [CartController::class, 'kirim'])->name('sentra.kirim');
 
         
         // Route::post('/sentra/cekout/konfirm', [CartController::class, 'konfirm'])->name('sentra.konfirm');
