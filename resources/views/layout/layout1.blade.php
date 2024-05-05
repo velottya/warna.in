@@ -80,7 +80,7 @@
     @section('content')
     @show
 
-    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/Ask.jpg);">
+    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md pt-5">
