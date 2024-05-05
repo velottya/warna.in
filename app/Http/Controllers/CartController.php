@@ -5,13 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Carts;
-<<<<<<< HEAD
-use App\Models\Cart;
-=======
 use App\Models\Orders;
-use App\Models\Transactions;
-
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
@@ -86,10 +80,7 @@ class CartController extends Controller
     {
         return view('home.sentra.addcart');
     }
-<<<<<<< HEAD
-}
-=======
-
+    
     public function cekout(Request $request)
     {
         $product_id = $request->product_id;
@@ -99,30 +90,99 @@ class CartController extends Controller
         return view('home.sentra.cekout', compact('product'));
     }
 
-    public function store(Request $request)
+    // public function store(Request $request)
+    // {
+    //     // Validasi data input
+    //     $validatedData = $request->validate([
+    //         'fullName' => 'required|string',
+    //         'address' => 'required|string',
+    //         'phoneNumber' => 'required|string',
+    //         'jumlahTransfer' => 'required|integer',
+    //         'transferMethod' => 'required|string', // tambahkan validasi untuk metode transfer
+    //         'buktiPembayaran' => 'required|string', // tambahkan validasi untuk bukti pembayaran (opsional)
+    //         'catatan' => 'nullable|string',
+    //         'total_price' => 'required|string',
+    //         'product_id' => 'required|exists:products,id',
+    //     ]);
+
+    //     // Simpan data order ke dalam database
+    //     $order = new Orders();
+    //     $order->product_id = $validatedData['product_id'];
+    //     $order->full_name = $validatedData['fullName'];
+    //     $order->address = $validatedData['address'];
+    //     $order->phone_number = $validatedData['phoneNumber'];
+    //     $order->note = $validatedData['catatan'];
+    //     $order->total_price = $validatedData['total_price'];
+    //     $order->jumlah_transfer = $request->input('jumlah_transfer');
+    //     $order->transfer_melalui = $validatedData['transferMethod'];
+
+    //     // Proses upload bukti pembayaran jika ada
+    //     if ($request->hasFile('buktiPembayaran')) {
+    //         $imageName = time() . '.' . $request->buktiPembayaran->extension();
+    //         $request->buktiPembayaran->move(public_path('images/sentra/pembayaran'), $imageName);
+    //         $order->bukti_pembayaran = 'images/sentra/pembayaran/' . $imageName;
+    //     } else {
+    //         echo "proses gagal";
+    //     }
+
+    //     // // Simpan gambar ke direktori tertentu
+    //     // $imageName = time().'.'.$request->buktiPembayaran->extension();
+    //     // $request->buktiPembayaran->move(public_path('images/sentra/pembayaran'), $imageName);
+
+    //     // // Simpan data ke database
+    //     // Orders::create([
+    //     //     'gambar' => $imageName,
+    //     //     'judul' => $request->judul,
+    //     //     'deskripsi' => $request->deskripsi,
+    //     //     'fullName' => $request->fullName,
+    //     //     'address' => $request->address,
+    //     //     'phoneNumber' => $request->phoneNumber,
+    //     //     'jumlahTransfer' => $request->jumlahTransfer,
+    //     //     'transferMethod' => $request->transferMethod, 
+    //     //     'buktiPembayaran' => $request->buktiPembayaran, 
+    //     //     'catatan' => $request->catatan,
+
+    //     //     'total_price' => $request->total_price,
+    //     //     'product_id' => $request->product_id,
+    //     // ]);
+
+    //     $order->save();
+
+    //     // Redirect ke halaman lain setelah order berhasil disimpan
+    //     return redirect()->back()->with('success', 'Pesanan anda berhasil disimpan.');
+    // }
+
+    public function kirim(Request $request)
     {
-        // Validasi data input
-        $validatedData = $request->validate([
-            'fullName' => 'required|string',
-            'address' => 'required|string',
-            'phoneNumber' => 'required|string',
-            'catatan' => 'nullable|string',
-            'total_price' => 'required|string',
-            'product_id' => 'required|exists:products,id',
+        $rules = [
+            'product_id' => 'required',
+            'fullName' => 'required',
+            'address' => 'required',
+            'phoneNumber' => 'required',
+            'note' => 'nullable',
+            'jumlahTransfer' => 'required',
+            'transferMethod' => 'required', 
+            'buktiPembayaran' => 'required', 
+            'total_price' => 'required',
+        ];
+
+        // Simpan gambar ke direktori tertentu
+        $imageName = time().'.'.$request->buktiPembayaran->extension();
+        $request->buktiPembayaran->move(public_path('images/sentra/pembayaran'), $imageName);
+
+        Orders::create([
+            'product_id' => $request->product_id,
+            'full_name' => $request->fullName,
+            'address' => $request->address,
+            'phone_number' => $request->phoneNumber,
+            'total_price' => $request->total_price,
+            'jumlah_transfer' => $request->jumlahTransfer,
+            'transfer_melalui' => $request->transferMethod,
+            'bukti_pembayaran' => $request->buktiPembayaran,
+            'note' => $request->catatan,
         ]);
 
-        // Simpan data order ke dalam database
-        $order = new Orders();
-        $order->product_id = $validatedData['product_id'];
-        $order->full_name = $validatedData['fullName'];
-        $order->address = $validatedData['address'];
-        $order->phone_number = $validatedData['phoneNumber'];
-        $order->note = $validatedData['catatan'];
-        $order->total_price = $validatedData['total_price'];
-        $order->save();
-
-        // Redirect ke halaman lain setelah order berhasil disimpan
-        return redirect()->route('sentra.bayar')->with('success', 'Pesanan berhasil ditempatkan!');
+        return redirect()->back()->with('success','PPEMBAYARAN berhasil ditambahkan.');
     }
 
     public function bayar(Request $request)
@@ -134,4 +194,3 @@ class CartController extends Controller
     }
     
 }
->>>>>>> 3f82662a3b0cc3032264f188785eead9e3724708

@@ -7,20 +7,53 @@
     <div class="container-fluid" style="background-color: white; min-width: 160vh;">
         <div class="row">
             <div class="col-lg-5 col-md-5">
-                <!-- Ringkasan Data dari Halaman Cekout Sebelumnya -->
-                <div class="ringkasan-cekout my-3">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5 class="card-title">Ringkasan Cekout</h5>
+                <!-- Form Pembayaran -->
+                <div class="pembayaran-form">
+                    <div class="card shadow-sm my-3">
+                        <div class="col-xxl">
+                            <div class="card mb-4">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0">Informasi Pembayaran</h5>
+                                    <small class="text-muted float-end"></small>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST" action="{{ route('sentra.bayar', ['product_id' => $product->id]) }}">
+                                        @csrf
+                                        <!-- Nama, Alamat, Nomor HP, No Transaksi, Catatan -->
+                                        <div class="mb-3 row">
+                                            <label for="nama" class="col-md-4 col-form-label">Nama</label>
+                                            <div class="col-md-8">
+                                                <input class="form-control" type="text" id="nama" value="{{ $fullName }}" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="alamat" class="col-md-4 col-form-label">Alamat</label>
+                                            <div class="col-md-8">
+                                                <input class="form-control" type="text" id="alamat" value="{{ $address }}" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="nomor-hp" class="col-md-4 col-form-label">Nomor HP</label>
+                                            <div class="col-md-8">
+                                                <input class="form-control" type="text" id="nomor-hp" value="{{ $phoneNumber }}" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="no-transaksi" class="col-md-4 col-form-label">No Transaksi</label>
+                                            <div class="col-md-8">
+                                                <input class="form-control" type="text" id="no-transaksi" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="catatan" class="col-md-4 col-form-label">Catatan</label>
+                                            <div class="col-md-8">
+                                                <input class="form-control" type="text" id="catatan" value="{{ $catatan }}" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                          <!-- Tambahkan informasi ringkasan cekout di sini -->
-                          <p style="color: black;">Nama: {{ $fullName }}</p>
-                          <p style="color: black;">Alamat: {{ $address }}</p>
-                          <p style="color: black;">No HP: {{ $phoneNumber }}</p>
-                          <p style="color: black;">No Transaksi: </p>
-                          <p style="color: black;">Catatan: {{ $catatan }}</p>
-                      </div>
                     </div>
                 </div>
             </div>
