@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\Orders;
 use App\Models\Bayar;
+use App\Models\Bayardua;
 
 class AdminController extends Controller
 {
@@ -133,24 +134,25 @@ class AdminController extends Controller
         $orders = Bayar::all();
         return view('admin.verifikasiBayar', compact('orders'));
     }
-    public function accept($id)
-{
-    $order = Orders::findOrFail($id);
 
-    // Proses untuk mengirim ke tabel lain
+//     public function accept($id)
+// {
+//     $order = Orders::findOrFail($id);
 
-    return redirect()->back()->with('success', 'Pesanan telah diterima.');
-}
+//     // Proses untuk mengirim ke tabel lain
 
-public function reject($id)
-{
-    $order = Orders::findOrFail($id);
+//     return redirect()->back()->with('success', 'Pesanan telah diterima.');
+// }
 
-    // Proses untuk menghapus pesanan dari database
+// public function reject($id)
+// {
+//     $order = Orders::findOrFail($id);
 
-    $order->delete();
+//     // Proses untuk menghapus pesanan dari database
 
-    return redirect()->back()->with('success', 'Pesanan telah ditolak dan dihapus.');
-}
+//     $order->delete();
+
+//     return redirect()->back()->with('success', 'Pesanan telah ditolak dan dihapus.');
+// }
 
 }
