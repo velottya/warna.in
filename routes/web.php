@@ -83,7 +83,6 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         Route::post('/order/reject/{id}', 'AdminController@reject')->name('order.reject');
 
 
-
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('galeri')->middleware(['auth', 'akses:admin']);
         Route::post("/galeri/tambah", [GaleriController::class, "tambahGaleri"])->name('galeri.tambah');
         Route::get("/galeri", [GaleriController::class, "adminGaleri"])->name('admin.galeri')->middleware(['auth', 'akses:admin']);
@@ -115,11 +114,7 @@ Route::middleware(['auth', 'akses:admin'])->group(function () {
         });
 
         Route::get("/transaksi", [AdminController::class, "transaksi"])->name('admin.transaksi')->middleware(['auth', 'akses:admin']);
-<<<<<<< HEAD
-
-=======
         Route::get("/pembayaran", [SentraController::class, "adminPembayaran"])->name('pembayaran');
->>>>>>> 3f5ff7afaad57f032fc229ea82d04cc3b74fab20
 
         Route::get("/account", [AdminController::class, "account"])->name('account');
         Route::get("edit-account", [AdminController::class, "editaccount"])->name('editaccount');
