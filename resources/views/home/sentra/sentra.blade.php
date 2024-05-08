@@ -18,7 +18,7 @@
     </div>
 </section>
 
-<h1 class="mb-0 bread text-center pt-5 font-weight-bold">PAKET KEGIATAN</h1>
+<h1 class="bread text-center pt-5 font-weight-bold">PAKET KEGIATAN</h1>
 <section class="ftco-section">
     <div class="container">
         <div class="row">
