@@ -96,7 +96,7 @@
                                                     <label for="#">BOOKING</label>
                                                     <div class="form-field">
                                                         <div><span></span></div>
-                                                        <input type="text" class="form-control" placeholder="56 ++">
+                                                        <input type="text" class="form-control" placeholder="{{ $jumlahPesanan }} ++">
                                                     </div>
                                                 </div>
                                             </div>
@@ -105,7 +105,7 @@
                                                     <label for="#">GALERI</label>
                                                     <div class="form-field">
                                                         <div><span></span></div>
-                                                        <input type="text" class="form-control checkin_date" placeholder="30 ++">
+                                                        <input type="text" class="form-control checkin_date" placeholder="{{ $jumlahGaleri }} ++">
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,7 +114,7 @@
                                                     <label for="#">SENTRA PRODUK</label>
                                                     <div class="form-field">
                                                         <div><span></span></div>
-                                                        <input type="text" class="form-control checkout_date" placeholder="23 ++">
+                                                        <input type="text" class="form-control checkout_date" placeholder="{{ $jumlahProduk }} ++">
                                                     </div>
                                                 </div>
                                             </div>
@@ -124,7 +124,7 @@
                                                     <div class="form-field">
                                                         <div class="select-wrap">
                                                             <div><span></span></div>
-                                                            <input type="text" class="form-control checkout_date" placeholder="12 ++">
+                                                            <input type="text" class="form-control checkout_date" placeholder="{{ $jumlahArtikel }} ++">
                                                         </div>
                                                     </div>
                                                 </div>
