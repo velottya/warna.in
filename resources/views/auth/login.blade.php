@@ -8,12 +8,12 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/signin-image.png"></figure>
-                        <a href="/regist" style="text-decoration: none"class="signup-image-link">Create an account</a>
+                        <a href="{{route('register')}}" style="text-decoration: none"class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
-                        <form action="/login" method="POST" class="register-form" id="login-form">
+                        <form action="{{route('login')}}" method="POST" class="register-form" id="login-form">
                             @csrf
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>

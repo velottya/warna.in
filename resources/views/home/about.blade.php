@@ -120,10 +120,10 @@
           <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
           <p>Warisi Tradisi Lestarikan Budaya</p>
           @if (Auth::check() && Auth::user()->role == 'user')
-          <p class="mb-0"><a href="{{url('/user/contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+          <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
           @endif
           @guest
-          <p class="mb-0"><a href="{{url('/contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+          <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
           @endguest
         </div>
       </div>

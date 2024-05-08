@@ -21,7 +21,7 @@
     </div>
   </div>
 </section>
-<p class="text-center"><a href="/blog" class="btn btn-primary">Kembali</a></p>
+<p class="text-center"><a href="{{ url('/blog')}}" class="btn btn-primary">Kembali</a></p>
 
 <section class="ftco-intro ftco-section ftco-no-pt">
   <div class="container pt-5">
@@ -31,7 +31,7 @@
           <div class="overlay"></div>
           <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
           <p>Warisi Tradisi Lestarikan Budaya</p>
-          <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+          <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
         </div>
       </div>
     </div>

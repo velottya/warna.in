@@ -59,7 +59,7 @@
                     <p>
                         Forgot Your Password? Let's Fill the Form and Log in Again with Your New Password!
                     </p>
-                    <a href="/login">
+                    <a href="{{route('login')}}">
                         <button class="btn transparent">
                             Back to Log In
                         </button>

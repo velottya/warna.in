@@ -34,7 +34,7 @@
           <div class="overlay"></div>
           <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
           <p>Warisi Tradisi Lestarikan Budaya</p>
-          <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+          <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
         </div>
       </div>
     </div>
@@ -49,4 +49,3 @@
           <p align="justify">"Swatantra Panawidyan kala itu sebagai pusat pendidikan dan penyebaran keagamaan pada abad X kerajaan Kanjuruhan," katanya. </p>
           <p align="justify">"Oleh karena itu siswa-siswa Polowijen harus maju dan berprestasi dalam bidang pendidikan dan kebudayaan," tandasnya.</p>
           <p align="justify">Panggung hiburan wisuda SDN 3 Polowijen dipentaskan beberapa tarian topeng oleh siswa-siswa setempat, diantaranya Tari Topeng Grebeg Jowo, Grebeg Sabrang, Bapang, dan Gunungsari, serta tari-tari kreasi lain seperti Tari Merak, Jaran Kore, Khuntul, Dor-Dor, Onclang dan Gagak.</p> -->
-        

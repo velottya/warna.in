@@ -101,13 +101,13 @@
                     <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">Menu</h2>
                         <ul class="list-unstyled">
-                            <li><a href="/" class="py-2 d-block">Homepage</a></li>
-                            <li><a href="/about" class="py-2 d-block">About KBP</a></li>
-                            <li><a href="/sentra" class="py-2 d-block">Sentra</a></li>
-                            <li><a href="/galeri" class="py-2 d-block">Galeri</a></li>
-                            <li><a href="/blog" class="py-2 d-block">Blog</a></li>
-                            <li><a href="/contact" class="py-2 d-block">Contact</a></li>
-                            <li><a href="/login" class="py-2 d-block">Log In</a></li>
+                            <li><a href="{{route('home')}}" class="py-2 d-block">Homepage</a></li>
+                            <li><a href="{{route('about')}}" class="py-2 d-block">About KBP</a></li>
+                            <li><a href="{{route('sentra')}}" class="py-2 d-block">Sentra</a></li>
+                            <li><a href="{{route('galeri')}}" class="py-2 d-block">Galeri</a></li>
+                            <li><a href="{{route('blog')}}" class="py-2 d-block">Blog</a></li>
+                            <li><a href="{{route('contact')}}" class="py-2 d-block">Contact</a></li>
+                            <li><a href="{{route('login')}}" class="py-2 d-block">Log In</a></li>
                         </ul>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <div class="col-md-12 text-center">
 
                     <p> Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7
-                    </div> 
+                    </div>
                 </div>
             </div>
         </footer>
@@ -155,7 +155,7 @@
         </div>
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
-        
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>
