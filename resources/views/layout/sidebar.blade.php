@@ -119,7 +119,7 @@
                 </a>
               </li>
               <li class="menu-item @yield('artikel')">
-                <a href="{{ route('admin.artikel') }}" class="menu-link">
+                <a href="{{ route('artikel') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-file"></i>
                   <div data-i18n="artikel">Artikel Polowijen</div>
                 </a>
