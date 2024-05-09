@@ -20,10 +20,10 @@
   </div>
 </section>
 @if (Auth::check() && Auth::user()->role == 'user')
-  <p class="text-center"><a href="{{ url('/user/blog')}}" class="btn btn-primary">Kembali</a></p>
+  <p class="text-center"><a href="{{ route('blog')}}" class="btn btn-primary">Kembali</a></p>
 
 @else
-<p class="text-center"><a href="{{ url('/blog')}}" class="btn btn-primary">Kembali</a></p>
+<p class="text-center"><a href="{{ route('blog')}}" class="btn btn-primary">Kembali</a></p>
 @endif
 
 <section class="ftco-intro ftco-section ftco-no-pt">

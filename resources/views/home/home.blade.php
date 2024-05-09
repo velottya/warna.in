@@ -429,7 +429,7 @@
                                     <p>o Jelajahi tradisi unik Megengan & Mya:</p>
                                     <p>o Dapatkan pengetahuan dan pengalaman baru</p>
                                     <p>o Ciptakan kenangan indah bersama keluarga</p></p>
-                                    <p><a href="#" class="btn btn-primary">Booking Kunjungan</a></p>
+                                    <p><a href="{{route('login')}}" class="btn btn-primary">Booking Kunjungan</a></p>
                                 </div>
                             </div>
                         </div>

@@ -21,7 +21,7 @@
     </div>
   </div>
 </section>
-<p class="text-center"><a href="{{ url('/blog')}}" class="btn btn-primary">Kembali</a></p>
+<p class="text-center"><a href="{{ route('blog')}}" class="btn btn-primary">Kembali</a></p>
 
 <section class="ftco-intro ftco-section ftco-no-pt">
   <div class="container pt-5">

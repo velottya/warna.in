@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
       <div class="col-md-9 ftco-animate pb-5 text-center">
-        <p class="breadcrumbs"><span class="mr-2"><a href="{{ url('') }}">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>
+        <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>
         <h1 class="mb-0 bread">About Us</h1>
       </div>
     </div>
@@ -97,10 +97,10 @@
                 <p align="justify">Adapun prosesnya dimulai dengan memberikan ornament bambu pada rumah warga RT 03 RW 02 Polowijen sebanyak 15 rumah dan menambahkan gazebo di depan rumah masing masing warga. Prosesnya dengan swadaya mandiri dengan prinsip gotong royong secara bertahap. Butuh waktu 2 tahun untuk melakukan pembenahan infrasturktur agar desain kampung lebih unik antik, indah dan menarik.</p>
                 <p align="justify">Kampung Budaya Polowijen diresmikan pada tanggal 2 April 2017 selah 1 hari HUT Kota Malang oleh Walikota Malang, H.Moh Anton. Peresmian di meriahkan dengan Gerakan Senam Sehat, Menanam 100 Pohon, Peletakan Batu Pertama Sasana Budaya, Fragmen Wayang Topeng Tari Topeng Grebeg Jowo 100 Orang, Permainan Dolanan, Albanjari Dan Tari Topeng Gunungsari Dan Sarasehan Kampung Budaya Poloiwjen dengan tema mencari Hari jadi Polowijen oleh Arkelog UM Dwi Cahyono, Kepala Disbudpar Kota Malang Anggota DPRD Kota Malang, Camat Blimbing dan Lurah Polowijen</p>
                 @if (Auth::check() && Auth::user()->role == 'user')
-                <p><a href="{{url('/user/blog')}}" class="btn btn-primary">Lihat Blog</a></p>
+                <p><a href="{{route('blog')}}" class="btn btn-primary">Lihat Blog</a></p>
                 @endif
                 @guest
-                <p><a href="{{url('/blog')}}" class="btn btn-primary">Lihat Blog</a></p>
+                <p><a href="{{route('blog')}}" class="btn btn-primary">Lihat Blog</a></p>
                 @endguest
               </div>
             </div>
