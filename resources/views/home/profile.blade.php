@@ -53,7 +53,7 @@
                             </div>
                             <div class="mt-4 mb-2 text-center">
                                 <a href="{{ route('profile.edit') }}" class="btn btn-primary py-3 px-4">Edit Profile</a>
-                                <a href="/" class="btn btn-primary py-3 px-4">Back</a>
+                                <a href="{{route('home')}}" class="btn btn-primary py-3 px-4">Back</a>
                             </div>
                         </div>
                     </div>

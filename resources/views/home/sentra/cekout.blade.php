@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mb-4">
-                                <a href="{{ url('user/sentra') }}" class="btn btn-first  @yield('sentra')" style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Back to Sentra</a>
+                                <a href="{{ route('sentra') }}" class="btn btn-first  @yield('sentra')" style="background-color: #F15D30; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Back to Sentra</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">

@@ -136,7 +136,11 @@
                     <div class="overlay"></div>
                     <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
                     <p>Warisi Tradisi Lestarikan Budaya</p>
+<<<<<<< HEAD
+                    <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+=======
                     <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3">Minta Penawaran</a></p>
+>>>>>>> 33aa428f2a0f2e44e798ac229801b3064cb977ac
                 </div>
             </div>
         </div>

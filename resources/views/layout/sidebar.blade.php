@@ -81,7 +81,7 @@
           <!-- Menu -->
           <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo" {{ Request()->is('dashboard') ? 'active' : '' }}>
-              <a  href="{{ url('admin/dashboard') }}" class="app-brand-link">
+              <a  href="{{ route('dashboard') }}" class="app-brand-link">
                 <span class="app-brand-logo demo">
                   <img style="width: 45px;" src="{{asset ('admin/assets/img/icons/logo-polowijen.png')}}" alt="">
                 </span>
@@ -98,14 +98,14 @@
             <ul class="menu-inner py-1">
               <!-- Dashboard -->
               <li class="menu-item @yield('dashboard')">
-                <a href="{{ url('admin/dashboard') }}" class="menu-link">
+                <a href="{{ route('dashboard') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-home-circle"></i>
                   <div data-i18n="dashboard">Dashboard</div>
                 </a>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">Verifikasi</span></li>
               <li class="menu-item @yield('pembayaran')">
-                <a href="{{ url('admin/pembayaran') }}" class="menu-link">
+                <a href="{{ route('pembayaran') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-support"></i>
                   <div data-i18n="bayar">Verifikasi pembayaran</div>
                 </a>
@@ -113,13 +113,13 @@
               <!-- Website Information -->
               <li class="menu-header small text-uppercase"><span class="menu-header-text">Website Informasi</span></li>
               <li class="menu-item @yield('galeri')">
-                <a href="{{ url('admin/galeri') }}" class="menu-link">
+                <a href="{{ route('admin.galeri') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-folder"></i>
                   <div data-i18n="galeri">Galeri Polowijen</div>
                 </a>
               </li>
               <li class="menu-item @yield('artikel')">
-                <a href="{{ url('admin/artikel') }}" class="menu-link">
+                <a href="{{ route('artikel') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-file"></i>
                   <div data-i18n="artikel">Artikel Polowijen</div>
                 </a>
@@ -129,7 +129,7 @@
                 <span class="menu-header-text">Sentra Polowijen</span>
               </li>
               <li class="menu-item @yield('sentra')">
-                <a href="{{ url('admin/sentra') }}" class="menu-link">
+                <a href="{{ route('admin.sentra') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-dock-top"></i>
                   <div data-i18n="sentra">Sentra</div>
                 </a>
@@ -164,7 +164,7 @@
                 </a>
                 <ul class="menu-sub">
                   <li class="menu-item @yield('account')">
-                    <a href="{{ url('admin/account') }}" class="menu-link">
+                    <a href="{{ route('account') }}" class="menu-link">
                       <div data-i18n="account">Account</div>
                     </a>
                   </li>
@@ -218,7 +218,7 @@
                         <div class="dropdown-divider"></div>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="{{ url('admin/account') }}">
+                        <a class="dropdown-item" href="{{ route('account') }}">
                           <i class="bx bx-user me-2"></i>
                           <span class="align-middle">My Profile</span>
                         </a>
@@ -233,7 +233,7 @@
                         <div class="dropdown-divider"></div>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="{{ url('logout')}}">
+                        <a class="dropdown-item" href="{{ route('logout')}}">
                           <i class="bx bx-power-off me-2"></i>
                           <span class="align-middle">Log Out</span>
                         </a>

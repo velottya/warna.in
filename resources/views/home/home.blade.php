@@ -33,7 +33,7 @@
                 <h1 class="mb-4">KAMPUNG BUDAYA POLOWIJEN</h1>
                 <p class="caps">Warisi Tradisi Lestarikan Budaya</p>
             </div>
-            
+
             <a href="https://www.youtube.com/embed/O3ZDI1pjr2M?si=hVjtOkSFO5yOo7P6" id="video-link" class="icon-video d-flex align-items-center justify-content-center mb-4">
                 <span class="fa fa-play"></span>
             </a>
@@ -156,7 +156,7 @@
                         <h2 class="mb-4">Kampung Budaya Polowijen</h2>
                         <p align="justify">Kampung Budaya Polowijen adalah wujud nyata dari semangat pelestarian dan pengembangan warisan budaya yang kaya di Kelurahan Polowijen, Kecamatan Blimbing, Malang. Didirikan dan diprakarsai oleh Sdr. ISA WAHYUDI, serta dirumuskan dengan dukungan penuh dari Pemerintah Kota Malang, kampung budaya ini menjadi pusat kegiatan yang memadukan tradisi dan inovasi.</p>
                         <p align="justify">Kampung Polowijen adalah pusat kebudayaan yang menghidupkan warisan tradisionalnya melalui kegiatan seperti tari, pembuatan topeng, membatik, dan banyak lagi. Di sini, terdapat pelatihan yang menyelenggarakan kelas-kelas untuk menari, membuat batik, dan mengukir topeng, membantu mempertahankan keaslian budaya Polowijen secara berkelanjutan. Dengan beragam aktivitas budaya dan fasilitas pelatihan yang ditawarkan, Kampung Polowijen menjadi destinasi yang menarik bagi mereka yang ingin merasakan kekayaan budaya lokal dan mengembangkan keterampilan seni tradisional.</p>
-                        <p><a href="/about" class="btn btn-primary py-3 px-4">Sejarah lebih lanjut</a></p>
+                        <p><a href="{{route('about')}}" class="btn btn-primary py-3 px-4">Sejarah lebih lanjut</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -429,7 +429,7 @@
                                     <p>o Jelajahi tradisi unik Megengan & Mya:</p>
                                     <p>o Dapatkan pengetahuan dan pengalaman baru</p>
                                     <p>o Ciptakan kenangan indah bersama keluarga</p></p>
-                                    <p><a href="#" class="btn btn-primary">Booking Kunjungan</a></p>
+                                    <p><a href="{{route('login')}}" class="btn btn-primary">Booking Kunjungan</a></p>
                                 </div>
                             </div>
                         </div>
@@ -588,7 +588,7 @@
                             </div>
                             <h3 class="heading"><a href="#">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
                             <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="/blog1" class="btn btn-primary">Read more</a></p>
+                            <p><a href="{{route('blog')}}" class="btn btn-primary">Read more</a></p>
                         </div>
                     </div>
                 </div>
@@ -609,7 +609,7 @@
                             <h3 class="heading"><a href="#">Pegiat Kampung Budaya Polowijen Bentuk Asosiasi Batik Malang
                             </a></h3>
                             <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="/blog2" class="btn btn-primary">Read more</a></p>
+                            <p><a href="{{route('blog')}}" class="btn btn-primary">Read more</a></p>
                         </div>
                     </div>
                 </div>
@@ -646,7 +646,7 @@
                         <div class="overlay"></div>
                         <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
                         <p>Warisi Tradisi Lestarikan Budaya</p>
-                        <p class="mb-0"><a href="/contact" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+                        <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
                     </div>
                 </div>
             </div>

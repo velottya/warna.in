@@ -51,7 +51,7 @@
       @endforeach
   </div>
 
-  
+
 <!-- Modal -->
 @foreach($artikel as $item)
 <div class="modal fade" id="moreProduk{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -89,7 +89,7 @@
        <div class="overlay"></div>
        <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
        <p>Warisi Tradisi Lestarikan Budaya</p>
-       <p class="mb-0"><a href="contact.html" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+       <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
      </div>
    </div>
   </div>
