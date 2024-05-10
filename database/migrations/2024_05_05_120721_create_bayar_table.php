@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('phone_number');
             $table->decimal('total_price', 10, 2);
-            $table->decimal('jumlah_transfer')->default(0.00);;
-            $table->string('transfer_melalui')->default();;
+            $table->string('transfer_melalui')->default();
             $table->string('bukti_pembayaran')->nullable();
             $table->text('note')->nullable();
             $table->timestamps();
@@ -28,8 +27,6 @@ return new class extends Migration
             // Anda dapat mengganti 'products' dengan nama tabel produk yang sesuai
         });
     }
-
-
 
     /**
      * Reverse the migrations.

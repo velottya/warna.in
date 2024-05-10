@@ -101,12 +101,11 @@ class ArtikelController extends Controller
     }
 
     public function user($page = null)
-    {
-        $perPage = 9; // Jumlah artikel per halaman
+    {    
+        $artikel = Artikel::all(); 
     
+        return view('home.blog.blog', compact('artikel'));    
         $artikel = Artikel::all(); // Mengambil semua data Artikel dari database
-        
-    
     }
 
 }

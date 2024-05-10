@@ -13,24 +13,25 @@
           <table class="table">
             <thead>
               <tr>
-                <th>no</th>
-                <th>no pesanan</th>
-                <th>nama pembeli</th>
+                <th>No</th>
+                <th>No pesanan</th>
+                <th>Nama pembeli</th>
                 <th>Tanggal pesanan</th>
-                <th>Metode bayar</th>
+                <th>Alamat</th>
                 <th>Total bayar</th>
                 <th></th>
               </tr>
             </thead>
+            @foreach($orders as $order)
             <tbody class="table-border-bottom-0">
               <!-- Baris Isi Galeri -->
               <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>5</td>
+                <td>{{ $order->id }}</td>
+                <td>{{ $order->product_id }}</td>
+                <td>{{ $order->full_name }}</td>
+                <td>{{ $order->phone_number }}</td>
+                <td>{{ $order->address }}</td>
+                <td>Rp {{ $order->total_price }}</td>
                 <td>
                     <button type="button" class="btn btn-success btn-md mx-2 mb-4 mt-4">
                     Terima
@@ -39,7 +40,8 @@
                     Tolak
                     </button>
                 </td>
-              </tr>          
+              </tr>
+              @endforeach
             </tbody>
           </table>
         </div>
