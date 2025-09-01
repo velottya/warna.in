@@ -1,6 +1,6 @@
 @extends('layout.layout')
 @section('home', 'active')
-@section('title', 'Home | Authentic Polowijen')
+@section('title', 'Home | Netral.in')
 @section('content')
 
 <style>
@@ -24,19 +24,19 @@
     }
 </style>
 
-<div class="hero-wrap js-fullheight" style="background-image: url('images/slider.jpg');">
+<div class="hero-wrap js-fullheight" style="background-image: url('images/background.png');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate">
-                <span class="subheading">Welcome to</span>
-                <h1 class="mb-4">KAMPUNG BUDAYA POLOWIJEN</h1>
-                <p class="caps">Warisi Tradisi Lestarikan Budaya</p>
+                {{-- <span class="subheading">Welcome to</span> --}}
+                <p class="caps">Platform Belajar Kimia</p>
+                <h1 class="mb-4">AYO BELAJAR KIMIA HARI INI</h1>
             </div>
 
-            <a href="https://www.youtube.com/embed/O3ZDI1pjr2M?si=hVjtOkSFO5yOo7P6" id="video-link" class="icon-video d-flex align-items-center justify-content-center mb-4">
+            {{-- <a href="https://www.youtube.com/embed/O3ZDI1pjr2M?si=hVjtOkSFO5yOo7P6" id="video-link" class="icon-video d-flex align-items-center justify-content-center mb-4">
                 <span class="fa fa-play"></span>
-            </a>
+            </a> --}}
 
             <div id="lightbox" class="lightbox" style="display:none;">
                 <iframe id="video-frame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -93,7 +93,7 @@
                                         <div class="row no-gutters">
                                             <div class="col-md d-flex">
                                                 <div class="form-group p-4 border-0">
-                                                    <label for="#">BOOKING</label>
+                                                    <label for="#">MATERI</label>
                                                     <div class="form-field">
                                                         <div><span></span></div>
                                                         <input type="text" class="form-control" placeholder="{{ $jumlahPesanan }} ++">
@@ -102,37 +102,27 @@
                                             </div>
                                             <div class="col-md d-flex">
                                                 <div class="form-group p-4">
-                                                    <label for="#">GALERI</label>
+                                                    <label for="#">QUIZ</label>
                                                     <div class="form-field">
                                                         <div><span></span></div>
-                                                        <input type="text" class="form-control checkin_date" placeholder="{{ $jumlahGaleri }} ++">
+                                                        <input type="text" class="form-control" placeholder="{{ $jumlahGaleri }} ++">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md d-flex">
                                                 <div class="form-group p-4">
-                                                    <label for="#">SENTRA PRODUK</label>
+                                                    <label for="#">LAB</label>
                                                     <div class="form-field">
                                                         <div><span></span></div>
-                                                        <input type="text" class="form-control checkout_date" placeholder="{{ $jumlahProduk }} ++">
+                                                        <input type="text" class="form-control" placeholder="{{ $jumlahProduk }} ++">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md d-flex">
-                                                <div class="form-group p-4">
-                                                    <label for="#">ARTIKEL BLOG</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div><span></span></div>
-                                                            <input type="text" class="form-control checkout_date" placeholder="{{ $jumlahArtikel }} ++">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div class="col-md d-flex">
                                                 <div class="form-group d-flex w-100 border-0">
                                                     <div class="form-field w-100 align-items-center d-flex">
-                                                        <input type="submit" value="FEEDBACK" class="align-self-stretch form-control btn btn-primary">
+                                                        <input type="submit" value="MULAI" class="align-self-stretch form-control btn btn-primary">
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,14 +146,14 @@
                         <h2 class="mb-4">Kampung Budaya Polowijen</h2>
                         <p align="justify">Kampung Budaya Polowijen adalah wujud nyata dari semangat pelestarian dan pengembangan warisan budaya yang kaya di Kelurahan Polowijen, Kecamatan Blimbing, Malang. Didirikan dan diprakarsai oleh Sdr. ISA WAHYUDI, serta dirumuskan dengan dukungan penuh dari Pemerintah Kota Malang, kampung budaya ini menjadi pusat kegiatan yang memadukan tradisi dan inovasi.</p>
                         <p align="justify">Kampung Polowijen adalah pusat kebudayaan yang menghidupkan warisan tradisionalnya melalui kegiatan seperti tari, pembuatan topeng, membatik, dan banyak lagi. Di sini, terdapat pelatihan yang menyelenggarakan kelas-kelas untuk menari, membuat batik, dan mengukir topeng, membantu mempertahankan keaslian budaya Polowijen secara berkelanjutan. Dengan beragam aktivitas budaya dan fasilitas pelatihan yang ditawarkan, Kampung Polowijen menjadi destinasi yang menarik bagi mereka yang ingin merasakan kekayaan budaya lokal dan mengembangkan keterampilan seni tradisional.</p>
-                        <p><a href="{{route('about')}}" class="btn btn-primary py-3 px-4">Sejarah lebih lanjut</a></p>
+                        <p><a href="{{route('materi')}}" class="btn btn-primary py-3 px-4">Sejarah lebih lanjut</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1 color-1 d-block img" style="background-image: url(images/sejarah.jpg);">
-                                <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/sejarah.svg') }}" width="50" alt="Sentra Icon"></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/sejarah.svg') }}" width="50" alt="Quiz Icon"></div>
 
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Sejarah</h3>
@@ -172,32 +162,24 @@
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-2 d-block img" style="background-image: url(images/sentra.jpg);">
-                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/sentra.svg') }}" width="50" alt="Sentra Icon"></div>
+                            <div class="services services-1 color-2 d-block img" style="background-image: url(images/Quiz.jpg);">
+                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/Quiz.svg') }}" width="50" alt="Quiz Icon"></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Sentra Produk</h3>
+                                    <h3 class="heading mb-3">Quiz Produk</h3>
                                     <p>Pasar Budaya, Mejual segala kriya tangan warga lokal</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-3 d-block img" style="background-image: url(images/galeri.jpg);">
-                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/galeri.svg') }}" width="50" alt="Sentra Icon"></div>
+                            <div class="services services-1 color-3 d-block img" style="background-image: url(images/Lab.jpg);">
+                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/Lab.svg') }}" width="50" alt="Quiz Icon"></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Galeri</h3>
-                                    <p>Galeri Kegiatan di Kampung Budaya Polowijen</p>
+                                    <h3 class="heading mb-3">Lab</h3>
+                                    <p>Lab Kegiatan di Kampung Budaya Polowijen</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1 color-4 d-block img" style="background-image: url(images/blog.png);">
-                            <div class="icon d-flex align-items-center justify-content-center"><img src="{{ asset('images/icon/blog.svg') }}" width="50" alt="Sentra Icon"></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Blog</h3>
-                                    <p>Artikel Terkait Kampung Budaya Polowijen</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -209,7 +191,7 @@
             <div class="row justify-content-center pb-4">
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <span class="subheading">Galery</span>
-                    <h2 class="mb-4">Galeri Kegiatan Kampung Polowijen</h2>
+                    <h2 class="mb-4">Lab Kegiatan Kampung Polowijen</h2>
                 </div>
             </div>
         </div>
@@ -362,7 +344,7 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-about img"style="background-image: url(images/AboutUs2.jpg);">
+    <section class="ftco-section ftco-materi img"style="background-image: url(images/materiUs2.jpg);">
         <div class="overlay"></div>
         <div class="container py-md-5">
             <div class="row py-md-5">
@@ -410,19 +392,19 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-about ftco-no-pt img">
+    <section class="ftco-section ftco-materi ftco-no-pt img">
         <div class="container">
             <div class="row d-flex">
-                <div class="col-md-12 about-intro">
+                <div class="col-md-12 materi-intro">
                     <div class="row">
                         <div class="col-md-6 d-flex align-items-stretch">
-                            <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/AboutUs1.jpg);">
+                            <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/materiUs1.jpg);">
                             </div>
                         </div>
                         <div class="col-md-6 pl-md-5 py-5">
                             <div class="row justify-content-start pb-3">
                                 <div class="col-md-12 heading-section ftco-animate">
-                                    <span class="subheading">About Us</span>
+                                    <span class="subheading">materi Us</span>
                                     <h2 class="mb-4">Ayo Jelajahi Pesona Budaya Polowijen!</h2>
                                     <p>o Terjun langsung dalam 34 kegiatan budaya</p>
                                     <p>o Temukan 25 festival budaya yang semarak</p>
@@ -562,94 +544,4 @@
         </div>
     </section>
 
-
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center pb-4">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="subheading">Our Blog</span>
-                    <h2 class="mb-4">Postingan Terbaru</h2>
-                </div>
-            </div>
-            <div class="row d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/Blog-26Okto.jpg');">
-                        </a>
-                        <div class="text">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">11</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2020</span>
-                                    <span class="mos">September</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">"Virus" Topeng Malang Dari Polowijen Ditularkan ke Para Siswa</a></h3>
-                            <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="{{route('blog')}}" class="btn btn-primary">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/Blog-5Agu.jpg');">
-                        </a>
-                        <div class="text">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">11</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2020</span>
-                                    <span class="mos">September</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">Pegiat Kampung Budaya Polowijen Bentuk Asosiasi Batik Malang
-                            </a></h3>
-                            <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="{{route('blog')}}" class="btn btn-primary">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/Blog-24Mei.jpg');">
-                        </a>
-                        <div class="text">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">11</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2020</span>
-                                    <span class="mos">September</span>
-                                </div>
-                            </div>
-                            <h3 class="heading mb-5"><a href="#">Kampung Budaya Polowijen Gelar Festival Topeng Malang
-                            </a></h3>
-                            <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-                            <p><a href="#" class="btn btn-primary">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-intro ftco-section ftco-no-pt">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <div class="img"  style="background-image: url(images/Ask.jpg);">
-                        <div class="overlay"></div>
-                        <h2>KAMPUNG BUDAYA POLOWIJEN</h2>
-                        <p>Warisi Tradisi Lestarikan Budaya</p>
-                        <p class="mb-0"><a href="{{route('contact')}}" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection

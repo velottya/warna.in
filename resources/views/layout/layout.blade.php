@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Kampung Budaya Polowijen</title>
+	<title>Netral.in</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -28,7 +28,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         // Fungsi untuk menambahkan produk ke keranjang
         function addCart(id) {
             console.log('Product ID:', id); // Periksa apakah ID produk benar
@@ -69,13 +69,13 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{{route('home')}}">Authentic Polowijen<span></span></a>
+			<a class="navbar-brand" href="{{route('home')}}">Netral.in<span></span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<szpan class="oi oi-menu"></span> Menu
 			</button>
@@ -84,21 +84,17 @@
 				<ul class="navbar-nav ml-auto">
                     @guest
 					<li class="nav-item scrollto @yield('home')"> <a href="{{ route('guest.home') }}" class="nav-link">Home</a></li>
-					<li class="nav-item scrollto @yield('about')"> <a href="{{ route('guest.about') }}" class="nav-link">About</a></li>
-					<li class="nav-item scrollto @yield('sentra')"> <a href="{{ route('guest.sentra') }}" class="nav-link">Sentra</a></li>
-					<li class="nav-item scrollto @yield('galeri')"><a href="{{ route('guest.galeri') }}" class="nav-link">Galeri</a></li>
-					<li class="nav-item scrollto @yield('blog')"><a href="{{ route('guest.blog') }}" class="nav-link">Blog</a></li>
-					<li class="nav-item scrollto @yield('contact')"><a href="{{ route('guest.contact') }}" class="nav-link">Contact</a></li>
+					<li class="nav-item scrollto @yield('materi')"> <a href="{{ route('guest.materi') }}" class="nav-link">Materi</a></li>
+					<li class="nav-item scrollto @yield('quiz')"> <a href="{{ route('guest.quiz') }}" class="nav-link">Quiz</a></li>
+					<li class="nav-item scrollto @yield('lab')"><a href="{{ route('guest.lab') }}" class="nav-link">Lab</a></li>
                     <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
                     @endguest
 
                     @if (Auth::check() && Auth::user()->role == 'user')
                     <li class="nav-item scrollto @yield('home')"> <a href="{{ route('home') }}" class="nav-link">Home</a></li>
-					<li class="nav-item scrollto @yield('about')"> <a href="{{ route('about') }}" class="nav-link">About</a></li>
-					<li class="nav-item scrollto @yield('sentra')"> <a href="{{ route('sentra') }}" class="nav-link">Sentra</a></li>
-					<li class="nav-item scrollto @yield('galeri')"><a href="{{ route('galeri') }}" class="nav-link">Galeri</a></li>
-					<li class="nav-item scrollto @yield('blog')"><a href="{{ route('blog') }}" class="nav-link">Blog</a></li>
-					<li class="nav-item scrollto @yield('contact')"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+					<li class="nav-item scrollto @yield('materi')"> <a href="{{ route('materi') }}" class="nav-link">Materi</a></li>
+					<li class="nav-item scrollto @yield('quiz')"> <a href="{{ route('quiz') }}" class="nav-link">Quiz</a></li>
+					<li class="nav-item scrollto @yield('lab')"><a href="{{ route('lab') }}" class="nav-link">Lab</a></li>
                     <li class="nav-item scrollto @yield('profile')"><a href="{{ route('profile.show') }}" class="nav-link">Account </a></li>
                     <li class="nav-item scrollto"><a href="{{ route('logout') }}" class="nav-link">Logout</a></li>
                     @endif
@@ -133,12 +129,12 @@
                     <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">Menu</h2>
                         <ul class="list-unstyled">
-                            <li><a href="{{route('home')}}" class="py-2 d-block">Homepage</a></li>
-                            <li><a href="{{route('about')}}" class="py-2 d-block">About KBP</a></li>
-                            <li><a href="{{route('sentra')}}" class="py-2 d-block">Sentra</a></li>
-                            <li><a href="{{route('galeri')}}" class="py-2 d-block">Galeri</a></li>
-                            <li><a href="{{route('blog')}}" class="py-2 d-block">Blog</a></li>
-                            <li><a href="{{route('contact')}}" class="py-2 d-block">Contact</a></li>
+                            <li><a href="{{route('home')}}" class="py-2 d-block">Home</a></li>
+                            <li><a href="{{route('materi')}}" class="py-2 d-block">Materi</a></li>
+                            <li><a href="{{route('quiz')}}" class="py-2 d-block">Quiz</a></li>
+                            <li><a href="{{route('lab')}}" class="py-2 d-block">Lab</a></li>
+                            {{-- <li><a href="{{route('blog')}}" class="py-2 d-block">Blog</a></li>
+                            <li><a href="{{route('contact')}}" class="py-2 d-block">Contact</a></li> --}}
                             <li><a href="{{route('login')}}" class="py-2 d-block">Log In</a></li>
                         </ul>
                     </div>

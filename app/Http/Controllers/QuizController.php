@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
-class SentraController extends Controller
+class QuizController extends Controller
 {
-    public function sentra($page = null)
+    public function quiz($page = null)
     {
         $data =
         [
@@ -19,8 +19,8 @@ class SentraController extends Controller
             'product'=>Product::all()
         ];
 
-        return view('home.sentra.sentra', $data);
-        
+        return view('home.quiz.quiz', $data);
+
     }
     public function kegiatan($page = null) {
         $data =
@@ -28,7 +28,7 @@ class SentraController extends Controller
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
         ];
-        return view('home.sentra.sentra1', $data);
+        return view('home.quiz.quiz1', $data);
     }
 
     public function produk($page = null) {
@@ -37,12 +37,12 @@ class SentraController extends Controller
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
         ];
-        return view('home.sentra.sentra2', $data);
+        return view('home.quiz.quiz2', $data);
     }
 
     public function bayar($page, $productName)
     {
-        return view('home.sentra.form-bayar', ['productName' => $productName]);
+        return view('home.quiz.form-bayar', ['productName' => $productName]);
     }
 
     // Nyambung ke admin
@@ -51,7 +51,7 @@ class SentraController extends Controller
         return view('admin.verifikasiBayar');
     }
 
-    public function adminSentra()
+    public function adminquiz()
     {
         $categories = Category::all();
         $data =
@@ -59,10 +59,10 @@ class SentraController extends Controller
             'category'=>Category::orderBy('name', 'asc')->get(),
             'product'=>Product::all()
         ];
-        return view('admin.sentra', compact('categories'), $data);
+        return view('admin.quiz', compact('categories'), $data);
     }
 
-    public function tambahSentra(Request $request)
+    public function tambahquiz(Request $request)
     {
         $rules = [
             'name' => 'required',
@@ -91,21 +91,21 @@ class SentraController extends Controller
         return redirect()->back()->with('success','Galeri berhasil ditambahkan.');
     }
 
-    public function deleteSentra($id)
+    public function deletequiz($id)
     {
         $product = Product::findOrFail($id);
         $product->delete();
         return redirect()->back()->with('success', 'Product berhasil dihapus');
     }
 
-    public function editSentra($id)
+    public function editquiz($id)
     {
         $product = Product::findOrFail($id);
 
-        return view('editSentra', compact('galeri'));
+        return view('editquiz', compact('galeri'));
     }
 
-    public function updateSentra(Request $request, $id)
+    public function updatequiz(Request $request, $id)
     {
         $request->validate([
             'name' => 'required',
