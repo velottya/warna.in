@@ -12,13 +12,11 @@ class LabController extends Controller
 {
     public function lab()
     {
-    $lab = lab::all();
-    return view('home.lab.lab', ['lab' => $lab]);
+    return view('home.lab.lab');
     }
 
     public function adminlab()
     {
-        $lab = lab::all(); // Mengambil semua data lab dari database
         return view('admin.lab', compact('lab')); // Mengirim data lab ke tampilan 'admin.lab'
     }
 

@@ -511,6 +511,315 @@ mark,
   height: auto;
 }
 
+.custom-footer {
+  background: #0C3569;   /* warna biru gelap */
+  color: #fff;
+  padding: 50px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Kiri */
+.footer-left h2 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 420px;
+  color: #fff;
+}
+
+/* Kanan */
+.footer-right h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.footer-menu li a:hover {
+  color: #0071B9; /* kuning hover */
+}
+
+/* Copyright */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background: #0C3569;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Curve balok */
+.footer-curve {
+  width: 100%;
+  height: 30px;
+  background: #0074BD;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 10px;
+}
+
+/* Grid khusus untuk card materi */
+.materi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;          /* cukup 100% saja */
+  max-width: 1200px;    /* biar tidak terlalu lebar di layar besar */
+  margin: 0 auto;       /* center */
+  padding: 0 auto;      /* jarak kanan kiri */
+}
+
+/* Responsif */
+@media (max-width: 991px) {
+  .materi-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet 2 kolom */
+  }
+}
+
+@media (max-width: 767px) {
+  .materi-grid {
+    grid-template-columns: 1fr; /* HP 1 kolom */
+  }
+}
+
+
+.materi-card {
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.materi-card h3 {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.materi-card p {
+  margin: 0;
+}
+
+.materi-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.materi-footer {
+  font-size: 14px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.book-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+/* warna background card */
+.bg-cream { background: #FFF1CE; color: #000; }
+.bg-yellow { background: #FEC435; color: #000; }
+.bg-darkblue { background: #4ea8e0; color: #000; }
+.bg-white { background: #fff; color: #000; }
+
+
+
+.rounded-img {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-custom,
+.card-custom2,
+.card-custom3 {
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+
+    width: 100%;
+    max-width: 1200px;
+    min-height: 180px;       /* tinggi minimal biar rata */
+    display: flex;
+    align-items: center;     /* icon & teks sejajar */
+}
+
+.card-custom {
+    background: #FEC435;
+}
+
+.card-custom2 {
+    background: #0C3569;
+}
+
+.card-custom3 {
+    background: #0074BD;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* kotak icon dengan ukuran fix */
+.card-icon {
+    flex-shrink: 0;
+    width: 100px;             /* lebar fix */
+    height: 100px;            /* tinggi fix */
+    margin-left: 30px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;     /* gambar masuk tanpa mengubah proporsi */
+}
+
+.card-text {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.card-text h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.card-text h2 {
+    margin: 5px 0 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-custom {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  margin-right: 40px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: #0074BD;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 116, 189, 0.4);
+}
+
+.btn-custom2 {
+  background: #0074BD;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 40px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom2:hover {
+  background: #fff;
+  color: #0C3569;
+  box-shadow: 0 4px 12px rgba(0, 116, 189, 0.4);
+}
+
+
+.section-title {
+  font-weight: 520; /* semibold */
+  text-align: left;
+  color: #000;
+  font-size: 40px;
+}
+
+.feature-buttons {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;          /* aktifkan scroll horizontal */
+  white-space: nowrap;       /* cegah tombol turun ke bawah */
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch; /* biar smooth di iOS */
+  scrollbar-width: none;     /* sembunyikan scrollbar di Firefox */
+}
+
+.feature-buttons::-webkit-scrollbar {
+  display: none;             /* sembunyikan scrollbar di Chrome, Safari */
+}
+
+.feature-btn {
+  flex: 0 0 auto; /* tombol tetap ukuran aslinya */
+  border: 2px solid #0074BD;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.feature-btn:hover {
+  background: #0074BD;
+  color: #fff;
+}
+
+
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -12347,7 +12656,7 @@ h5,
 }
 
 .ftco-navbar-light.scrolled .nav-link.active {
-  color: #0074BD !important;
+  color: #0C3569 !important;
 }
 
 .ftco-navbar-light.scrolled.awake {
@@ -12410,14 +12719,16 @@ h5,
   width: 100%;
 }
 
+
+
 .slider-text {
   position: relative;
 }
 
 .slider-text .subheading {
-  font-size: 30px;
+  font-size: 20px;
   color: #0074BD;
-  font-family: "Arizonia", cursive;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .slider-text h1 {
@@ -12911,7 +13222,7 @@ h5,
   height: 0;
   border-style: solid;
   border-width: 5px 0 0 5px;
-  border-color: transparent transparent transparent #c7390d;
+  border-color: transparent transparent transparent #0074BD;
 }
 
 .project-destination:hover .text span {
@@ -13535,11 +13846,11 @@ textarea.form-control {
 }
 
 .heading-section .subheading {
-  font-size: 30px;
+  font-size: 20px;
   display: block;
   margin-bottom: 5px;
   color: #0074BD;
-  font-family: "Arizonia", cursive;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .heading-section h2 {

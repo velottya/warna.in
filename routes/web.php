@@ -14,6 +14,9 @@ use App\Http\Controllers\UserRegisterController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\ChatbotController;
+
+Route::post('/chatbot', [ChatbotController::class, 'reply']);
 
 Route::group(['prefix' => ''], function () {
     Route::get('/materi', fn () => view('home.materi'))->name('materi');

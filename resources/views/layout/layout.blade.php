@@ -106,73 +106,150 @@
                 </div>
 		</div>
 	</nav>
+
+<!-- Floating Chatbot Button -->
+<div id="chatbot-btn"
+     style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+            background: #FEC435; border-radius: 50%; width: 60px; height: 60px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: 0px 4px 6px rgba(0,0,0,0.2); overflow: hidden;">
+    <img src="{{ asset('images/Frame2108.png') }}"
+        alt="Chatbot"
+        style="width: 70%; height: 70%; object-fit: contain; margin-top: 5px;">
+</div>
+
+<!-- Chatbot Overlay -->
+<div id="chatbot-overlay"
+     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); display: none; z-index: 10000;
+            align-items: center; justify-content: center;">
+
+    <div style="background: #fff; width: 400px; height: 600px; border-radius: 12px;
+                display: flex; flex-direction: column; overflow: hidden;">
+
+        <!-- Header -->
+        <div style="background: #FEC435; color: black; padding: 10px;
+                    font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+            <span>Chatbot</span>
+            <button onclick="closeChatbot()" style="background: none; border: none; color: black; font-size: 18px; cursor: pointer;">✖</button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="chat-messages" style="flex: 1; padding: 10px; overflow-y: auto; background: #f5f5f5;">
+            <!-- Chat content muncul disini -->
+        </div>
+
+        <!-- Input -->
+        <div style="display: flex; border-top: 1px solid #ddd;">
+            <input id="chat-input" type="text" placeholder="Tulis pesan..."
+                   style="flex: 1; padding: 10px; border: none; outline: none;">
+            <button onclick="sendMessage()"
+                    style="padding: 10px 20px; background: #FEC435; color: black; border: none; cursor: pointer; font-weight: bold;">
+                ➤
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const chatbotBtn = document.getElementById('chatbot-btn');
+    const chatbotOverlay = document.getElementById('chatbot-overlay');
+
+    chatbotBtn.addEventListener('click', () => {
+        chatbotOverlay.style.display = 'flex';
+    });
+
+    function closeChatbot() {
+        chatbotOverlay.style.display = 'none';
+    }
+
+    function sendMessage() {
+        let input = document.getElementById('chat-input');
+        let message = input.value.trim();
+        if (message === '') return;
+
+        let messagesDiv = document.getElementById('chat-messages');
+
+        // tampilkan pesan user (bubble kanan)
+        messagesDiv.innerHTML += `
+            <div style="display: flex; justify-content: flex-end; margin: 5px 0;">
+                <div style="background: #FEC435; color: black; padding: 10px 15px; border-radius: 15px 15px 0 15px; max-width: 70%; word-wrap: break-word;">
+                    ${message}
+                </div>
+            </div>
+        `;
+        input.value = '';
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        // panggil API Gemini di backend Laravel
+        fetch('/chatbot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({ message })
+        })
+        .then(res => res.json())
+        .then(data => {
+            // parse markdown ke HTML
+            let botReply = marked.parse(data.reply);
+
+            messagesDiv.innerHTML += `
+                <div style="display: flex; justify-content: flex-start; margin: 5px 0;">
+                    <div style="background: #e0e0e0; color: black; padding: 10px 15px;
+                                border-radius: 15px 15px 15px 0; max-width: 70%;
+                                word-wrap: break-word;">
+                        ${botReply}
+                    </div>
+                </div>
+            `;
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+
 	<!-- END nav -->
 
     @section('content')
     @show
 
-    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md pt-5">
-                    <div class="ftco-footer-widget pt-md-5 mb-4">
-                        <h2 class="ftco-heading-2"> Kampung Budaya Polowijen </h2>
-                        <p>Kampung Edukasi sebagai Sarana Pelestarian Budaya di Kota Malang</p>
-                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                            <li class="ftco-animate"><a href="https://twitter.com/PemkotMalang"><span class="fa fa-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="https://m.facebook.com/people/Kampung-Budaya-Polowijen/100023993563201/?locale=ms_MY"><span class="fa fa-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="https://www.instagram.com/kampungbudayapolowijen?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><span class="fa fa-instagram"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md pt-5 border-left">
-                    <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-                        <h2 class="ftco-heading-2">Menu</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="{{route('home')}}" class="py-2 d-block">Home</a></li>
-                            <li><a href="{{route('materi')}}" class="py-2 d-block">Materi</a></li>
-                            <li><a href="{{route('quiz')}}" class="py-2 d-block">Quiz</a></li>
-                            <li><a href="{{route('lab')}}" class="py-2 d-block">Lab</a></li>
-                            {{-- <li><a href="{{route('blog')}}" class="py-2 d-block">Blog</a></li>
-                            <li><a href="{{route('contact')}}" class="py-2 d-block">Contact</a></li> --}}
-                            <li><a href="{{route('login')}}" class="py-2 d-block">Log In</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md pt-5 border-left">
-                    <div class="ftco-footer-widget pt-md-5 mb-4">
-                        <h2 class="ftco-heading-2">Informasi</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Sejarah</a></li>
-                            <li><a href="#" class="py-2 d-block">Paket Kegiatan</a></li>
-                            <li><a href="#" class="py-2 d-block">Galeri dan Video</a></li>
-                            <li><a href="#" class="py-2 d-block">Berita</a></li>
-                            <li><a href="#" class="py-2 d-block">Produk</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md pt-5 border-left">
-                    <div class="ftco-footer-widget pt-md-5 mb-4">
-                        <h2 class="ftco-heading-2">Kontak</h2>
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li><span class="icon fa fa-map-marker"></span><span class="text">Jl. Cakalang, RT.3/RW.2, Polowijen, Kec. Blimbing, Kota Malang, Jawa Timur</span></li>
-                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+62 815-5181-303</span></a></li>
-                                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">kampungbudayapolowijen
-                                    @gmail.com</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
+<footer class="custom-footer">
+  <div class="container footer-content">
+    <!-- Kiri -->
+    <div class="footer-left">
+      <h2>Netral.in</h2>
+      <p>
+        Netral.in adalah platform belajar mata pelajaran Kimia khusus untuk materi Netralisasi.
+        Siswa bisa belajar secara interaktif dan menyenangkan.
+      </p>
+    </div>
 
-                    <p> Copyright &copy;<script>document.write(new Date().getFullYear());</script> | KELOMPOK 7
-                    </div>
-                </div>
-            </div>
-        </footer>
+    <!-- Kanan -->
+    <div class="footer-right">
+      <h3>Menu</h3>
+      <ul class="footer-menu">
+        <li><a href="{{route('home')}}">Home</a></li>
+        <li><a href="{{route('materi')}}">Materi</a></li>
+        <li><a href="{{route('quiz')}}">Quiz</a></li>
+        <li><a href="{{route('lab')}}">Lab</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <br>
+  <div class="footer-bottom">
+    <p>© 2025 Theta. All Rights Reserved.</p>
+  </div>
+
+  <!-- Curve balok -->
+  <div class="footer-curve"></div>
+</footer>
+
 
         <!-- loader -->
         <div id="ftco-loader" class="show fullscreen">

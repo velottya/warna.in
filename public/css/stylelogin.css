@@ -9,6 +9,131 @@ list-type-ulli, .socials {
   margin: 0;
   padding: 0; }
 
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0074BD; /* biru */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.signup {
+  padding: 40px 0;  /* atas-bawah 40px, kanan-kiri 0 */
+}
+
+.signup-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 15px; /* agak ramping */
+}
+
+.signup-form .form-title {
+  text-align: left;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.signup-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-image img {
+  max-width: 220px;   /* lebih kecil lagi */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.image-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* biar gak kosong */
+}
+
+.image-box img {
+  max-width: 300px;   /* atur besar kecil sesuai kebutuhan */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Judul Login rata kiri */
+.login-box h2 {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/* Bagian kanan untuk form */
+.form-box {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.form-group input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.btn {
+  width: 100%;
+  background: #0074BD;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005f96;
+}
+
+
 /* poppins-300 - latin */
 @font-face {
   font-family: 'Poppins';

@@ -13,7 +13,6 @@
                     <form action="{{ route('register.process') }}"method="POST" class="register-form" id="register-form">
                         @csrf
                         <div class="form-group">
-                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input required type="text" class="@error('username') is-invalid @enderror" placeholder="Username"
                             name="username" value="{{ old('username') }}" required>
                         </div>
@@ -21,28 +20,24 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <div class="form-group">
-                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input required type="text" name="fullname" placeholder="Fullname" required>
                             </div>
                             @error('fullname')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         <div class="form-group">
-                            <label for="email"><i class="zmdi zmdi-email"></i></label>
                             <input type="email" name="email" placeholder="Email" required>
                         </div>
                         @error('email')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <div class="form-group">
-                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                             <input type="password" name="password" placeholder="Password" required>
                         </div>
                         @error('password')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <div class="form-group">
-                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
                             <input type="password" id="password_confirmation" name="password_confirmation"
                             placeholder="Confirm Password" required>
                         </div>
@@ -55,7 +50,7 @@
                     </form>
                 </div>
                 <div class="signup-image">
-                    <figure><img src="images/signin-image.png" alt="sing up image"></figure>
+                    <figure><img src="images/_x32_.png" alt="sing up image"></figure>
                 </div>
             </div>
         </div>
